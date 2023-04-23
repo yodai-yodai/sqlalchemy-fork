@@ -109,7 +109,7 @@ _T = TypeVar("_T", bound=Any)
 class async_scoped_session(Generic[_AS]):
     """Provides scoped management of :class:`.AsyncSession` objects.
 
-    See the section :ref:`asyncio_scoped_session` for usage details.
+    See the section ref_asyncio_scoped_session for usage details.
 
     .. versionadded:: 1.4.19
 
@@ -610,7 +610,7 @@ class async_scoped_session(Generic[_AS]):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 
@@ -657,7 +657,7 @@ class async_scoped_session(Generic[_AS]):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 

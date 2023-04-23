@@ -192,7 +192,7 @@ MySQL DBAPIs available, including PyMySQL::
     # PyMySQL
     engine = create_engine("mysql+pymysql://scott:tiger@localhost/foo")
 
-More notes on connecting to MySQL at :ref:`mysql_toplevel`.
+More notes on connecting to MySQL at ref_mysql_toplevel.
 
 Oracle
 ^^^^^^^^^^
@@ -203,7 +203,7 @@ The Oracle dialect uses cx_oracle as the default DBAPI::
 
     engine = create_engine("oracle+cx_oracle://scott:tiger@tnsname")
 
-More notes on connecting to Oracle at :ref:`oracle_toplevel`.
+More notes on connecting to Oracle at ref_oracle_toplevel.
 
 Microsoft SQL Server
 ^^^^^^^^^^^^^^^^^^^^
@@ -217,7 +217,7 @@ also available::
     # pymssql
     engine = create_engine("mssql+pymssql://scott:tiger@hostname:port/dbname")
 
-More notes on connecting to SQL Server at :ref:`mssql_toplevel`.
+More notes on connecting to SQL Server at ref_mssql_toplevel.
 
 SQLite
 ^^^^^^^
@@ -248,7 +248,7 @@ To use a SQLite ``:memory:`` database, specify an empty URL::
 
     engine = create_engine("sqlite://")
 
-More notes on connecting to SQLite at :ref:`sqlite_toplevel`.
+More notes on connecting to SQLite at ref_sqlite_toplevel.
 
 Others
 ^^^^^^
@@ -291,7 +291,7 @@ application, rather than creating a new one for each connection.
 .. note::
 
    :class:`.QueuePool` is not used by default for SQLite engines.  See
-   :ref:`sqlite_toplevel` for details on SQLite connection pool usage.
+   ref_sqlite_toplevel for details on SQLite connection pool usage.
 
 For more information on connection pooling, see :ref:`pooling_toplevel`.
 
@@ -424,7 +424,7 @@ parameter, this could be implemented as::
 
 .. seealso::
 
-    :ref:`mssql_pyodbc_access_tokens` - a more concrete example involving
+    ref_mssql_pyodbc_access_tokens - a more concrete example involving
     SQL Server
 
 Modifying the DBAPI connection after connect, or running commands after connect

@@ -84,7 +84,7 @@ SQL expression mapped by :func:`_orm.column_property`, and an additional
 "deferred" basis as defined
 by the :paramref:`_orm.mapped_column.deferred` keyword.    More documentation
 on these particular concepts may be found at :ref:`relationship_patterns`,
-:ref:`mapper_column_property_sql_expressions`, and :ref:`orm_queryguide_column_deferral`.
+ref_mapper_column_property_sql_expressions, and :ref:`orm_queryguide_column_deferral`.
 
 Properties may be specified with a declarative mapping as above using
 "hybrid table" style as well; the :class:`_schema.Column` objects that
@@ -218,7 +218,7 @@ an ORM-maintained version counter that is updated and checked within the
 
 .. seealso::
 
-    :ref:`mapper_version_counter` - background on the ORM version counter feature
+    ref_mapper_version_counter - background on the ORM version counter feature
 
 **Single Table Inheritance**
 
@@ -406,7 +406,7 @@ be illustrated using :meth:`_orm.registry.mapped` as follows::
 
 ``__abstract__`` causes declarative to skip the production
 of a table or mapper for the class entirely.  A class can be added within a
-hierarchy in the same way as mixin (see :ref:`declarative_mixins`), allowing
+hierarchy in the same way as mixin (see ref_declarative_mixins), allowing
 subclasses to extend just from the special class::
 
     class SomeAbstractBase(Base):

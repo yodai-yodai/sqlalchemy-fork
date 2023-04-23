@@ -76,7 +76,7 @@ Class Mapping API
 
         .. seealso::
 
-            :ref:`declarative_inheritance`
+            ref_declarative_inheritance
 
             :ref:`mixin_inheritance_columns`
 

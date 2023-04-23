@@ -14,11 +14,11 @@ r"""
     :url: https://github.com/long2ice/asyncmy
 
 .. note:: The asyncmy dialect as of September, 2021 was added to provide
-   MySQL/MariaDB asyncio compatibility given that the :ref:`aiomysql` database
+   MySQL/MariaDB asyncio compatibility given that the ref_aiomysql database
    driver has become unmaintained, however asyncmy is itself very new.
 
 Using a special asyncio mediation layer, the asyncmy dialect is usable
-as the backend for the :ref:`SQLAlchemy asyncio <asyncio_toplevel>`
+as the backend for the ref_asyncio_toplevel
 extension package.
 
 This dialect should normally be used only with the

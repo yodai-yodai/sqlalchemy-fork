@@ -214,7 +214,7 @@ by *not even emitting BEGIN* until the first write operation.
 
     SQLite's transactional scope is impacted by unresolved
     issues in the pysqlite driver, which defers BEGIN statements to a greater
-    degree than is often feasible. See the section :ref:`pysqlite_serializable`
+    degree than is often feasible. See the section ref_pysqlite_serializable
     for techniques to work around this behavior.
 
 .. seealso::
@@ -274,7 +274,7 @@ won't work at all with pysqlite unless workarounds are taken.
 
     SQLite's SAVEPOINT feature is impacted by unresolved
     issues in the pysqlite driver, which defers BEGIN statements to a greater
-    degree than is often feasible. See the section :ref:`pysqlite_serializable`
+    degree than is often feasible. See the section ref_pysqlite_serializable
     for techniques to work around this behavior.
 
 Transactional DDL
@@ -290,7 +290,7 @@ workarounds are required.
     SQLite's transactional DDL is impacted by unresolved issues
     in the pysqlite driver, which fails to emit BEGIN and additionally
     forces a COMMIT to cancel any transaction when DDL is encountered.
-    See the section :ref:`pysqlite_serializable`
+    See the section ref_pysqlite_serializable
     for techniques to work around this behavior.
 
 .. _sqlite_foreign_keys:
@@ -349,7 +349,7 @@ ON CONFLICT support for constraints
 
 .. seealso:: This section describes the :term:`DDL` version of "ON CONFLICT" for
    SQLite, which occurs within a CREATE TABLE statement.  For "ON CONFLICT" as
-   applied to an INSERT statement, see :ref:`sqlite_on_conflict_insert`.
+   applied to an INSERT statement, see ref_sqlite_on_conflict_insert.
 
 SQLite supports a non-standard DDL clause known as ON CONFLICT which can be applied
 to primary key, unique, check, and not null constraints.   In DDL, it is
@@ -459,7 +459,7 @@ INSERT...ON CONFLICT (Upsert)
 
 .. seealso:: This section describes the :term:`DML` version of "ON CONFLICT" for
    SQLite, which occurs within an INSERT statement.  For "ON CONFLICT" as
-   applied to a CREATE TABLE statement, see :ref:`sqlite_on_conflict_ddl`.
+   applied to a CREATE TABLE statement, see ref_sqlite_on_conflict_ddl.
 
 From version 3.24.0 onwards, SQLite supports "upserts" (update or insert)
 of rows into a table via the ``ON CONFLICT`` clause of the ``INSERT``

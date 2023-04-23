@@ -907,7 +907,7 @@ Mitigation of this error is via these techniques:
 
     :ref:`session_committing` - background on session commit
 
-    :ref:`session_expire` - background on attribute expiry
+    ref_session_expire - background on attribute expiry
 
 
 .. _error_7s2a:
@@ -1327,7 +1327,7 @@ annotations within class definitions at runtime. A requirement of this form is
 that all ORM annotations must make use of a generic container called
 :class:`_orm.Mapped` to be properly annotated. Legacy SQLAlchemy mappings which
 include explicit :pep:`484` typing annotations, such as those which use the
-:ref:`legacy Mypy extension <mypy_toplevel>` for typing support, may include
+ref_mypy_toplevel for typing support, may include
 directives such as those for :func:`_orm.relationship` that don't include this
 generic.
 
@@ -1346,7 +1346,7 @@ When transforming <cls> to a dataclass, attribute(s) originate from superclass <
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This warning occurs when using the SQLAlchemy ORM Mapped Dataclasses feature
-described at :ref:`orm_declarative_native_dataclasses` in conjunction with
+described at ref_orm_declarative_native_dataclasses in conjunction with
 any mixin class or abstract base that is not itself declared as a
 dataclass, such as in the example below::
 
@@ -1463,7 +1463,7 @@ attention to the rules applied to `inheritance <dc_superclass_>`_.
 
 .. seealso::
 
-  :ref:`orm_declarative_native_dataclasses` - SQLAlchemy dataclasses documentation
+  ref_orm_declarative_native_dataclasses - SQLAlchemy dataclasses documentation
 
   `Python dataclasses <dataclasses_>`_ - on the python.org website
 
@@ -1491,7 +1491,7 @@ with a non compatible :term:`DBAPI`.
 
 .. seealso::
 
-    :ref:`asyncio_toplevel`
+    ref_asyncio_toplevel
 
 .. _error_xd2s:
 
@@ -1506,7 +1506,7 @@ attempt, which is unsupported when using SQLAlchemy with AsyncIO dialects.
 
 .. seealso::
 
-    :ref:`asyncio_orm_avoid_lazyloads` - covers most ORM scenarios where
+    ref_asyncio_orm_avoid_lazyloads - covers most ORM scenarios where
     this problem can occur and how to mitigate.
 
 .. _error_xd3s:
@@ -1534,7 +1534,7 @@ that performs the desired operations::
 
 .. seealso::
 
-    :ref:`asyncio_inspector` - additional examples of using :func:`_sa.inspect`
+    ref_asyncio_inspector - additional examples of using :func:`_sa.inspect`
     with the asyncio extension.
 
 

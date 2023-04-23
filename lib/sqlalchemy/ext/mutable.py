@@ -233,14 +233,14 @@ Establishing Mutability on Composites
 Composites are a special ORM feature which allow a single scalar attribute to
 be assigned an object value which represents information "composed" from one
 or more columns from the underlying mapped table. The usual example is that of
-a geometric "point", and is introduced in :ref:`mapper_composite`.
+a geometric "point", and is introduced in ref_mapper_composite.
 
 As is the case with :class:`.Mutable`, the user-defined composite class
 subclasses :class:`.MutableComposite` as a mixin, and detects and delivers
 change events to its parents via the :meth:`.MutableComposite.changed` method.
 In the case of a composite class, the detection is usually via the usage of the
 special Python method ``__setattr__()``. In the example below, we expand upon the ``Point``
-class introduced in :ref:`mapper_composite` to include
+class introduced in ref_mapper_composite to include
 :class:`.MutableComposite` in its bases and to route attribute set events via
 ``__setattr__`` to the :meth:`.MutableComposite.changed` method::
 

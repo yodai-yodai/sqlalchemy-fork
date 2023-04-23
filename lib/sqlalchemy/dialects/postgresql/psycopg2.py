@@ -52,7 +52,7 @@ may be passed to :func:`_sa.create_engine()`, and include the following:
 
   .. seealso::
 
-    :ref:`psycopg2_executemany_mode`
+    ref_psycopg2_executemany_mode
 
 .. tip::
 
@@ -376,7 +376,7 @@ The psycopg2 dialect fully supports SAVEPOINT and two-phase commit operations.
 Psycopg2 Transaction Isolation Level
 -------------------------------------
 
-As discussed in :ref:`postgresql_isolation_level`,
+As discussed in ref_postgresql_isolation_level,
 all PostgreSQL dialects support setting of transaction isolation level
 both via the ``isolation_level`` parameter passed to :func:`_sa.create_engine`
 ,
@@ -398,7 +398,7 @@ The psycopg2 dialect supports these constants for isolation level:
 
 .. seealso::
 
-    :ref:`postgresql_isolation_level`
+    ref_postgresql_isolation_level
 
     :ref:`pg8000_isolation_level`
 

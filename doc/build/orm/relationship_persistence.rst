@@ -223,7 +223,7 @@ object, and we also illustrate the ``mysql_engine='InnoDB'`` setting
 which, on a MySQL backend, ensures that the ``InnoDB`` engine supporting
 referential integrity is used.  When using SQLite, referential integrity
 should be enabled, using the configuration described at
-:ref:`sqlite_foreign_keys`.
+ref_sqlite_foreign_keys.
 
 .. seealso::
 

@@ -371,7 +371,7 @@ ORM Declarative Models
 ~~~~~~~~~~~~~~~~~~~~~~
 
 SQLAlchemy 1.4 introduced the first SQLAlchemy-native ORM typing support
-using a combination of sqlalchemy2-stubs_ and the :ref:`Mypy Plugin <mypy_toplevel>`.
+using a combination of sqlalchemy2-stubs_ and the ref_mypy_toplevel.
 In SQLAlchemy 2.0, the Mypy plugin **remains available, and has been updated
 to work with SQLAlchemy 2.0's typing system**.  However, it should now be
 considered **deprecated**, as applications now have a straightforward path to adopting the
@@ -731,7 +731,7 @@ and :class:`_engine.Row` objects::
 Using Legacy Mypy-Typed Models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SQLAlchemy applications that use the :ref:`Mypy plugin <mypy_toplevel>` with
+SQLAlchemy applications that use the ref_mypy_toplevel with
 explicit annotations that don't use :class:`_orm.Mapped` in their annotations
 are subject to errors under the new system, as such annotations are flagged as
 errors when using constructs such as :func:`_orm.relationship`.
@@ -848,7 +848,7 @@ positional arguments as configured::
 
 .. seealso::
 
-    :ref:`orm_declarative_native_dataclasses`
+    ref_orm_declarative_native_dataclasses
 
 
 .. _change_6047:
@@ -910,7 +910,7 @@ and are still improved by the "insertmanyvalues" approach.
 Benchmarks
 ~~~~~~~~~~
 
-SQLAlchemy includes a :ref:`Performance Suite <examples_performance>` within
+SQLAlchemy includes a ref_examples_performance within
 the ``examples/`` directory, where we can make use of the ``bulk_insert``
 suite to benchmark INSERTs of many rows using both Core and ORM in different
 ways.
@@ -1271,11 +1271,11 @@ using :term:`2.0 style` to load the desired objects in an explicit way::
 The :class:`_orm.WriteOnlyCollection` also integrates with the new
 :ref:`ORM bulk dml <change_8360>` features, including support for bulk INSERT
 and UPDATE/DELETE with WHERE criteria, all including RETURNING support as
-well.   See the complete documentation at :ref:`write_only_relationship`.
+well.   See the complete documentation at ref_write_only_relationship.
 
 .. seealso::
 
-    :ref:`write_only_relationship`
+    ref_write_only_relationship
 
 New pep-484 / type annotated mapping support for Dynamic Relationships
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1323,7 +1323,7 @@ as ``AccountTransaction``.
 
 .. seealso::
 
-    :ref:`dynamic_relationship`
+    ref_dynamic_relationship
 
 
 :ticket:`7123`
@@ -1392,7 +1392,7 @@ Major Architectural, Performance and API Enhancements for Database Reflection
 -----------------------------------------------------------------------------
 
 The internal system by which :class:`.Table` objects and their components are
-:ref:`reflected <metadata_reflection>` has been completely rearchitected to
+ref_metadata_reflection has been completely rearchitected to
 allow high performance bulk reflection of thousands of tables at once for
 participating dialects. Currently, the **PostgreSQL** and **Oracle** dialects
 participate in the new architecture, where the PostgreSQL dialect can now
@@ -1504,7 +1504,7 @@ automatically.
 
 .. seealso::
 
-    :ref:`postgresql_psycopg`
+    ref_postgresql_psycopg
 
 
 .. _ticket_8054:
@@ -1517,7 +1517,7 @@ DBAPI, which is the renamed, new major release of the popular cx_Oracle driver.
 
 .. seealso::
 
-    :ref:`oracledb`
+    ref_oracledb
 
 .. _ticket_7631:
 
@@ -2195,7 +2195,7 @@ customizable via the :paramref:`_sa.create_engine.poolclass` parameter.
 
 .. seealso::
 
-    :ref:`pysqlite_threading_pooling`
+    ref_pysqlite_threading_pooling
 
 
 :ticket:`7490`
@@ -2286,12 +2286,12 @@ All PostgreSQL search functions and operators are available through use of
 :data:`.func` to generate PostgreSQL-specific functions and
 :meth:`.Operators.bool_op` (a boolean-typed version of :meth:`.Operators.op`)
 to generate arbitrary operators, in the same manner as they are available
-in previous versions.  See the examples at :ref:`postgresql_match`.
+in previous versions.  See the examples at ref_postgresql_match.
 
 Existing SQLAlchemy projects that make use of PG-specific directives within
 :meth:`.Operators.match` should make use of ``func.to_tsquery()`` directly.
 To render SQL in exactly the same form as would be present
-in 1.4, see the version note at :ref:`postgresql_simple_match`.
+in 1.4, see the version note at ref_postgresql_simple_match.
 
 
 

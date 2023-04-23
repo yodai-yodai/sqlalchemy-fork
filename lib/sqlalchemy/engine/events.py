@@ -940,13 +940,13 @@ class DialectEvents(event.Events[Dialect]):
 
             .. seealso::
 
-                  :ref:`mssql_pyodbc_setinputsizes`
+                  ref_mssql_pyodbc_setinputsizes
 
         .. versionadded:: 1.2.9
 
         .. seealso::
 
-            :ref:`cx_oracle_setinputsizes`
+            ref_cx_oracle_setinputsizes
 
         """
         pass

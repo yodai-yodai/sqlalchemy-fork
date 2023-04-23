@@ -311,7 +311,7 @@ dictionary-oriented JSON structure, we can apply this as::
 
 .. seealso::
 
-    :ref:`mutable_toplevel`
+    ref_mutable_toplevel
 
 Dealing with Comparison Operations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -695,7 +695,7 @@ It is important to note that database types which are modified to have
 additional in-Python behaviors, including types based on
 :class:`.TypeDecorator` as well as other user-defined subclasses of datatypes,
 do not have any representation within a database schema.    When using database
-the introspection features described at :ref:`metadata_reflection`, SQLAlchemy
+the introspection features described at ref_metadata_reflection, SQLAlchemy
 makes use of a fixed mapping which links the datatype information reported by a
 database server to a SQLAlchemy datatype object.   For example, if we look
 inside of a PostgreSQL schema at the definition for a particular database
@@ -774,7 +774,7 @@ additional Python behaviors of the custom datatypes, additional steps must be
 taken to allow this.
 
 The most straightforward is to override specific columns as described at
-:ref:`reflection_overriding_columns`.  In this technique, we simply
+ref_reflection_overriding_columns.  In this technique, we simply
 use reflection in combination with explicit :class:`_schema.Column` objects for those
 columns for which we want to use a custom or decorated datatype::
 

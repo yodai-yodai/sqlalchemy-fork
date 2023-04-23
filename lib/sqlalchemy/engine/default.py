@@ -2150,7 +2150,7 @@ class DefaultExecutionContext(ExecutionContext):
     """A dictionary of parameters applied to the current row.
 
     This attribute is only available in the context of a user-defined default
-    generation function, e.g. as described at :ref:`context_default_functions`.
+    generation function, e.g. as described at ref_context_default_functions.
     It consists of a dictionary which includes entries for each column/value
     pair that is to be part of the INSERT or UPDATE statement. The keys of the
     dictionary will be the key value of each :class:`_schema.Column`,
@@ -2167,7 +2167,7 @@ class DefaultExecutionContext(ExecutionContext):
 
         :meth:`.DefaultExecutionContext.get_current_parameters`
 
-        :ref:`context_default_functions`
+        ref_context_default_functions
 
     """
 
@@ -2176,7 +2176,7 @@ class DefaultExecutionContext(ExecutionContext):
 
         This method can only be used in the context of a user-defined default
         generation function, e.g. as described at
-        :ref:`context_default_functions`. When invoked, a dictionary is
+        ref_context_default_functions. When invoked, a dictionary is
         returned which includes entries for each column/value pair that is part
         of the INSERT or UPDATE statement. The keys of the dictionary will be
         the key value of each :class:`_schema.Column`,
@@ -2201,7 +2201,7 @@ class DefaultExecutionContext(ExecutionContext):
 
             :attr:`.DefaultExecutionContext.current_parameters`
 
-            :ref:`context_default_functions`
+            ref_context_default_functions
 
         """
         try:

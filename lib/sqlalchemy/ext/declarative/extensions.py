@@ -190,7 +190,7 @@ class AbstractConcreteBase(ConcreteBase):
 
     Using this approach, we can specify columns and properties
     that will take place on mapped subclasses, in the way that
-    we normally do as in :ref:`declarative_mixins`::
+    we normally do as in ref_declarative_mixins::
 
         from sqlalchemy.ext.declarative import AbstractConcreteBase
 

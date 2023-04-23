@@ -69,7 +69,7 @@ def create_async_engine(url: Union[str, URL], **kw: Any) -> AsyncEngine:
     Arguments passed to :func:`_asyncio.create_async_engine` are mostly
     identical to those passed to the :func:`_sa.create_engine` function.
     The specified dialect must be an asyncio-compatible dialect
-    such as :ref:`dialect-postgresql-asyncpg`.
+    such as ref_dialect-postgresql-asyncpg.
 
     .. versionadded:: 1.4
 
@@ -93,7 +93,7 @@ def async_engine_from_config(
 
     This function is analogous to the :func:`_sa.engine_from_config` function
     in SQLAlchemy Core, except that the requested dialect must be an
-    asyncio-compatible dialect such as :ref:`dialect-postgresql-asyncpg`.
+    asyncio-compatible dialect such as ref_dialect-postgresql-asyncpg.
     The argument signature of the function is identical to that
     of :func:`_sa.engine_from_config`.
 
@@ -117,7 +117,7 @@ def create_async_pool_from_url(url: Union[str, URL], **kwargs: Any) -> Pool:
     Arguments passed to :func:`_asyncio.create_async_pool_from_url` are mostly
     identical to those passed to the :func:`_sa.create_pool_from_url` function.
     The specified dialect must be an asyncio-compatible dialect
-    such as :ref:`dialect-postgresql-asyncpg`.
+    such as ref_dialect-postgresql-asyncpg.
 
     .. versionadded:: 2.0.10
 

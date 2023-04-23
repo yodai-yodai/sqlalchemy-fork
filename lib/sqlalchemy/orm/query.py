@@ -1761,7 +1761,7 @@ class Query(
            statement executions, as the :class:`_orm.Session` will not track
            objects from different schema translate maps within a single
            session.  For multiple schema translate maps within the scope of a
-           single :class:`_orm.Session`, see :ref:`examples_sharding`.
+           single :class:`_orm.Session`, see ref_examples_sharding.
 
 
         .. seealso::
@@ -3003,7 +3003,7 @@ class Query(
         The 'load' argument is the same as that of :meth:`.Session.merge`.
 
         For an example of how :meth:`_query.Query.merge_result` is used, see
-        the source code for the example :ref:`examples_caching`, where
+        the source code for the example ref_examples_caching, where
         :meth:`_query.Query.merge_result` is used to efficiently restore state
         from a cache back into a target :class:`.Session`.
 

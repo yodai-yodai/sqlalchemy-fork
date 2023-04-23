@@ -248,7 +248,7 @@ value and pass it through, rather than omitting it as a "missing" value::
 Fetching Server-Generated Defaults
 ===================================
 
-As introduced in the sections :ref:`server_defaults` and :ref:`triggered_columns`,
+As introduced in the sections ref_server_defaults and ref_triggered_columns,
 the Core supports the notion of database columns for which the database
 itself generates a value upon INSERT and in less common cases upon UPDATE
 statements.  The ORM features support for such columns regarding being
@@ -375,7 +375,7 @@ to retreive the newly generated primary key value:
 
 .. seealso::
 
-    :ref:`mssql_insert_behavior` - background on the SQL Server dialect's
+    ref_mssql_insert_behavior - background on the SQL Server dialect's
     methods of fetching newly generated primary key values
 
 Case 3: non primary key, RETURNING or equivalent is not supported or not needed
@@ -574,7 +574,7 @@ INSERT looks like:
 
 .. seealso::
 
-    :ref:`metadata_defaults_toplevel`
+    ref_metadata_defaults_toplevel
 
 Notes on eagerly fetching client invoked SQL expressions used for INSERT or UPDATE
 -----------------------------------------------------------------------------------
@@ -584,7 +584,7 @@ to create tables that include default-generation functions within their
 DDL.
 
 SQLAlchemy also supports non-DDL server side defaults, as documented at
-:ref:`defaults_client_invoked_sql`; these "client invoked SQL expressions"
+ref_defaults_client_invoked_sql; these "client invoked SQL expressions"
 are set up using the :paramref:`_schema.Column.default` and
 :paramref:`_schema.Column.onupdate` parameters.
 
@@ -826,8 +826,8 @@ Horizontal partitioning partitions the rows of a single table (or a set of
 tables) across multiple databases.    The SQLAlchemy :class:`.Session`
 contains support for this concept, however to use it fully requires that
 :class:`.Session` and :class:`_query.Query` subclasses are used.  A basic version
-of these subclasses are available in the :ref:`horizontal_sharding_toplevel`
-ORM extension.   An example of use is at: :ref:`examples_sharding`.
+of these subclasses are available in the ref_horizontal_sharding_toplevel
+ORM extension.   An example of use is at: ref_examples_sharding.
 
 .. _bulk_operations:
 

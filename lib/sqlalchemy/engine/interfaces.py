@@ -3388,7 +3388,7 @@ class AdaptedConnection:
 
         .. seealso::
 
-            :ref:`asyncio_events_run_async`
+            ref_asyncio_events_run_async
 
         """
         return await_only(fn(self._connection))

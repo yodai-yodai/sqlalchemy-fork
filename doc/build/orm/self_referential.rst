@@ -87,7 +87,7 @@ relationship using the :func:`.backref` function::
 
 .. seealso::
 
-    :ref:`examples_adjacencylist` - working example
+    ref_examples_adjacencylist - working example
 
 Composite Adjacency Lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~

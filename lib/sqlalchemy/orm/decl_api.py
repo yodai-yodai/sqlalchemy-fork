@@ -509,7 +509,7 @@ def declarative_mixin(cls: Type[_T]) -> Type[_T]:
 
     The :func:`_orm.declarative_mixin` decorator currently does not modify
     the given class in any way; it's current purpose is strictly to assist
-    the :ref:`Mypy plugin <mypy_toplevel>` in being able to identify
+    the ref_mypy_toplevel in being able to identify
     SQLAlchemy declarative mixin classes when no other context is present.
 
     .. versionadded:: 1.4.6
@@ -518,8 +518,8 @@ def declarative_mixin(cls: Type[_T]) -> Type[_T]:
 
         :ref:`orm_mixins_toplevel`
 
-        :ref:`mypy_declarative_mixins` - in the
-        :ref:`Mypy plugin documentation <mypy_toplevel>`
+        ref_mypy_declarative_mixins - in the
+        ref_mypy_toplevel
 
     """  # noqa: E501
 
@@ -573,7 +573,7 @@ class MappedAsDataclass(metaclass=DCTransformDeclarative):
 
     .. seealso::
 
-        :ref:`orm_declarative_native_dataclasses` - complete background
+        ref_orm_declarative_native_dataclasses - complete background
         on SQLAlchemy native dataclass mapping
 
     .. versionadded:: 2.0
@@ -1594,7 +1594,7 @@ class registry:
 
         .. seealso::
 
-            :ref:`orm_declarative_native_dataclasses` - complete background
+            ref_orm_declarative_native_dataclasses - complete background
             on SQLAlchemy native dataclass mapping
 
 

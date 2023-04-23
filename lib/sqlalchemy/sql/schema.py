@@ -590,11 +590,11 @@ class Table(
 
             .. seealso::
 
-                :ref:`metadata_reflection_toplevel`
+                ref_metadata_reflection_toplevel
 
                 :meth:`_events.DDLEvents.column_reflect`
 
-                :ref:`metadata_reflection_dbagnostic_types`
+                ref_metadata_reflection_dbagnostic_types
 
         :param extend_existing: When ``True``, indicates that if this
             :class:`_schema.Table` is already present in the given
@@ -662,7 +662,7 @@ class Table(
 
             In modern SQLAlchemy there is generally no reason to alter this
             setting, except for some backend specific cases
-            (see :ref:`mssql_triggers` in the SQL Server dialect documentation
+            (see ref_mssql_triggers in the SQL Server dialect documentation
             for one such example).
 
         :param include_columns: A list of strings indicating a subset of
@@ -1699,7 +1699,7 @@ class Column(DialectKWArgs, SchemaItem, ColumnClause[_T]):
               to render the special SQLite keyword ``AUTOINCREMENT``
               is not included as this is unnecessary and not recommended
               by the database vendor.  See the section
-              :ref:`sqlite_autoincrement` for more background.
+              ref_sqlite_autoincrement for more background.
             * Oracle - The Oracle dialect has no default "autoincrement"
               feature available at this time, instead the :class:`.Identity`
               construct is recommended to achieve this (the :class:`.Sequence`
@@ -1755,7 +1755,7 @@ class Column(DialectKWArgs, SchemaItem, ColumnClause[_T]):
 
             .. seealso::
 
-                :ref:`metadata_defaults_toplevel`
+                ref_metadata_defaults_toplevel
 
         :param doc: optional String that can be used by the ORM or similar
             to document attributes on the Python side.   This attribute does
@@ -1852,7 +1852,7 @@ class Column(DialectKWArgs, SchemaItem, ColumnClause[_T]):
 
             .. seealso::
 
-                :ref:`metadata_defaults` - complete discussion of onupdate
+                ref_metadata_defaults - complete discussion of onupdate
 
         :param primary_key: If ``True``, marks this column as a primary key
             column. Multiple columns can have this flag set to specify
@@ -1915,7 +1915,7 @@ class Column(DialectKWArgs, SchemaItem, ColumnClause[_T]):
 
             .. seealso::
 
-                :ref:`server_defaults` - complete discussion of server side
+                ref_server_defaults - complete discussion of server side
                 defaults
 
         :param server_onupdate: A :class:`.FetchedValue` instance
@@ -1929,12 +1929,12 @@ class Column(DialectKWArgs, SchemaItem, ColumnClause[_T]):
 
             .. warning:: This directive **does not** currently produce MySQL's
                "ON UPDATE CURRENT_TIMESTAMP()" clause.  See
-               :ref:`mysql_timestamp_onupdate` for background on how to
+               ref_mysql_timestamp_onupdate for background on how to
                produce this clause.
 
             .. seealso::
 
-                :ref:`triggered_columns`
+                ref_triggered_columns
 
         :param quote: Force quoting of this column's name on or off,
              corresponding to ``True`` or ``False``. When left at its default
@@ -3681,7 +3681,7 @@ class Sequence(HasSchemaAttr, IdentityOptions, DefaultGenerator):
 
     .. seealso::
 
-        :ref:`defaults_sequences`
+        ref_defaults_sequences
 
         :class:`.CreateSequence`
 
@@ -3955,7 +3955,7 @@ class FetchedValue(SchemaEventTarget):
 
     .. seealso::
 
-        :ref:`triggered_columns`
+        ref_triggered_columns
 
     """
 
@@ -5140,13 +5140,13 @@ class Index(
 
         :ref:`schema_indexes` - General information on :class:`.Index`.
 
-        :ref:`postgresql_indexes` - PostgreSQL-specific options available for
+        ref_postgresql_indexes - PostgreSQL-specific options available for
         the :class:`.Index` construct.
 
-        :ref:`mysql_indexes` - MySQL-specific options available for the
+        ref_mysql_indexes - MySQL-specific options available for the
         :class:`.Index` construct.
 
-        :ref:`mssql_indexes` - MSSQL-specific options available for the
+        ref_mssql_indexes - MSSQL-specific options available for the
         :class:`.Index` construct.
 
     """
@@ -5676,13 +5676,13 @@ class MetaData(HasSchemaAttr):
 
         .. seealso::
 
-            :ref:`metadata_reflection_toplevel`
+            ref_metadata_reflection_toplevel
 
             :meth:`_events.DDLEvents.column_reflect` - Event used to customize
             the reflected columns. Usually used to generalize the types using
             :meth:`_types.TypeEngine.as_generic`
 
-            :ref:`metadata_reflection_dbagnostic_types` - describes how to
+            ref_metadata_reflection_dbagnostic_types - describes how to
             reflect tables using general types.
 
         """

@@ -285,7 +285,7 @@ Illustrating insertion and selecting of a record::
    as handled by the ORM will not automatically detect in-place changes to
    a particular list value; to update list values with the ORM, either re-assign
    a new list to the attribute, or use the :class:`.MutableList`
-   type modifier.  See the section :ref:`mutable_toplevel` for background.
+   type modifier.  See the section ref_mutable_toplevel for background.
 
 
 The available multirange datatypes are as follows:

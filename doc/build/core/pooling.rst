@@ -214,8 +214,8 @@ consistent with the state of the transaction::
 
 .. seealso::
 
-    * :ref:`mssql_reset_on_return` - in the :ref:`mssql_toplevel` documentation
-    * :ref:`postgresql_reset_on_return` in the :ref:`postgresql_toplevel` documentation
+    * ref_mssql_reset_on_return - in the ref_mssql_toplevel documentation
+    * ref_postgresql_reset_on_return in the :ref:`postgresql_toplevel` documentation
 
 
 

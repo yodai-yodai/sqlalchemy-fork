@@ -174,7 +174,7 @@ construction routines that must be built up each time an ORM query seeks to run
 and construct ORM objects from result sets.
 
 To introduce the general idea of the feature, given code from the
-:ref:`examples_performance` suite as follows, which will invoke
+ref_examples_performance suite as follows, which will invoke
 a very simple query "n" times, for a default value of n=10000.   The
 query returns only a single row, as the overhead we are looking to decrease
 is that of **many small queries**.    The optimization is not as significant
@@ -287,7 +287,7 @@ In addition, The :func:`_declarative.instrument_declarative` function is
 deprecated, superseded by :meth:`_orm.registry.map_declaratively`.  The
 :class:`_declarative.ConcreteBase`, :class:`_declarative.AbstractConcreteBase`,
 and :class:`_declarative.DeferredReflection` classes remain as extensions in the
-:ref:`declarative_toplevel` package.
+ref_declarative_toplevel package.
 
 Mapping styles have now been organized such that they all extend from
 the :class:`_orm.registry` object, and fall into these categories:
@@ -299,10 +299,10 @@ the :class:`_orm.registry` object, and fall into these categories:
     * Using :meth:`_orm.registry.mapped` Declarative Decorator
         * Declarative Table
         * Imperative Table (Hybrid)
-            * :ref:`orm_declarative_dataclasses`
+            * ref_orm_declarative_dataclasses
 * :ref:`Imperative (a.k.a. "classical" mapping) <orm_imperative_mapping>`
     * Using :meth:`_orm.registry.map_imperatively`
-        * :ref:`orm_imperative_dataclasses`
+        * ref_orm_imperative_dataclasses
 
 The existing classical mapping function ``sqlalchemy.orm.mapper()`` remains,
 however it is deprecated to call upon ``sqlalchemy.orm.mapper()`` directly; the
@@ -351,9 +351,9 @@ attribute systems can now interoperate with Declarative mappings as well.
 
 .. seealso::
 
-  :ref:`orm_declarative_dataclasses`
+  ref_orm_declarative_dataclasses
 
-  :ref:`orm_imperative_dataclasses`
+  ref_orm_imperative_dataclasses
 
 
 :ticket:`5027`
@@ -373,7 +373,7 @@ usage as well as :class:`_orm.Session` for ORM use, using the
    the initial releases of SQLAlchemy 1.4.   This is super new stuff that uses
    some previously unfamiliar programming techniques.
 
-The initial database API supported is the :ref:`dialect-postgresql-asyncpg`
+The initial database API supported is the ref_dialect-postgresql-asyncpg
 asyncio driver for PostgreSQL.
 
 The internal features of SQLAlchemy are fully integrated by making use of
@@ -423,7 +423,7 @@ tradition, the new API provides a **strictly optional
 feature** such that applications that wish to make use of such ORM features
 can opt to organize database-related code into functions which can then be
 run within greenlets using the :meth:`_asyncio.AsyncSession.run_sync`
-method. See the ``greenlet_orm.py`` example at :ref:`examples_asyncio`
+method. See the ``greenlet_orm.py`` example at ref_examples_asyncio
 for a demonstration.
 
 Support for asynchronous cursors is also provided using new methods
@@ -438,9 +438,9 @@ in traditional SQLAlchemy.
 
 .. seealso::
 
-  :ref:`asyncio_toplevel`
+  ref_asyncio_toplevel
 
-  :ref:`examples_asyncio`
+  ref_examples_asyncio
 
 
 
@@ -553,7 +553,7 @@ is established as the implementation.
 
     :meth:`_sql.ColumnOperators.regexp_replace`
 
-    :ref:`pysqlite_regexp` - SQLite implementation notes
+    ref_pysqlite_regexp - SQLite implementation notes
 
 
 :ticket:`1390`
@@ -1026,7 +1026,7 @@ structural specification, lists are used for data specification**.
 All IN expressions render parameters for each value in the list on the fly (e.g. expanding parameters)
 ------------------------------------------------------------------------------------------------------
 
-The "expanding IN" feature, first introduced in :ref:`change_3953`, has matured
+The "expanding IN" feature, first introduced in ref_change_3953, has matured
 enough such that it is clearly superior to the previous method of rendering IN
 expressions.  As the approach was improved to handle empty lists of values, it
 is now the only means that Core / ORM will use to render lists of IN
@@ -1043,7 +1043,7 @@ their parameters, nor could the parameter dictionary be fully used for
 statements that included IN expressions generally.
 
 In order to service the "baked query" feature described at
-:ref:`baked_toplevel`, a cacheable version of IN was needed, which is what
+ref_baked_toplevel, a cacheable version of IN was needed, which is what
 brought about the "expanding IN" feature.  In contrast to the existing behavior
 whereby the parameter list is expanded at statement construction time into
 individual :class:`.BindParameter` objects, the feature instead uses a single
@@ -1114,7 +1114,7 @@ introduced in version 1.3 and is described at :ref:`change_4271`.  The
 :paramref:`_sa.create_engine.empty_in_strategy` parameter, introduced in version
 1.2 as a means for migrating for how this case was treated for the previous IN
 system, is now deprecated and this flag no longer has an effect; as described
-in :ref:`change_3907`, this flag allowed a dialect to switch between the
+in ref_change_3907, this flag allowed a dialect to switch between the
 original system of comparing a column against itself, which turned out to be a
 huge performance issue, and a newer system of comparing "1 != 1" in
 order to produce a "false" expression. The 1.3 introduced behavior which
@@ -1941,7 +1941,7 @@ rather than invoking the same statement repeatedly, as psycopg2 lacks the abilit
 to PREPARE the statement ahead of time as would normally be expected for this
 approach to be performant.
 
-SQLAlchemy includes a :ref:`performance suite <examples_performance>` within
+SQLAlchemy includes a ref_examples_performance within
 its examples, where we can compare the times generated for the "batch_inserts"
 runner against 1.3 and 1.4, revealing a 3x-5x speedup for most flavors
 of batch insert:
@@ -1993,7 +1993,7 @@ The ultimate INSERT statement can be seen by enabling statement logging on the P
 
 The feature batches rows into groups of 1000 by default which can be affected
 using the ``executemany_values_page_size`` argument documented at
-:ref:`psycopg2_executemany_mode`.
+ref_psycopg2_executemany_mode.
 
 :ticket:`5263`
 
@@ -2572,7 +2572,7 @@ in the value of the ``name`` attribute.  Since this is a SQL NULL, the ORM
 would skip including these values within an INSERT so that SQL-level defaults
 take place, if any, else the value defaults to NULL on the database side.
 
-In version 1.0 as part of :ref:`migration_3061`, this behavior was refined so
+In version 1.0 as part of ref_migration_3061, this behavior was refined so
 that the ``None`` value was no longer populated into ``__dict__``, only
 returned.   Besides removing the mutating side effect of a getter operation,
 this change also made it possible to set columns that did have server defaults
@@ -2969,7 +2969,7 @@ It also occurs beyond the cache boundary so that the INSERT statement may
 be cached before the VALUES are rendered.
 
 A quick test of the ``execute_values()`` approach using the
-``bulk_inserts.py`` script in the :ref:`examples_performance` example
+``bulk_inserts.py`` script in the ref_examples_performance example
 suite reveals an approximate **fivefold performance increase**:
 
 .. sourcecode:: text
@@ -2983,7 +2983,7 @@ suite reveals an approximate **fivefold performance increase**:
     test_core_insert : A single Core INSERT construct inserting mappings in bulk. (100000 iterations); total time 0.944007 sec
 
 Support for the "batch" extension was added in version 1.2 in
-:ref:`change_4109`, and enhanced to include support for the ``execute_values``
+ref_change_4109, and enhanced to include support for the ``execute_values``
 extension in 1.3 in :ticket:`4623`.  In 1.4 the ``execute_values`` extension is
 now being turned on by default for INSERT statements; the "batch" extension
 for UPDATE and DELETE remains off by default.
@@ -3035,7 +3035,7 @@ with the following changes:
 
 .. seealso::
 
-    :ref:`psycopg2_executemany_mode`
+    ref_psycopg2_executemany_mode
 
 
 :ticket:`5401`
@@ -3051,7 +3051,7 @@ versions prior to 3.7.16, released in 2013.   It is not expected that
 any modern Python versions rely upon this limitation.
 
 The behavior was first introduced in 0.9 and was part of the larger change of
-allowing for right nested joins as described at :ref:`feature_joins_09`.
+allowing for right nested joins as described at ref_feature_joins_09.
 However the SQLite workaround produced many regressions in the 2013-2014
 period due to its complexity. In 2016, the dialect was modified so that the
 join rewriting logic would only occur for SQLite versions prior to 3.7.16 after
@@ -3114,7 +3114,7 @@ was not created.
 
 .. seealso::
 
-    :ref:`defaults_sequences`
+    ref_defaults_sequences
 
 :ticket:`4976`
 
@@ -3139,7 +3139,7 @@ parameters should be used; see the MSSQL dialect documentation linked below.
 
 .. seealso::
 
-    :ref:`mssql_identity`
+    ref_mssql_identity
 
 :ticket:`4235`
 

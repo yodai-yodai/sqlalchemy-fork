@@ -77,7 +77,7 @@ class Insert(StandardInsert):
 
         .. seealso::
 
-            :ref:`postgresql_insert_on_conflict` - example of how
+            ref_postgresql_insert_on_conflict - example of how
             to use :attr:`_expression.Insert.excluded`
 
         """
@@ -149,7 +149,7 @@ class Insert(StandardInsert):
 
         .. seealso::
 
-            :ref:`postgresql_insert_on_conflict`
+            ref_postgresql_insert_on_conflict
 
         """
         self._post_values_clause = OnConflictDoUpdate(
@@ -186,7 +186,7 @@ class Insert(StandardInsert):
 
         .. seealso::
 
-            :ref:`postgresql_insert_on_conflict`
+            ref_postgresql_insert_on_conflict
 
         """
         self._post_values_clause = OnConflictDoNothing(

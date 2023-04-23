@@ -463,7 +463,7 @@ Some limited direct support for MySQL / MariaDB extensions to SQL is currently
 available.
 
 * INSERT..ON DUPLICATE KEY UPDATE:  See
-  :ref:`mysql_insert_on_duplicate_key_update`
+  ref_mysql_insert_on_duplicate_key_update
 
 * SELECT pragma, use :meth:`_expression.Select.prefix_with` and
   :meth:`_query.Query.prefix_with`::
@@ -810,7 +810,7 @@ reflection will not include foreign keys.  For these tables, you may supply a
 
 .. seealso::
 
-    :ref:`mysql_storage_engines`
+    ref_mysql_storage_engines
 
 .. _mysql_unique_constraints:
 

@@ -1228,7 +1228,7 @@ the ON clause of the SQL join is expressed in terms of a SQL function.
 Expanding IN feature now supports empty lists
 ---------------------------------------------
 
-The "expanding IN" feature introduced in version 1.2 at :ref:`change_3953` now
+The "expanding IN" feature introduced in version 1.2 at ref_change_3953 now
 supports empty lists passed to the :meth:`.ColumnOperators.in_` operator.   The implementation
 for an empty list will produce an "empty set" expression that is specific to a target
 backend, such as "SELECT CAST(NULL AS INTEGER) WHERE 1!=1" for PostgreSQL,
@@ -1352,7 +1352,7 @@ Coercion of string SQL fragments to text() fully removed
 ---------------------------------------------------------
 
 The warnings that were first added in version 1.0, described at
-:ref:`migration_2992`, have now been converted into exceptions.    Continued
+ref_migration_2992, have now been converted into exceptions.    Continued
 concerns have been raised regarding the automatic coercion of string fragments
 passed to methods like :meth:`_query.Query.filter` and :meth:`_expression.Select.order_by` being
 converted to :func:`_expression.text` constructs, even though this has emitted a warning.
@@ -1554,7 +1554,7 @@ can now be explicitly ordered by passing a list of 2-tuples::
 
 .. seealso::
 
-    :ref:`mysql_insert_on_duplicate_key_update`
+    ref_mysql_insert_on_duplicate_key_update
 
 Dialect Improvements and Changes - SQLite
 =============================================
@@ -1611,7 +1611,7 @@ The above table would render in a CREATE TABLE statement as:
 
 .. seealso::
 
-    :ref:`sqlite_on_conflict_ddl`
+    ref_sqlite_on_conflict_ddl
 
 :ticket:`4360`
 
@@ -1708,7 +1708,7 @@ Pass it via :func:`_sa.create_engine`::
 
 .. seealso::
 
-    :ref:`mssql_pyodbc_fastexecutemany`
+    ref_mssql_pyodbc_fastexecutemany
 
 
 :ticket:`4158`
@@ -1758,7 +1758,7 @@ primary key column::
 
 .. seealso::
 
-    :ref:`mssql_identity`
+    ref_mssql_identity
 
 :ticket:`4362`
 

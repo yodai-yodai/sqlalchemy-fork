@@ -109,7 +109,7 @@
 
         .. seealso::
 
-            :ref:`asyncpg_prepared_statement_name`
+            ref_asyncpg_prepared_statement_name
 
     .. change::
         :tags: typing, bug
@@ -347,7 +347,7 @@
 
             :ref:`error_dcmx` - background on rationale
 
-            :ref:`orm_declarative_dc_mixins`
+            ref_orm_declarative_dc_mixins
 
     .. change::
         :tags: bug, postgresql
@@ -625,7 +625,7 @@
         SQLAlchemy now computes rowcount for a RETURNING statement in this specific
         case by counting the rows returned, rather than relying upon
         ``cursor.rowcount``.  In particular, the ORM versioned rows use case
-        (documented at :ref:`mapper_version_counter`) should now be fully
+        (documented at ref_mapper_version_counter) should now be fully
         supported with the SQL Server pyodbc dialect.
 
 
@@ -829,7 +829,7 @@
         :tags: usecase, typing
         :tickets: 9321
 
-        Improved the typing support for the :ref:`hybrids_toplevel`
+        Improved the typing support for the ref_hybrids_toplevel
         extension, updated all documentation to use ORM Annotated Declarative
         mappings, and added a new modifier called :attr:`.hybrid_property.inplace`.
         This modifier provides a way to alter the state of a :class:`.hybrid_property`
@@ -845,7 +845,7 @@
 
         .. seealso::
 
-            :ref:`hybrid_pep484_naming`
+            ref_hybrid_pep484_naming
 
     .. change::
         :tags: bug, orm
@@ -885,7 +885,7 @@
         :tickets: 9295
 
         Adjusted the behavior of the ``thick_mode`` parameter for the
-        :ref:`oracledb` dialect to correctly accept ``False`` as a value.
+        ref_oracledb dialect to correctly accept ``False`` as a value.
         Previously, only ``None`` would indicate that thick mode should be
         disabled.
 
@@ -936,7 +936,7 @@
 
         .. seealso::
 
-            :ref:`dataclasses_pydantic`
+            ref_dataclasses_pydantic
 
 
 .. changelog::
@@ -1144,7 +1144,7 @@
         :class:`_orm.Mapper` object is created within the class creation process,
         there was no documented means of running code at this point.  The change
         is to immediately benefit custom mapping schemes such as that
-        of the :ref:`examples_versioned_history` example, which generate additional
+        of the ref_examples_versioned_history example, which generate additional
         mappers and tables in response to the creation of mapped classes.
 
 
@@ -1174,7 +1174,7 @@
         :tags: bug, examples
         :tickets: 9220
 
-        Reworked the :ref:`examples_versioned_history` to work with
+        Reworked the ref_examples_versioned_history to work with
         version 2.0, while at the same time improving the overall working of
         this example to use newer APIs, including a newly added hook
         :meth:`_orm.MapperEvents.after_mapper_constructed`.
@@ -1406,7 +1406,7 @@
 
         .. seealso::
 
-            :ref:`automap_by_module` - illustrates use of both techniques at once.
+            ref_automap_by_module - illustrates use of both techniques at once.
 
     .. change::
         :tags: orm, bug
@@ -1520,7 +1520,7 @@
 
         .. seealso::
 
-            :ref:`mssql_comment_support`
+            ref_mssql_comment_support
 
 
 .. changelog::
@@ -1937,7 +1937,7 @@
 
         .. seealso::
 
-            :ref:`orm_declarative_native_dataclasses_non_mapped_fields`
+            ref_orm_declarative_native_dataclasses_non_mapped_fields
 
 
     .. change::
@@ -2172,7 +2172,7 @@
         :tags: bug, orm
         :tickets: 8880
 
-        Fixed bug in :ref:`orm_declarative_native_dataclasses` feature where using
+        Fixed bug in ref_orm_declarative_native_dataclasses feature where using
         plain dataclass fields with the ``__allow_unmapped__`` directive in a
         mapping would not create a dataclass with the correct class-level state for
         those fields, copying the raw ``Field`` object to the class inappropriately
@@ -2186,7 +2186,7 @@
         Added support for the :func:`.association_proxy` extension function to
         take part within Python ``dataclasses`` configuration, when using
         the native dataclasses feature described at
-        :ref:`orm_declarative_native_dataclasses`.  Included are attribute-level
+        ref_orm_declarative_native_dataclasses.  Included are attribute-level
         arguments including :paramref:`.association_proxy.init` and
         :paramref:`.association_proxy.default_factory`.
 
@@ -2237,7 +2237,7 @@
         attribute constructs including :func:`_orm.mapped_column`,
         :func:`_orm.relationship` etc. to provide for the Python dataclasses
         ``compare`` parameter on ``field()``, when using the
-        :ref:`orm_declarative_native_dataclasses` feature. Pull request courtesy
+        ref_orm_declarative_native_dataclasses feature. Pull request courtesy
         Simon Schiele.
 
     .. change::
@@ -3005,7 +3005,7 @@
 
         .. seealso::
 
-            :ref:`sqlite_include_internal`
+            ref_sqlite_include_internal
 
     .. change::
         :tags: feature, postgresql
@@ -3039,7 +3039,7 @@
 
             :ref:`ticket_8054`
 
-            :ref:`oracledb`
+            ref_oracledb
 
     .. change::
         :tags: bug, engine
@@ -3197,7 +3197,7 @@
 
             :ref:`ticket_6842`
 
-            :ref:`postgresql_psycopg`
+            ref_postgresql_psycopg
 
 
 
@@ -3231,7 +3231,7 @@
         Additionally, classes mapped by :class:`_orm.composite` now support
         ordering comparison operations, e.g. ``<``, ``>=``, etc.
 
-        See the new documentation at :ref:`mapper_composite` for examples.
+        See the new documentation at ref_mapper_composite for examples.
 
     .. change::
         :tags: engine, bug
@@ -4005,7 +4005,7 @@
         ``'value'``. For normal bound value handling, the :class:`_types.Unicode`
         datatype also may have implications for passing values to the DBAPI, again
         in the case of SQL Server, the pyodbc driver supports the use of
-        :ref:`setinputsizes mode <mssql_pyodbc_setinputsizes>` which will handle
+        ref_mssql_pyodbc_setinputsizes which will handle
         :class:`_types.String` versus :class:`_types.Unicode` differently.
 
 

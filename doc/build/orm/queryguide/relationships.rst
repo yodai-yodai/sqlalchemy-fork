@@ -92,7 +92,7 @@ The primary forms of relationship loading are:
   :meth:`.WriteOnlyCollection.add_all` and :meth:`.WriteOnlyCollection.remove`
   methods.  Querying the collection is performed by invoking a SELECT statement
   which is constructed using the :meth:`.WriteOnlyCollection.select`
-  method.    Write only loading is discussed at :ref:`write_only_relationship`.
+  method.    Write only loading is discussed at ref_write_only_relationship.
 
 * **dynamic loading** - available via ``lazy='dynamic'``, or by
   annotating the left side of the :class:`_orm.Relationship` object using the
@@ -102,9 +102,9 @@ The primary forms of relationship loading are:
   contents. However, dynamic loaders will implicitly iterate the underlying
   collection in various circumstances which makes them less useful for managing
   truly large collections. Dynamic loaders are superseded by
-  :ref:`"write only" <write_only_relationship>` collections, which will prevent
+  ref_write_only_relationship collections, which will prevent
   the underlying collection from being implicitly loaded under any
-  circumstances. Dynamic loaders are discussed at :ref:`dynamic_relationship`.
+  circumstances. Dynamic loaders are discussed at ref_dynamic_relationship.
 
 
 .. _relationship_lazy_option:

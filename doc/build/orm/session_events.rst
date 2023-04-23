@@ -108,7 +108,7 @@ apply to subsequent relationship loads, which includes
 lazy loads, selectinloads, etc.
 
 For a series of classes that all feature some common column structure,
-if the classes are composed using a :ref:`declarative mixin <declarative_mixins>`,
+if the classes are composed using a ref_declarative_mixins,
 the mixin class itself may be used in conjunction with the :func:`_orm.with_loader_criteria`
 option by making use of a Python lambda.  The Python lambda will be invoked at
 query compilation time against the specific entities which match the criteria.
@@ -160,7 +160,7 @@ to intercept all objects that extend from ``HasTimestamp`` and filter their
 
 .. seealso::
 
-    :ref:`examples_session_orm_events` - includes working examples of the
+    ref_examples_session_orm_events - includes working examples of the
     above :func:`_orm.with_loader_criteria` recipes.
 
 .. _do_orm_execute_re_executing:
@@ -244,7 +244,7 @@ result from the "frozen" result, the :func:`_orm.loading.merge_frozen_result`
 function is used to merge the "frozen" data from the result object into the
 current session.
 
-The above example is implemented as a complete example in :ref:`examples_caching`.
+The above example is implemented as a complete example in ref_examples_caching.
 
 The :meth:`_orm.ORMExecuteState.invoke_statement` method may also be called
 multiple times, passing along different information to the
@@ -253,14 +253,14 @@ that the :class:`_orm.Session` will make use of different
 :class:`_engine.Engine` objects each time.  This will return a different
 :class:`_engine.Result` object each time; these results can be merged together
 using the :meth:`_engine.Result.merge` method.  This is the technique employed
-by the :ref:`horizontal_sharding_toplevel` extension; see the source code to
+by the ref_horizontal_sharding_toplevel extension; see the source code to
 familiarize.
 
 .. seealso::
 
-    :ref:`examples_caching`
+    ref_examples_caching
 
-    :ref:`examples_sharding`
+    ref_examples_sharding
 
 
 
@@ -296,8 +296,8 @@ scanning the collections :attr:`.Session.new`, :attr:`.Session.dirty` and
 where something will be happening.
 
 For illustrations of :meth:`.SessionEvents.before_flush`, see
-examples such as :ref:`examples_versioned_history` and
-:ref:`examples_versioned_rows`.
+examples such as ref_examples_versioned_history and
+ref_examples_versioned_rows.
 
 ``after_flush()``
 ^^^^^^^^^^^^^^^^^
@@ -408,7 +408,7 @@ Object Lifecycle Events
 -----------------------
 
 Another use case for events is to track the lifecycle of objects.  This
-refers to the states first introduced at :ref:`session_object_states`.
+refers to the states first introduced at ref_session_object_states.
 
 All the states above can be tracked fully with events.   Each event
 represents a distinct state transition, meaning, the starting state
@@ -684,7 +684,7 @@ however, it is often much more convenient to use a "validator" hook, which
 uses these hooks behind the scenes; see :ref:`simple_validators` for
 background on this.  The attribute events are also behind the mechanics
 of backreferences.   An example illustrating use of attribute events
-is in :ref:`examples_instrumentation`.
+is in ref_examples_instrumentation.
 
 
 

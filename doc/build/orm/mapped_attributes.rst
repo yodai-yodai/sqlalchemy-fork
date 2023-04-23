@@ -252,7 +252,7 @@ attribute, a SQL function is rendered which produces the same effect:
     (0, 12, 'address')
     {stop}
 
-Read more about Hybrids at :ref:`hybrids_toplevel`.
+Read more about Hybrids at ref_hybrids_toplevel.
 
 .. _synonyms:
 

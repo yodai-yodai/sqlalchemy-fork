@@ -68,7 +68,7 @@ def listen(
       internal list upon discovery. This feature is not typically used or
       recommended by the SQLAlchemy maintainers, but is provided to ensure
       certain user defined functions can run before others, such as when
-      :ref:`Changing the sql_mode in MySQL <mysql_sql_mode>`.
+      ref_mysql_sql_mode.
 
     :param bool named: When using named argument passing, the names listed in
       the function argument specification will be used as keys in the

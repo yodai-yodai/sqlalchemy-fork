@@ -105,7 +105,7 @@ one :class:`_schema.Column` we need::
 .. warning:: When passed as a Python-evaluable string, the
     :paramref:`_orm.relationship.foreign_keys` argument is interpreted using Python's
     ``eval()`` function. **DO NOT PASS UNTRUSTED INPUT TO THIS STRING**. See
-    :ref:`declarative_relationship_eval` for details on declarative
+    ref_declarative_relationship_eval for details on declarative
     evaluation of :func:`_orm.relationship` arguments.
 
 
@@ -168,7 +168,7 @@ argument.
     :paramref:`_orm.relationship.primaryjoin` argument is interpreted using
     Python's
     ``eval()`` function. **DO NOT PASS UNTRUSTED INPUT TO THIS STRING**. See
-    :ref:`declarative_relationship_eval` for details on declarative
+    ref_declarative_relationship_eval for details on declarative
     evaluation of :func:`_orm.relationship` arguments.
 
 
@@ -600,7 +600,7 @@ use the string name of the table as it is present in the :class:`_schema.MetaDat
     :paramref:`_orm.relationship.primaryjoin` and
     :paramref:`_orm.relationship.secondaryjoin` arguments are interpreted using
     Python's ``eval()`` function. **DO NOT PASS UNTRUSTED INPUT TO THESE
-    STRINGS**. See :ref:`declarative_relationship_eval` for details on
+    STRINGS**. See ref_declarative_relationship_eval for details on
     declarative evaluation of :func:`_orm.relationship` arguments.
 
 

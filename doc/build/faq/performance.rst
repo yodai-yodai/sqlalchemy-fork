@@ -439,7 +439,7 @@ Common strategies to mitigate this include:
       for user, address in session.execute(select(u_b, a_b).join(User.addresses)):
           ...
 
-* Use result caching - see :ref:`examples_caching` for an in-depth example
+* Use result caching - see ref_examples_caching for an in-depth example
   of this.
 
 * Consider a faster interpreter like that of PyPy.
@@ -449,7 +449,7 @@ practice they are very easy to read.
 
 .. seealso::
 
-    :ref:`examples_performance` - a suite of performance demonstrations
+    ref_examples_performance - a suite of performance demonstrations
     with bundled profiling capabilities.
 
 I'm inserting 400,000 rows with the ORM and it's really slow!

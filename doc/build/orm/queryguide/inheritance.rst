@@ -100,7 +100,7 @@ loaded, in the case that the consuming application will need to be accessing
 subclass-specific attributes, as this would be an example of the
 :term:`N plus one` problem that emits additional SQL per row.  This additional SQL can
 impact performance and also be incompatible with approaches such as
-using :ref:`asyncio <asyncio_toplevel>`.  Additionally, in our query for
+using ref_asyncio_toplevel.  Additionally, in our query for
 ``Employee`` objects, since the query is against the base table only, we did
 not have a way to add SQL criteria involving subclass-specific attributes in
 terms of ``Manager`` or ``Engineer``. The next two sections detail two

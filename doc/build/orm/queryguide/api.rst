@@ -118,7 +118,7 @@ The ``populate_existing`` execution option is equvialent to the
 
     :ref:`faq_session_identity` - in :doc:`/faq/index`
 
-    :ref:`session_expire` - in the ORM :class:`_orm.Session`
+    ref_session_expire - in the ORM :class:`_orm.Session`
     documentation
 
 .. _orm_queryguide_autoflush:
@@ -288,7 +288,7 @@ Identity Token
 .. doctest-disable:
 
 .. deepalchemy::   This option is an advanced-use feature mostly intended
-   to be used with the :ref:`horizontal_sharding_toplevel` extension. For
+   to be used with the ref_horizontal_sharding_toplevel extension. For
    typical cases of loading objects with identical primary keys from different
    "shards" or partitions, consider using individual :class:`_orm.Session`
    objects per shard first.
@@ -300,7 +300,7 @@ first and foremost to support extensions which perform per-row "sharding",
 where objects may be loaded from any number of replicas of a particular
 database table that nonetheless have overlapping primary key values.
 The primary consumer of "identity token" is the
-:ref:`horizontal_sharding_toplevel` extension, which supplies a general
+ref_horizontal_sharding_toplevel extension, which supplies a general
 framework for persisting objects among multiple "shards" of a particular
 database table.
 
@@ -361,7 +361,7 @@ into both ``test_schema.my_table`` as well as ``test_schema_2.my_table``.
 
 The :class:`_orm.Session` objects above are independent.  If we wanted to
 persist both objects in one transaction, we would need to use the
-:ref:`horizontal_sharding_toplevel` extension to do this.
+ref_horizontal_sharding_toplevel extension to do this.
 
 However, we can illustrate querying for these objects in one session as follows:
 
@@ -399,14 +399,14 @@ to view the two distinct identity tokens::
 
 
 The above logic takes place automatically when using the
-:ref:`horizontal_sharding_toplevel` extension.
+ref_horizontal_sharding_toplevel extension.
 
 .. versionadded:: 2.0.0rc1 - added the ``identity_token`` ORM level execution
    option.
 
 .. seealso::
 
-    :ref:`examples_sharding` - in the :ref:`examples_toplevel` section.
+    ref_examples_sharding - in the ref_examples_toplevel section.
     See the script ``separate_schema_translates.py`` for a demonstration of
     the above use case using the full sharding API.
 

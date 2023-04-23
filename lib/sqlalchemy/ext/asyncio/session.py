@@ -987,7 +987,7 @@ class AsyncSession(ReversibleProxy[Session]):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 
@@ -1028,7 +1028,7 @@ class AsyncSession(ReversibleProxy[Session]):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 

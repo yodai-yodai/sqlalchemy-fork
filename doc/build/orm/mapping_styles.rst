@@ -364,7 +364,7 @@ An object of type ``User`` above will have a constructor which allows
 
 .. tip::
 
-    The :ref:`orm_declarative_native_dataclasses` feature provides an alternate
+    The ref_orm_declarative_native_dataclasses feature provides an alternate
     means of generating a default ``__init__()`` method by using
     Python dataclasses, and allows for a highly configurable constructor
     form.
@@ -453,7 +453,7 @@ Inspection of Mapper objects
 
 As illustrated in the previous section, the :class:`_orm.Mapper` object is
 available from any mapped class, regardless of method, using the
-:ref:`core_inspection_toplevel` system.  Using the
+ref_core_inspection_toplevel system.  Using the
 :func:`_sa.inspect` function, one can acquire the :class:`_orm.Mapper` from a
 mapped class::
 
@@ -528,7 +528,7 @@ The :class:`_orm.Session` to which the object is :term:`attached`, if any::
   >>> insp.session
   <sqlalchemy.orm.session.Session object at 0x7f07e614f160>
 
-Information about the current :ref:`persistence state <session_object_states>`
+Information about the current ref_session_object_states
 for the object::
 
   >>> insp.persistent

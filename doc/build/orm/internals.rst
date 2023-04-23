@@ -22,8 +22,8 @@ sections, are listed here.
 
 .. autoclass:: Composite
 
-.. autoclass:: CompositeProperty
-    :members:
+.. .. autoclass:: CompositeProperty
+  ..   :members:
 
 .. autoclass:: AttributeEventToken
     :members:

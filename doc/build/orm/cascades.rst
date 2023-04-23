@@ -60,9 +60,9 @@ it is no longer associated with that parent.
 .. warning:: The ``all`` cascade option implies the
    :ref:`cascade_refresh_expire`
    cascade setting which may not be desirable when using the
-   :ref:`asyncio_toplevel` extension, as it will expire related objects
+   ref_asyncio_toplevel extension, as it will expire related objects
    more aggressively than is typically appropriate in an explicit IO context.
-   See the notes at :ref:`asyncio_orm_avoid_lazyloads` for further background.
+   See the notes at ref_asyncio_orm_avoid_lazyloads for further background.
 
 The list of available values which can be specified for
 the :paramref:`_orm.relationship.cascade` parameter are described in the following subsections.
@@ -457,10 +457,10 @@ is as follows:
     support ``FOREIGN KEY`` constraints and they must be enforcing:
 
     * When using MySQL, an appropriate storage engine must be
-      selected.  See :ref:`mysql_storage_engines` for details.
+      selected.  See ref_mysql_storage_engines for details.
 
     * When using SQLite, foreign key support must be enabled explicitly.
-      See :ref:`sqlite_foreign_keys` for details.
+      See ref_sqlite_foreign_keys for details.
 
 .. topic:: Notes on Passive Deletes
 

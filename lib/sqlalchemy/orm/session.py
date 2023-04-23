@@ -1589,7 +1589,7 @@ class Session(_SessionClassMethods, EventTarget):
             .. tip:: When using SQLite, the SQLite driver included through
                Python 3.11 does not handle SAVEPOINTs correctly in all cases
                without workarounds. See the section
-               :ref:`pysqlite_serializable` for details on current workarounds.
+               ref_pysqlite_serializable for details on current workarounds.
 
           * ``"control_fully"`` - the :class:`_orm.Session` will take
             control of the given transaction as its own;
@@ -1838,7 +1838,7 @@ class Session(_SessionClassMethods, EventTarget):
 
             :ref:`session_begin_nested`
 
-            :ref:`pysqlite_serializable` - special workarounds required
+            ref_pysqlite_serializable - special workarounds required
             with the SQLite driver in order for SAVEPOINT to work
             correctly.
 
@@ -1895,7 +1895,7 @@ class Session(_SessionClassMethods, EventTarget):
 
             :ref:`unitofwork_transaction`
 
-            :ref:`asyncio_orm_avoid_lazyloads`
+            ref_asyncio_orm_avoid_lazyloads
 
         """
         trans = self._transaction
@@ -2972,7 +2972,7 @@ class Session(_SessionClassMethods, EventTarget):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 
@@ -3051,7 +3051,7 @@ class Session(_SessionClassMethods, EventTarget):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 
@@ -3093,7 +3093,7 @@ class Session(_SessionClassMethods, EventTarget):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 
@@ -3704,7 +3704,7 @@ class Session(_SessionClassMethods, EventTarget):
         This operation cascades to associated instances if the association is
         mapped with ``cascade="merge"``.
 
-        See :ref:`unitofwork_merging` for a detailed discussion of merging.
+        See ref_unitofwork_merging for a detailed discussion of merging.
 
         :param instance: Instance to be merged.
         :param load: Boolean, when False, :meth:`.merge` switches into

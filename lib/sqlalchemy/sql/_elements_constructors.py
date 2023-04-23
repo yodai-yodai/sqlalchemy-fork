@@ -667,7 +667,7 @@ def bindparam(
 
         :meth:`.ColumnOperators.in_`
 
-        :ref:`baked_in` - with baked queries
+        ref_baked_in - with baked queries
 
       .. note:: The "expanding" feature does not support "executemany"-
          style parameter sets.

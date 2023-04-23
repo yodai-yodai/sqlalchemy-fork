@@ -24,7 +24,7 @@ databases are not socket-based.  However it does provide a working asyncio
 interface that's useful for testing and prototyping purposes.
 
 Using a special asyncio mediation layer, the aiosqlite dialect is usable
-as the backend for the :ref:`SQLAlchemy asyncio <asyncio_toplevel>`
+as the backend for the ref_asyncio_toplevel
 extension package.
 
 This dialect should normally be used only with the

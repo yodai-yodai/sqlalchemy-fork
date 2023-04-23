@@ -80,7 +80,7 @@ Code Examples
 
 Working code examples, mostly regarding the ORM, are included in the
 SQLAlchemy distribution. A description of all the included example
-applications is at :ref:`examples_toplevel`.
+applications is at ref_examples_toplevel.
 
 There is also a wide variety of examples involving both core SQLAlchemy
 constructs as well as the ORM on the wiki.  See
@@ -109,7 +109,7 @@ SQLAlchemy's ``asyncio`` support depends upon the
 `greenlet <https://pypi.org/project/greenlet/>`_ project.    This dependency
 will be installed by default on common machine platforms, however is not
 supported on every architecture and also may not install by default on
-less common architectures.  See the section :ref:`asyncio_install` for
+less common architectures.  See the section ref_asyncio_install for
 additional details on ensuring asyncio support is present.
 
 Supported Installation Methods

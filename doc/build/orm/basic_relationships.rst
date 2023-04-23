@@ -716,14 +716,14 @@ association object::
 
 To enhance the association object pattern such that direct
 access to the ``Association`` object is optional, SQLAlchemy
-provides the :ref:`associationproxy_toplevel` extension. This
+provides the ref_associationproxy_toplevel extension. This
 extension allows the configuration of attributes which will
 access two "hops" with a single access, one "hop" to the
 associated object, and a second to a target attribute.
 
 .. seealso::
 
-    :ref:`associationproxy_toplevel` - allows direct "many to many" style
+    ref_associationproxy_toplevel - allows direct "many to many" style
     access between parent and child for a three-class association object mapping.
 
 .. warning::
@@ -731,7 +731,7 @@ associated object, and a second to a target attribute.
   Avoid mixing the association object pattern with the :ref:`many-to-many <relationships_many_to_many>`
   pattern directly, as this produces conditions where data may be read
   and written in an inconsistent fashion without special steps;
-  the :ref:`association proxy <associationproxy_toplevel>` is typically
+  the ref_associationproxy_toplevel is typically
   used to provide more succinct access.  For more detailed background
   on the caveats introduced by this combination, see the next section
   :ref:`association_pattern_w_m2m`.
@@ -899,11 +899,11 @@ A popular alternative to the above pattern is one where the direct many-to-many
 ``Parent.children`` and ``Child.parents`` relationships are replaced with
 an extension that will transparently proxy through the ``Association``
 class, while keeping everything consistent from the ORM's point of
-view.  This extension is known as the :ref:`Association Proxy <associationproxy_toplevel>`.
+view.  This extension is known as the ref_associationproxy_toplevel.
 
 .. seealso::
 
-    :ref:`associationproxy_toplevel` - allows direct "many to many" style
+    ref_associationproxy_toplevel - allows direct "many to many" style
     access between parent and child for a three-class association object mapping.
 
 .. _orm_declarative_relationship_eval:

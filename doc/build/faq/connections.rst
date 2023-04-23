@@ -402,7 +402,7 @@ current SQLAlchemy versions.
 
 .. seealso::
 
-    :ref:`pysqlite_threading_pooling` - info on PySQLite's behavior.
+    ref_pysqlite_threading_pooling - info on PySQLite's behavior.
 
 .. _faq_dbapi_connection:
 

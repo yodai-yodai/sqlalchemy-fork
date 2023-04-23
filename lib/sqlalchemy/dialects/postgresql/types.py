@@ -244,7 +244,7 @@ class TSVECTOR(sqltypes.TypeEngine[str]):
 
     .. seealso::
 
-        :ref:`postgresql_match`
+        ref_postgresql_match
 
     """
 

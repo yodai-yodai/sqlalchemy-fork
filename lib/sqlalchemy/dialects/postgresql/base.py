@@ -198,7 +198,7 @@ Valid values for ``isolation_level`` on most PostgreSQL dialects include:
 
     :ref:`dbapi_autocommit`
 
-    :ref:`postgresql_readonly_deferrable`
+    ref_postgresql_readonly_deferrable
 
     :ref:`psycopg2_isolation_level`
 
@@ -353,7 +353,7 @@ Remote-Schema Table Introspection and PostgreSQL search_path
     attribute set up.
 
 The PostgreSQL dialect can reflect tables from any schema, as outlined in
-:ref:`metadata_reflection_schemas`.
+ref_metadata_reflection_schemas.
 
 With regards to tables which these :class:`_schema.Table`
 objects refer to via foreign key constraint, a decision must be made as to how
@@ -1067,7 +1067,7 @@ construct, the DBAPI's "autocommit" mode must be used::
 
 .. seealso::
 
-    :ref:`postgresql_isolation_level`
+    ref_postgresql_isolation_level
 
 .. _postgresql_index_reflection:
 

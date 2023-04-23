@@ -474,14 +474,14 @@ about these classes include:
   To automatically generate a full-featured ``__init__()`` method which
   provides for positional arguments as well as arguments with default keyword
   values, the dataclasses feature introduced at
-  :ref:`orm_declarative_native_dataclasses` may be used.  It's of course
+  ref_orm_declarative_native_dataclasses may be used.  It's of course
   always an option to use an explicit ``__init__()`` method as well.
 
 * The ``__repr__()`` methods are added so that we get a readable string output;
   there's no requirement for these methods to be here.  As is the case
   with ``__init__()``, a ``__repr__()`` method
   can be generated automatically by using the
-  :ref:`dataclasses <orm_declarative_native_dataclasses>` feature.
+  ref_orm_declarative_native_dataclasses feature.
 
 .. topic::  Where'd the old Declarative go?
 
@@ -500,7 +500,7 @@ about these classes include:
     checkers such as Mypy and Pyright, without the need for plugins. Secondly,
     deriving the declarations from type annotations is part of SQLAlchemy's
     integration with Python dataclasses, which can now be
-    :ref:`generated natively <orm_declarative_native_dataclasses>` from mappings.
+    ref_orm_declarative_native_dataclasses from mappings.
 
     For users who like the "old" way, but still desire their IDEs to not
     mistakenly report typing errors for their declarative mappings, the
@@ -641,7 +641,7 @@ we declared explicitly::
 
 .. seealso::
 
-    Read more about table and schema reflection at :ref:`metadata_reflection_toplevel`.
+    Read more about table and schema reflection at ref_metadata_reflection_toplevel.
 
     For ORM-related variants of table reflection, the section
     :ref:`orm_declarative_reflected` includes an overview of the available

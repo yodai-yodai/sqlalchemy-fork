@@ -579,7 +579,7 @@ class InstanceEvents(event.Events[ClassManager[Any]]):
 
             :ref:`orm_server_defaults`
 
-            :ref:`metadata_defaults_toplevel`
+            ref_metadata_defaults_toplevel
 
         """
 
@@ -962,7 +962,7 @@ class MapperEvents(event.Events[mapperlib.Mapper[Any]]):
 
         .. seealso::
 
-            :ref:`examples_versioning` - an example which illustrates the use
+            ref_examples_versioning - an example which illustrates the use
             of the :meth:`_orm.MapperEvents.before_mapper_configured`
             event to create new mappers to record change-audit histories on
             objects.
@@ -1735,14 +1735,14 @@ class SessionEvents(event.Events[Session]):
             and parameters as well as an option that allows programmatic
             invocation of the statement at any point.
 
-            :ref:`examples_session_orm_events` - includes examples of using
+            ref_examples_session_orm_events - includes examples of using
             :meth:`_orm.SessionEvents.do_orm_execute`
 
-            :ref:`examples_caching` - an example of how to integrate
+            ref_examples_caching - an example of how to integrate
             Dogpile caching with the ORM :class:`_orm.Session` making use
             of the :meth:`_orm.SessionEvents.do_orm_execute` event hook.
 
-            :ref:`examples_sharding` - the Horizontal Sharding example /
+            ref_examples_sharding - the Horizontal Sharding example /
             extension relies upon the
             :meth:`_orm.SessionEvents.do_orm_execute` event hook to invoke a
             SQL statement on multiple backends and return a merged result.
@@ -2878,7 +2878,7 @@ class AttributeEvents(event.Events[QueryableAttribute[Any]]):
           we indicate that this value is to be persisted to the database.
           This supersedes the use of ``SOME_CONSTANT`` in the default generator
           for the :class:`_schema.Column`.  The ``active_column_defaults.py``
-          example given at :ref:`examples_instrumentation` illustrates using
+          example given at ref_examples_instrumentation illustrates using
           the same approach for a changing default, e.g. a timestamp
           generator.    In this particular example, it is not strictly
           necessary to do this since ``SOME_CONSTANT`` would be part of the
@@ -2939,7 +2939,7 @@ class AttributeEvents(event.Events[QueryableAttribute[Any]]):
             :class:`.AttributeEvents` - background on listener options such
             as propagation to subclasses.
 
-            :ref:`examples_instrumentation` - see the
+            ref_examples_instrumentation - see the
             ``active_column_defaults.py`` example.
 
         """
@@ -3070,7 +3070,7 @@ class QueryEvents(event.Events[Query[Any]]):
            the :meth:`_orm.QueryEvents.before_compile` event is **no longer
            used** for ORM-level attribute loads, such as loads of deferred
            or expired attributes as well as relationship loaders.   See the
-           new examples in :ref:`examples_session_orm_events` which
+           new examples in ref_examples_session_orm_events which
            illustrate new ways of intercepting and modifying ORM queries
            for the most common purpose of adding arbitrary filter criteria.
 
@@ -3121,7 +3121,7 @@ class QueryEvents(event.Events[Query[Any]]):
 
             :meth:`.QueryEvents.before_compile_delete`
 
-            :ref:`baked_with_before_compile`
+            ref_baked_with_before_compile
 
         """
 

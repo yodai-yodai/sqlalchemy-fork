@@ -80,7 +80,7 @@ Pooling Behavior
 ----------------
 
 The driver makes a change to the default pool behavior of pysqlite
-as described in :ref:`pysqlite_threading_pooling`.   The pysqlcipher driver
+as described in ref_pysqlite_threading_pooling.   The pysqlcipher driver
 has been observed to be significantly slower on connection than the
 pysqlite driver, most likely due to the encryption overhead, so the
 dialect here defaults to using the :class:`.SingletonThreadPool`

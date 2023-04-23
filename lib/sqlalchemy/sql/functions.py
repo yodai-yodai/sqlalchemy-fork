@@ -276,7 +276,7 @@ class FunctionElement(Executable, ColumnElement[_T], FromClause, Generative):
 
             :ref:`tutorial_functions_table_valued` - in the :ref:`unified_tutorial`
 
-            :ref:`postgresql_table_valued` - in the :ref:`postgresql_toplevel` documentation
+            ref_postgresql_table_valued - in the :ref:`postgresql_toplevel` documentation
 
             :meth:`_functions.FunctionElement.scalar_table_valued` - variant of
             :meth:`_functions.FunctionElement.table_valued` which delivers the
@@ -336,7 +336,7 @@ class FunctionElement(Executable, ColumnElement[_T], FromClause, Generative):
 
             :ref:`tutorial_functions_column_valued` - in the :ref:`unified_tutorial`
 
-            :ref:`postgresql_column_valued` - in the :ref:`postgresql_toplevel` documentation
+            ref_postgresql_column_valued - in the :ref:`postgresql_toplevel` documentation
 
             :meth:`_functions.FunctionElement.table_valued`
 
@@ -840,7 +840,7 @@ class _FunctionGenerator:
 
     Functions which are interpreted as "generic" functions know how to
     calculate their return type automatically. For a listing of known generic
-    functions, see :ref:`generic_functions`.
+    functions, see ref_generic_functions.
 
     .. note::
 

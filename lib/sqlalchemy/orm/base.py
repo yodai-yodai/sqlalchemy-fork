@@ -798,7 +798,7 @@ class Mapped(
         The :class:`_orm.Mapped` class represents attributes that are handled
         directly by the :class:`_orm.Mapper` class. It does not include other
         Python descriptor classes that are provided as extensions, including
-        :ref:`hybrids_toplevel` and the :ref:`associationproxy_toplevel`.
+        ref_hybrids_toplevel and the ref_associationproxy_toplevel.
         While these systems still make use of ORM-specific superclasses
         and structures, they are not :term:`instrumented` by the
         :class:`_orm.Mapper` and instead provide their own functionality
@@ -885,7 +885,7 @@ class DynamicMapped(_MappedAnnotationBase[_T]):
 
     .. legacy::  The "dynamic" lazy loader strategy is the legacy form of what
        is now the "write_only" strategy described in the section
-       :ref:`write_only_relationship`.
+       ref_write_only_relationship.
 
     E.g.::
 
@@ -896,13 +896,13 @@ class DynamicMapped(_MappedAnnotationBase[_T]):
                 cascade="all,delete-orphan"
             )
 
-    See the section :ref:`dynamic_relationship` for background.
+    See the section ref_dynamic_relationship for background.
 
     .. versionadded:: 2.0
 
     .. seealso::
 
-        :ref:`dynamic_relationship` - complete background
+        ref_dynamic_relationship - complete background
 
         :class:`.WriteOnlyMapped` - fully 2.0 style version
 
@@ -938,13 +938,13 @@ class WriteOnlyMapped(_MappedAnnotationBase[_T]):
                 cascade="all,delete-orphan"
             )
 
-    See the section :ref:`write_only_relationship` for background.
+    See the section ref_write_only_relationship for background.
 
     .. versionadded:: 2.0
 
     .. seealso::
 
-        :ref:`write_only_relationship` - complete background
+        ref_write_only_relationship - complete background
 
         :class:`.DynamicMapped` - includes legacy :class:`_orm.Query` support
 

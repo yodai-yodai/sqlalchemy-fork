@@ -1683,7 +1683,7 @@ Oracle, and SQL Server.
 
 .. seealso::
 
-    :ref:`postgresql_table_valued_overview` - in the :ref:`postgresql_toplevel` documentation.
+    ref_postgresql_table_valued_overview - in the :ref:`postgresql_toplevel` documentation.
 
     While many databases support table valued and other special
     forms, PostgreSQL tends to be where there is the most demand for these
@@ -1719,7 +1719,7 @@ towards as ``value``, and then selected two of its three rows.
 
 .. seealso::
 
-    :ref:`postgresql_table_valued` - in the :ref:`postgresql_toplevel` documentation -
+    ref_postgresql_table_valued - in the :ref:`postgresql_toplevel` documentation -
     this section will detail additional syntaxes such as special column derivations
     and "WITH ORDINALITY" that are known to work with PostgreSQL.
 
@@ -1757,7 +1757,7 @@ it is usable for custom SQL functions::
 
 .. seealso::
 
-    :ref:`postgresql_column_valued` - in the :ref:`postgresql_toplevel` documentation.
+    ref_postgresql_column_valued - in the :ref:`postgresql_toplevel` documentation.
 
 .. _tutorial_casts:
 

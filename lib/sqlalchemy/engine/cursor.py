@@ -1576,11 +1576,11 @@ class CursorResult(Result[_T]):
         .. note:: As indicated below, in current SQLAlchemy versions this
            accessor is only useful beyond what's already supplied by
            :attr:`_engine.CursorResult.inserted_primary_key` when using the
-           :ref:`postgresql_psycopg2` dialect.   Future versions hope to
+           psycopg2 dialect.   Future versions hope to
            generalize this feature to more dialects.
 
         This accessor is added to support dialects that offer the feature
-        that is currently implemented by the :ref:`psycopg2_executemany_mode`
+        that is currently implemented by the ref_psycopg2_executemany_mode
         feature, currently **only the psycopg2 dialect**, which provides
         for many rows to be INSERTed at once while still retaining the
         behavior of being able to return server-generated primary key values.

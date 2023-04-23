@@ -533,11 +533,11 @@ ways to refresh its contents with new data from the current transaction:
   ..
 
 Further discussion on the refresh / expire concept can be found at
-:ref:`session_expire`.
+ref_session_expire.
 
 .. seealso::
 
-  :ref:`session_expire`
+  ref_session_expire
 
   :ref:`faq_session_identity`
 
@@ -924,7 +924,7 @@ The :class:`.Session` is not designed to be a
 global object from which everyone consults as a "registry" of objects.
 That's more the job of a **second level cache**.   SQLAlchemy provides
 a pattern for implementing second level caching using `dogpile.cache <https://dogpilecache.readthedocs.io/>`_,
-via the :ref:`examples_caching` example.
+via the ref_examples_caching example.
 
 How can I get the :class:`~sqlalchemy.orm.session.Session` for a certain object?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -934,7 +934,7 @@ available on :class:`~sqlalchemy.orm.session.Session`::
 
     session = Session.object_session(someobject)
 
-The newer :ref:`core_inspection_toplevel` system can also be used::
+The newer ref_core_inspection_toplevel system can also be used::
 
     from sqlalchemy import inspect
 
@@ -952,7 +952,7 @@ time.
 The :class:`.Session` should be used in such a way that one
 instance exists for a single series of operations within a single
 transaction.   One expedient way to get this effect is by associating
-a :class:`.Session` with the current thread (see :ref:`unitofwork_contextual`
+a :class:`.Session` with the current thread (see ref_unitofwork_contextual
 for background).  Another is to use a pattern
 where the :class:`.Session` is passed between functions and is otherwise
 not shared with other threads.

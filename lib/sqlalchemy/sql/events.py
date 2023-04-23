@@ -446,10 +446,10 @@ class DDLEvents(event.Events[SchemaEventTarget]):
             :ref:`mapper_automated_reflection_schemes` -
             in the ORM mapping documentation
 
-            :ref:`automap_intercepting_columns` -
-            in the :ref:`automap_toplevel` documentation
+            ref_automap_intercepting_columns -
+            in the ref_automap_toplevel documentation
 
-            :ref:`metadata_reflection_dbagnostic_types` - in
-            the :ref:`metadata_reflection_toplevel` documentation
+            ref_metadata_reflection_dbagnostic_types - in
+            the ref_metadata_reflection_toplevel documentation
 
         """

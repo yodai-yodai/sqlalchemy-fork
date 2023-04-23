@@ -401,10 +401,10 @@ at once, such as::
 
 .. seealso::
 
-    :ref:`multipart_schema_names` - describes use of dotted schema names
+    ref_multipart_schema_names - describes use of dotted schema names
     with the SQL Server dialect.
 
-    :ref:`metadata_reflection_schemas`
+    ref_metadata_reflection_schemas
 
 
 .. _schema_metadata_schema_name:
@@ -543,7 +543,7 @@ for specific information regarding how default schemas are configured.
 
 .. seealso::
 
-    :ref:`postgresql_alternate_search_path` - in the :ref:`postgresql_toplevel` dialect documentation.
+    ref_postgresql_alternate_search_path - in the :ref:`postgresql_toplevel` dialect documentation.
 
 
 
@@ -552,8 +552,8 @@ Schemas and Reflection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The schema feature of SQLAlchemy interacts with the table reflection
-feature introduced at :ref:`metadata_reflection_toplevel`.  See the section
-:ref:`metadata_reflection_schemas` for additional details on how this works.
+feature introduced at ref_metadata_reflection_toplevel.  See the section
+ref_metadata_reflection_schemas for additional details on how this works.
 
 
 Backend-Specific Options

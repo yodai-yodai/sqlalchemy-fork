@@ -679,7 +679,7 @@ class AliasedClass(
     same attribute and method interface as the original mapped
     class, allowing :class:`.AliasedClass` to be compatible
     with any attribute technique which works on the original class,
-    including hybrid attributes (see :ref:`hybrids_toplevel`).
+    including hybrid attributes (see ref_hybrids_toplevel).
 
     The :class:`.AliasedClass` can be inspected for its underlying
     :class:`_orm.Mapper`, aliased selectable, and other information
@@ -885,7 +885,7 @@ class AliasedInsp(
 
     .. seealso::
 
-        :ref:`inspection_toplevel`
+        ref_inspection_toplevel
 
     """
 

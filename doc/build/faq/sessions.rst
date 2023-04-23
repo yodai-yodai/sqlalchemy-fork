@@ -64,7 +64,7 @@ Three ways, from most common to least:
 2. We tell our :class:`.Session` to re-read rows that it has already read,
    either when we next query for them using :meth:`.Session.expire_all`
    or :meth:`.Session.expire`, or immediately on an object using
-   :class:`.Session.refresh`.  See :ref:`session_expire` for detail on this.
+   :class:`.Session.refresh`.  See ref_session_expire for detail on this.
 
 3. We can run whole queries while setting them to definitely overwrite
    already-loaded objects as they read rows by using "populate existing".

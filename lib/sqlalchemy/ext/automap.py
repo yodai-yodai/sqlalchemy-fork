@@ -19,7 +19,7 @@ Declarative class techniques, :class:`.AutomapBase` seeks to provide
 a well-integrated approach to the issue of expediently auto-generating ad-hoc
 mappings.
 
-.. tip:: The :ref:`automap_toplevel` extension is geared towards a
+.. tip:: The ref_automap_toplevel extension is geared towards a
    "zero declaration" approach, where a complete ORM model including classes
    and pre-named relationships can be generated on the fly from a database
    schema. For applications that still want to use explicit class declarations
@@ -991,7 +991,7 @@ class AutomapBase:
 
     .. seealso::
 
-        :ref:`automap_toplevel`
+        ref_automap_toplevel
 
     """
 
@@ -1034,7 +1034,7 @@ class AutomapBase:
 
     .. seealso::
 
-        :ref:`automap_by_module`
+        ref_automap_by_module
 
     """
 
@@ -1133,7 +1133,7 @@ class AutomapBase:
 
          .. seealso::
 
-            :ref:`automap_by_module`
+            ref_automap_by_module
 
         :param name_for_scalar_relationship: callable function which will be
          used to produce relationship names for scalar relationships.  Defaults
@@ -1165,7 +1165,7 @@ class AutomapBase:
 
             For an overview of multiple-schema automap including the use
             of additional naming conventions to resolve table name
-            conflicts, see the section :ref:`automap_by_module`.
+            conflicts, see the section ref_automap_by_module.
 
             .. versionadded:: 2.0 :meth:`.AutomapBase.prepare` supports being
                directly invoked any number of times, keeping track of tables

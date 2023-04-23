@@ -20,7 +20,7 @@ on the class.
     their own instrumentation.  It is not intended for general use.
 
 For examples of how the instrumentation extension is used,
-see the example :ref:`examples_instrumentation`.
+see the example ref_examples_instrumentation.
 
 """
 import weakref

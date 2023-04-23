@@ -500,13 +500,13 @@ class WriteOnlyCollection(AbstractCollectionWriter[_T]):
     The :class:`.WriteOnlyCollection` is used in a mapping by
     using the ``"write_only"`` lazy loading strategy with
     :func:`_orm.relationship`.     For background on this configuration,
-    see :ref:`write_only_relationship`.
+    see ref_write_only_relationship.
 
     .. versionadded:: 2.0
 
     .. seealso::
 
-        :ref:`write_only_relationship`
+        ref_write_only_relationship
 
     """
 

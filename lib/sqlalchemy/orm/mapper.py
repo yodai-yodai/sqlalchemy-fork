@@ -432,7 +432,7 @@ class Mapper(
           be consistent in more scenarios independently of whether or not an
           orphan object has been flushed yet or not.
 
-          See the change note and example at :ref:`legacy_is_orphan_addition`
+          See the change note and example at ref_legacy_is_orphan_addition
           for more detail on this change.
 
         :param non_primary: Specify that this :class:`_orm.Mapper`
@@ -668,7 +668,7 @@ class Mapper(
 
            .. seealso::
 
-              :ref:`mapper_version_counter` - discussion of version counting
+              ref_mapper_version_counter - discussion of version counting
               and rationale.
 
         :param version_id_generator: Define how new version ids should
@@ -682,14 +682,14 @@ class Mapper(
           Alternatively, server-side versioning functions such as triggers,
           or programmatic versioning schemes outside of the version id
           generator may be used, by specifying the value ``False``.
-          Please see :ref:`server_side_version_counter` for a discussion
+          Please see ref_server_side_version_counter for a discussion
           of important points when using this option.
 
           .. seealso::
 
-             :ref:`custom_version_counter`
+             ref_custom_version_counter
 
-             :ref:`server_side_version_counter`
+             ref_server_side_version_counter
 
 
         :param with_polymorphic: A tuple in the form ``(<classes>,

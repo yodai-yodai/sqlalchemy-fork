@@ -411,15 +411,15 @@ reverted when a connection is returned to the connection pool.
 
 .. seealso::
 
-      :ref:`SQLite Transaction Isolation <sqlite_isolation_level>`
+      ref_sqlite_isolation_level
 
-      :ref:`PostgreSQL Transaction Isolation <postgresql_isolation_level>`
+      ref_postgresql_isolation_level
 
-      :ref:`MySQL Transaction Isolation <mysql_isolation_level>`
+      ref_mysql_isolation_level
 
-      :ref:`SQL Server Transaction Isolation <mssql_isolation_level>`
+      ref_mssql_isolation_level
 
-      :ref:`Oracle Transaction Isolation <oracle_isolation_level>`
+      ref_oracle_isolation_level
 
       :ref:`session_transaction_isolation` - for the ORM
 
@@ -852,8 +852,8 @@ as the schema name is passed to these methods explicitly.
     values into account for individual objects.
 
     To use a single :class:`_orm.Session` with multiple ``schema_translate_map``
-    configurations, the :ref:`horizontal_sharding_toplevel` extension may
-    be used.  See the example at :ref:`examples_sharding`.
+    configurations, the ref_horizontal_sharding_toplevel extension may
+    be used.  See the example at ref_examples_sharding.
 
 .. _sql_caching:
 
@@ -1765,7 +1765,7 @@ be used when the statement is invoked::
 
 
 For a series of examples of "lambda" caching with performance comparisons,
-see the "short_selects" test suite within the :ref:`examples_performance`
+see the "short_selects" test suite within the ref_examples_performance
 performance example.
 
 .. _engine_insertmanyvalues:
@@ -1820,7 +1820,7 @@ place when making use of the :meth:`_dml.Insert.returning` method of an
 execution, which occurs when passing a list of dictionaries to the
 :paramref:`_engine.Connection.execute.parameters` parameter of the
 :meth:`_engine.Connection.execute` or :meth:`_orm.Session.execute` methods (as
-well as equivalent methods under :ref:`asyncio <asyncio_toplevel>` and
+well as equivalent methods under ref_asyncio_toplevel and
 shorthand methods like :meth:`_orm.Session.scalars`). It also takes place
 within the ORM :term:`unit of work` process when using methods such as
 :meth:`_orm.Session.add` and :meth:`_orm.Session.add_all` to add rows.

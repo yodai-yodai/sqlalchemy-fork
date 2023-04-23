@@ -85,7 +85,7 @@ of the :ref:`psycopg2 <psycopg2_isolation_level>` dialect:
 
 .. seealso::
 
-    :ref:`postgresql_isolation_level`
+    ref_postgresql_isolation_level
 
     :ref:`psycopg2_isolation_level`
 

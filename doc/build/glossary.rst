@@ -88,7 +88,7 @@ Glossary
 
         .. seealso::
 
-            :ref:`metadata_reflection_toplevel` - complete background on
+            ref_metadata_reflection_toplevel - complete background on
             database reflection.
 
             :ref:`orm_declarative_reflected` - background on integrating
@@ -461,9 +461,9 @@ Glossary
 
         .. seealso::
 
-            :ref:`mapper_version_counter` - SQLAlchemy's built-in version id feature.
+            ref_mapper_version_counter - SQLAlchemy's built-in version id feature.
 
-            :ref:`examples_versioning` - other examples of mappings that version rows
+            ref_examples_versioning - other examples of mappings that version rows
             temporally.
 
     registry
@@ -613,8 +613,8 @@ Glossary
             :doc:`orm/queryguide/relationships` - includes information on lazy
             loading of ORM related objects
 
-            :ref:`asyncio_orm_avoid_lazyloads` - tips on avoiding lazy loading
-            when using the :ref:`asyncio_toplevel` extension
+            ref_asyncio_orm_avoid_lazyloads - tips on avoiding lazy loading
+            when using the ref_asyncio_toplevel extension
 
     eager load
     eager loads
@@ -824,7 +824,7 @@ Glossary
 
         .. seealso::
 
-            :ref:`session_expire`
+            ref_session_expire
 
     Session
         The container or scope for ORM database operations. Sessions
@@ -1623,7 +1623,7 @@ Glossary
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
     pending
         This describes one of the major object states which
@@ -1635,7 +1635,7 @@ Glossary
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
     deleted
         This describes one of the major object states which
@@ -1650,7 +1650,7 @@ Glossary
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
     persistent
         This describes one of the major object states which
@@ -1665,7 +1665,7 @@ Glossary
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
     detached
         This describes one of the major object states which
@@ -1681,7 +1681,7 @@ Glossary
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
     attached
         Indicates an ORM object that is presently associated with a specific
@@ -1689,5 +1689,5 @@ Glossary
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 

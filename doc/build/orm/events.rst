@@ -91,7 +91,7 @@ Attribute Events
 Attribute events are triggered as things occur on individual attributes of
 ORM mapped objects.  These events form the basis for things like
 :ref:`custom validation functions <simple_validators>` as well as
-:ref:`backref handlers <relationships_backref>`.
+ref_relationships_backref.
 
 .. seealso::
 

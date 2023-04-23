@@ -293,7 +293,7 @@ with a ``@property`` as mentioned earlier::
         )
 
 Dictionary mappings are often combined with the "Association Proxy" extension to produce
-streamlined dictionary views.  See :ref:`proxying_dictionaries` and :ref:`composite_association_proxy`
+streamlined dictionary views.  See ref_proxying_dictionaries and ref_composite_association_proxy
 for examples.
 
 .. _key_collections_mutations:
@@ -400,7 +400,7 @@ about how the collection operates.
    of validation and simple marshaling.  See :ref:`simple_validators`
    for an example of this.
 
-   For the second use case, the :ref:`associationproxy_toplevel` extension is a
+   For the second use case, the ref_associationproxy_toplevel extension is a
    well-tested, widely used system that provides a read/write "view" of a
    collection in terms of some attribute present on the target object. As the
    target attribute can be a ``@property`` that returns virtually anything, a

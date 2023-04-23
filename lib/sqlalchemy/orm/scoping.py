@@ -143,11 +143,11 @@ __all__ = ["scoped_session"]
 class scoped_session(Generic[_S]):
     """Provides scoped management of :class:`.Session` objects.
 
-    See :ref:`unitofwork_contextual` for a tutorial.
+    See ref_unitofwork_contextual for a tutorial.
 
     .. note::
 
-       When using :ref:`asyncio_toplevel`, the async-compatible
+       When using ref_asyncio_toplevel, the async-compatible
        :class:`_asyncio.async_scoped_session` class should be
        used in place of :class:`.scoped_session`.
 
@@ -463,7 +463,7 @@ class scoped_session(Generic[_S]):
 
             :ref:`session_begin_nested`
 
-            :ref:`pysqlite_serializable` - special workarounds required
+            ref_pysqlite_serializable - special workarounds required
             with the SQLite driver in order for SAVEPOINT to work
             correctly.
 
@@ -545,7 +545,7 @@ class scoped_session(Generic[_S]):
 
             :ref:`unitofwork_transaction`
 
-            :ref:`asyncio_orm_avoid_lazyloads`
+            ref_asyncio_orm_avoid_lazyloads
 
 
         """  # noqa: E501
@@ -765,7 +765,7 @@ class scoped_session(Generic[_S]):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 
@@ -806,7 +806,7 @@ class scoped_session(Generic[_S]):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 
@@ -1423,7 +1423,7 @@ class scoped_session(Generic[_S]):
         This operation cascades to associated instances if the association is
         mapped with ``cascade="merge"``.
 
-        See :ref:`unitofwork_merging` for a detailed discussion of merging.
+        See ref_unitofwork_merging for a detailed discussion of merging.
 
         :param instance: Instance to be merged.
         :param load: Boolean, when False, :meth:`.merge` switches into
@@ -1658,7 +1658,7 @@ class scoped_session(Generic[_S]):
 
         .. seealso::
 
-            :ref:`session_expire` - introductory material
+            ref_session_expire - introductory material
 
             :meth:`.Session.expire`
 

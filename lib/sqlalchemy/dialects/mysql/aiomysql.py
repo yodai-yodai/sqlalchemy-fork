@@ -17,13 +17,13 @@ r"""
    SQLAlchemy’s continuous integration. As of September, 2021 the driver
    appears to be unmaintained and no longer functions for Python version 3.10,
    and additionally depends on a significantly outdated version of PyMySQL.
-   Please refer to the :ref:`asyncmy` dialect for current MySQL/MariaDB asyncio
+   Please refer to the ref_asyncmy dialect for current MySQL/MariaDB asyncio
    functionality.
 
 The aiomysql dialect is SQLAlchemy's second Python asyncio dialect.
 
 Using a special asyncio mediation layer, the aiomysql dialect is usable
-as the backend for the :ref:`SQLAlchemy asyncio <asyncio_toplevel>`
+as the backend for the ref_asyncio_toplevel
 extension package.
 
 This dialect should normally be used only with the

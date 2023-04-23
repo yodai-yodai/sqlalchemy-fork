@@ -1521,7 +1521,7 @@ class ColumnOperators(Operators):
 
             .. versionchanged:: 2.0  ``plainto_tsquery()`` is used instead
                of ``to_tsquery()`` for PostgreSQL now; for compatibility with
-               other forms, see :ref:`postgresql_match`.
+               other forms, see ref_postgresql_match.
 
 
         * MySQL - renders ``MATCH (x) AGAINST (y IN BOOLEAN MODE)``

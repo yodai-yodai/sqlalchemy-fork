@@ -53,7 +53,7 @@ class Insert(StandardInsert):
 
     .. seealso::
 
-        :ref:`sqlite_on_conflict_insert`
+        ref_sqlite_on_conflict_insert
 
     """
 

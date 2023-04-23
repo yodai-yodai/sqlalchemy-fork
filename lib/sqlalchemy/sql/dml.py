@@ -1257,7 +1257,7 @@ class Insert(ValuesBase):
          correspond.
         :param include_defaults: if True, non-server default values and
          SQL expressions as specified on :class:`_schema.Column` objects
-         (as documented in :ref:`metadata_defaults_toplevel`) not
+         (as documented in ref_metadata_defaults_toplevel) not
          otherwise specified in the list of names will be rendered
          into the INSERT and SELECT statements, so that these values are also
          included in the data to be inserted.

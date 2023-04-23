@@ -80,7 +80,7 @@ class Insert(StandardInsert):
 
         .. seealso::
 
-            :ref:`mysql_insert_on_duplicate_key_update` - example of how
+            ref_mysql_insert_on_duplicate_key_update - example of how
             to use :attr:`_expression.Insert.inserted`
 
         """
@@ -139,7 +139,7 @@ class Insert(StandardInsert):
 
         .. seealso::
 
-            :ref:`mysql_insert_on_duplicate_key_update`
+            ref_mysql_insert_on_duplicate_key_update
 
         """
         if args and kw:

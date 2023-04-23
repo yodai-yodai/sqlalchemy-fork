@@ -327,7 +327,7 @@ class SingletonThreadPool(Pool):
 
     :class:`.SingletonThreadPool` is used by the SQLite dialect
     automatically when a memory-based database is used.
-    See :ref:`sqlite_toplevel`.
+    See ref_sqlite_toplevel.
 
     """
 

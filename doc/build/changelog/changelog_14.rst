@@ -7,11 +7,6 @@ This document details individual issue-level changes made throughout
 :ref:`migration_14_toplevel`.
 
 
-.. changelog_imports::
-
-    .. include:: changelog_13.rst
-        :start-line: 5
-
 
 .. changelog::
     :version: 1.4.48
@@ -995,7 +990,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`azure_synapse_ignore_no_transaction_on_rollback`
+            ref_azure_synapse_ignore_no_transaction_on_rollback
 
     .. change::
         :tags: bug, mypy
@@ -1832,7 +1827,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`postgresql_constraint_options`
+            ref_postgresql_constraint_options
 
     .. change::
         :tags: bug, orm, regression
@@ -1982,7 +1977,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`asyncio_events_run_async`
+            ref_asyncio_events_run_async
 
 
     .. change::
@@ -3229,7 +3224,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`asyncmy`
+            ref_asyncmy
 
     .. change::
         :tags: bug, asyncio
@@ -4014,7 +4009,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`asyncio_scoped_session`
+            ref_asyncio_scoped_session
 
     .. change::
         :tags: usecase, mysql
@@ -5293,7 +5288,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`mypy_declarative_mixins`
+            ref_mypy_declarative_mixins
 
 
     .. change::
@@ -5582,7 +5577,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-          :ref:`aiosqlite`
+          ref_aiosqlite
 
     .. change::
         :tags: bug, regression, orm, declarative
@@ -5632,7 +5627,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-          :ref:`pysqlcipher`
+          ref_pysqlcipher
 
 
     .. change::
@@ -5746,7 +5741,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`orm_declarative_dataclasses_mixin`
+            ref_orm_declarative_dataclasses_mixin
 
     .. change::
         :tags: bug, sql, regression
@@ -5845,7 +5840,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-          :ref:`mssql_pyodbc_setinputsizes`
+          ref_mssql_pyodbc_setinputsizes
 
     .. change::
         :tags: bug, orm, regression
@@ -5947,7 +5942,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`mypy_toplevel`
+            ref_mypy_toplevel
 
     .. change::
         :tags: bug, sql
@@ -6402,7 +6397,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`orm_declarative_dataclasses_declarative_table`
+            ref_orm_declarative_dataclasses_declarative_table
 
     .. change::
         :tags: bug, sql
@@ -6510,7 +6505,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`asyncpg_prepared_statement_cache`
+            ref_asyncpg_prepared_statement_cache
 
     .. change::
         :tags: feature, mysql
@@ -6521,7 +6516,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-          :ref:`aiomysql`
+          ref_aiomysql
 
     .. change::
         :tags: bug, reflection
@@ -6605,7 +6600,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`sqlite_on_conflict_insert`
+            ref_sqlite_on_conflict_insert
 
     .. change::
         :tags: bug, asyncio
@@ -6701,7 +6696,7 @@ This document details individual issue-level changes made throughout
 
             :ref:`mapper_automated_reflection_schemes` - in the ORM mapping documentation
 
-            :ref:`automap_intercepting_columns` - in the :ref:`automap_toplevel` documentation
+            ref_automap_intercepting_columns - in the ref_automap_toplevel documentation
 
 
 
@@ -6792,7 +6787,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-          :ref:`metadata_reflection_dbagnostic_types` - example usage
+          ref_metadata_reflection_dbagnostic_types - example usage
 
     .. change::
         :tags: bug, sql
@@ -7523,13 +7518,13 @@ This document details individual issue-level changes made throughout
         :tickets: 3414
 
         SQLAlchemy now includes support for Python asyncio within both Core and
-        ORM, using the included :ref:`asyncio extension <asyncio_toplevel>`. The
+        ORM, using the included ref_asyncio_toplevel. The
         extension makes use of the `greenlet
         <https://greenlet.readthedocs.io/en/latest/>`_ library in order to adapt
         SQLAlchemy's sync-oriented internals such that an asyncio interface that
         ultimately interacts with an asyncio database adapter is now feasible.  The
         single driver supported at the moment is the
-        :ref:`dialect-postgresql-asyncpg` driver for PostgreSQL.
+        ref_dialect-postgresql-asyncpg driver for PostgreSQL.
 
         .. seealso::
 
@@ -7663,7 +7658,7 @@ This document details individual issue-level changes made throughout
         Microsoft SQL Server.  This removes the deprecated feature of using
         :class:`.Sequence` objects to manipulate IDENTITY characteristics which
         should now be performed using ``mssql_identity_start`` and
-        ``mssql_identity_increment`` as documented at :ref:`mssql_identity`. The
+        ``mssql_identity_increment`` as documented at ref_mssql_identity. The
         change includes a new parameter :paramref:`.Sequence.data_type` to
         accommodate SQL Server's choice of datatype, which for that backend
         includes INTEGER, BIGINT, and DECIMAL(n, 0).   The default starting value
@@ -7814,7 +7809,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`oracle_max_identifier_lengths` - in the Oracle dialect documentation
+            ref_oracle_max_identifier_lengths - in the Oracle dialect documentation
 
 
     .. change::
@@ -8284,7 +8279,7 @@ This document details individual issue-level changes made throughout
 
         .. seealso::
 
-            :ref:`postgresql_readonly_deferrable`
+            ref_postgresql_readonly_deferrable
 
     .. change::
         :tags: mysql, feature
@@ -8549,7 +8544,7 @@ This document details individual issue-level changes made throughout
 
        Remove deprecated method ``Session.prune`` and parameter
        ``Session.weak_identity_map``. See the recipe at
-       :ref:`session_referencing_behavior` for an event-based approach to
+       ref_session_referencing_behavior for an event-based approach to
        maintaining strong identity references.
        This change also removes the class ``StrongInstanceDict``.
 

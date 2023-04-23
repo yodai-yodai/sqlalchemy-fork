@@ -104,7 +104,7 @@ See the section :ref:`orm_queryguide_deferred_raiseload` for
 background and examples.
 
 .. tip::  as noted elsewhere, lazy loading is not available when using
-   :ref:`asyncio_toplevel`.
+   ref_asyncio_toplevel.
 
 Using ``load_only()`` with multiple entities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -437,8 +437,8 @@ when mapped SQL expressions should be loaded on a deferred basis:
 
 .. seealso::
 
-    :ref:`mapper_column_property_sql_expressions` - in the section
-    :ref:`mapper_sql_expressions`
+    ref_mapper_column_property_sql_expressions - in the section
+    ref_mapper_sql_expressions
 
     :ref:`orm_imperative_table_column_options` - in the section
     :ref:`orm_declarative_table_config_toplevel`
@@ -823,7 +823,7 @@ The :func:`.query_expression` mapping has these caveats:
     The :func:`_orm.with_expression` option is a special option used to
     apply SQL expressions to mapped classes dynamically at query time.
     For ordinary fixed SQL expressions configured on mappers,
-    see the section :ref:`mapper_sql_expressions`.
+    see the section ref_mapper_sql_expressions.
 
 .. _orm_queryguide_with_expression_unions:
 

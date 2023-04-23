@@ -80,20 +80,15 @@ SQLAlchemy Documentation
     * **Using the ORM:**
       :doc:`Using the ORM Session <orm/session>` |
       :doc:`ORM Querying Guide <orm/queryguide/index>` |
-      :doc:`Using AsyncIO <orm/extensions/asyncio>`
 
     * **Configuration Extensions:**
-      :doc:`Association Proxy <orm/extensions/associationproxy>` |
-      :doc:`Hybrid Attributes <orm/extensions/hybrid>` |
-      :doc:`Mutable Scalars <orm/extensions/mutable>` |
-      :doc:`Automap <orm/extensions/automap>` |
-      :doc:`All extensions <orm/extensions/index>`
+      none...
 
     * **Extending the ORM:**
       :doc:`ORM Events and Internals <orm/extending>`
 
     * **Other:**
-      :doc:`Introduction to Examples <orm/examples>`
+      none
 
   .. container:: core
 
@@ -102,14 +97,13 @@ SQLAlchemy Documentation
     * **Engines, Connections, Pools:**
       :doc:`Engine Configuration <core/engines>` |
       :doc:`Connections, Transactions, Results <core/connections>` |
-      :doc:`AsyncIO Support <orm/extensions/asyncio>` |
       :doc:`Connection Pooling <core/pooling>`
 
     * **Schema Definition:**
       :doc:`Overview <core/schema>` |
       :ref:`Tables and Columns <metadata_describing_toplevel>` |
-      :ref:`Database Introspection (Reflection) <metadata_reflection_toplevel>` |
-      :ref:`Insert/Update Defaults <metadata_defaults_toplevel>` |
+      ref_metadata_reflection_toplevel |
+      ref_metadata_defaults_toplevel |
       :ref:`Constraints and Indexes <metadata_constraints_toplevel>` |
       :ref:`Using Data Definition Language (DDL) <metadata_ddl_toplevel>`
 
@@ -118,7 +112,6 @@ SQLAlchemy Documentation
       :doc:`Operator Reference <core/operators>` |
       :doc:`SELECT and related constructs <core/selectable>` |
       :doc:`INSERT, UPDATE, DELETE <core/dml>` |
-      :doc:`SQL Functions <core/functions>` |
       :doc:`Table of Contents <core/expression_api>`
 
 
@@ -130,7 +123,6 @@ SQLAlchemy Documentation
 
     * **Core Basics:**
       :doc:`Overview <core/api_basics>` |
-      :doc:`Runtime Inspection API <core/inspection>` |
       :doc:`Event System <core/event>` |
       :doc:`Core Event Interfaces <core/events>` |
       :doc:`Creating Custom SQL Constructs <core/compiler>`
@@ -149,10 +141,6 @@ SQLAlchemy Documentation
       This section describes notes, options, and usage patterns regarding individual dialects.
 
       :doc:`PostgreSQL <dialects/postgresql>` |
-      :doc:`MySQL <dialects/mysql>` |
-      :doc:`SQLite <dialects/sqlite>` |
-      :doc:`Oracle <dialects/oracle>` |
-      :doc:`Microsoft SQL Server <dialects/mssql>`
 
       :doc:`More Dialects ... <dialects/index>`
 

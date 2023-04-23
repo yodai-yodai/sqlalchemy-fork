@@ -283,7 +283,7 @@ class ColumnProperty(
 
         .. seealso::
 
-            :ref:`mapper_column_property_sql_expressions_composed`
+            ref_mapper_column_property_sql_expressions_composed
 
         """
         return self.columns[0]

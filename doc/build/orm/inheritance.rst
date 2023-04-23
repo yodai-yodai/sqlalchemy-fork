@@ -21,7 +21,7 @@ return objects of multiple types.
 
     :ref:`loading_joined_inheritance` - in the :ref:`queryguide_toplevel`
 
-    :ref:`examples_inheritance` - complete examples of joined, single and
+    ref_examples_inheritance - complete examples of joined, single and
     concrete inheritance
 
 .. _joined_inheritance:

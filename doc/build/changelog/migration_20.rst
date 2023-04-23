@@ -458,7 +458,7 @@ of the :class:`_orm.Mapped` generic container.  Annotations which don't use
 :class:`_orm.Mapped` which link to constructs such as :func:`_orm.relationship`
 will raise errors in Python, as they suggest mis-configurations.
 
-SQLAlchemy applications that use the :ref:`Mypy plugin <mypy_toplevel>` with
+SQLAlchemy applications that use the ref_mypy_toplevel with
 explicit annotations that don't use :class:`_orm.Mapped` in their annotations
 are subject to these errors, as would occur in the example below::
 
@@ -1298,8 +1298,8 @@ has always allowed this style using so-called
 remove the base class requirement, a first class :ref:`decorator
 <declarative_config_toplevel>` form has been added.
 
-As yet another separate but related enhancement, support for :ref:`Python
-dataclasses <orm_declarative_dataclasses>` is added as well to both
+As yet another separate but related enhancement, support for Python
+dataclasses is added as well to both
 declarative decorator and classical mapping forms.
 
 .. seealso::
@@ -1524,7 +1524,7 @@ following the table, and may include additional notes not summarized here.
           )
 
           # or
-          
+
           session.scalar(
             select(func.count(User.id))
           )
@@ -2163,7 +2163,7 @@ and should be preferred.
 **Synopsis**
 
 The ``lazy="dynamic"`` relationship loader strategy, discussed at
-:ref:`dynamic_relationship`, makes use of the :class:`_query.Query` object
+ref_dynamic_relationship, makes use of the :class:`_query.Query` object
 which is legacy in 2.0. The "dynamic" relationship is not directly compatible
 with asyncio without workarounds, and additionally it does not fulfill its
 original purpose of preventing iteration of large collections as it has several
@@ -2249,7 +2249,7 @@ new feature is as :ref:`change_7123`.
 
     :ref:`change_7123`
 
-    :ref:`write_only_relationship`
+    ref_write_only_relationship
 
 
 .. _migration_20_session_autocommit:

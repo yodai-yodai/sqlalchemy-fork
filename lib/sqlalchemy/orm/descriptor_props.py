@@ -187,7 +187,7 @@ class CompositeProperty(
 
     .. seealso::
 
-        :ref:`mapper_composite`
+        ref_mapper_composite
 
     """
 
@@ -729,7 +729,7 @@ class CompositeProperty(
         """Produce boolean, comparison, and other operators for
         :class:`.Composite` attributes.
 
-        See the example in :ref:`composite_operations` for an overview
+        See the example in ref_composite_operations for an overview
         of usage , as well as the documentation for :class:`.PropComparator`.
 
         .. seealso::
@@ -858,7 +858,7 @@ class Composite(CompositeProperty[_T], _DeclarativeMapped[_T]):
 
     .. seealso::
 
-        :ref:`mapper_composite`
+        ref_mapper_composite
 
     """
 

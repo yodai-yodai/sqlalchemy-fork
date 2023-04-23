@@ -221,7 +221,7 @@ class InstanceState(interfaces.InspectionAttrInfo, Generic[_O]):
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
         """
         return self.key is None and not self._attached
@@ -233,7 +233,7 @@ class InstanceState(interfaces.InspectionAttrInfo, Generic[_O]):
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
         """
         return self.key is None and self._attached
@@ -263,7 +263,7 @@ class InstanceState(interfaces.InspectionAttrInfo, Generic[_O]):
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
         """
         return self.key is not None and self._attached and self._deleted
@@ -284,7 +284,7 @@ class InstanceState(interfaces.InspectionAttrInfo, Generic[_O]):
 
             :func:`.orm.util.was_deleted` - standalone function
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
         """
         return self._deleted
@@ -299,7 +299,7 @@ class InstanceState(interfaces.InspectionAttrInfo, Generic[_O]):
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
         """
         return self.key is not None and self._attached and not self._deleted
@@ -310,7 +310,7 @@ class InstanceState(interfaces.InspectionAttrInfo, Generic[_O]):
 
         .. seealso::
 
-            :ref:`session_object_states`
+            ref_session_object_states
 
         """
         return self.key is not None and not self._attached
@@ -377,7 +377,7 @@ class InstanceState(interfaces.InspectionAttrInfo, Generic[_O]):
 
         .. seealso::
 
-            :ref:`asyncio_toplevel`
+            ref_asyncio_toplevel
 
         """
         if _async_provider is None:

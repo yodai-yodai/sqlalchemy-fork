@@ -863,7 +863,7 @@ class TypeEngine(Visitable, Generic[_T]):
 
         .. seealso::
 
-            :ref:`metadata_reflection_dbagnostic_types` - describes the
+            ref_metadata_reflection_dbagnostic_types - describes the
             use of :meth:`_types.TypeEngine.as_generic` in conjunction with
             the :meth:`_sql.DDLEvents.column_reflect` event, which is its
             intended use.

@@ -121,7 +121,7 @@ The :func:`_orm.relationship` construct is introduced in the
 Finally, the above example classes include a ``__repr__()`` method, which is
 not required but is useful for debugging. Mapped classes can be created with
 methods such as ``__repr__()`` generated automatically, using dataclasses. More
-on dataclass mapping at :ref:`orm_declarative_native_dataclasses`.
+on dataclass mapping at ref_orm_declarative_native_dataclasses.
 
 
 Create an Engine
@@ -131,7 +131,7 @@ Create an Engine
 The :class:`_engine.Engine` is a **factory** that can create new
 database connections for us, which also holds onto connections inside
 of a :ref:`Connection Pool <pooling_toplevel>` for fast reuse.  For learning
-purposes, we normally use a :ref:`SQLite <sqlite_toplevel>` memory-only database
+purposes, we normally use a ref_sqlite_toplevel memory-only database
 for convenience::
 
     >>> from sqlalchemy import create_engine

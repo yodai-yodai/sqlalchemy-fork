@@ -294,7 +294,7 @@ Facts about :attr:`_engine.CursorResult.rowcount`:
 * "rowcount" is used by the ORM :term:`unit of work` process to validate that
   an UPDATE or DELETE statement matched the expected number of rows, and is
   also essential for the ORM versioning feature documented at
-  :ref:`mapper_version_counter`.
+  ref_mapper_version_counter.
 
 Using RETURNING with UPDATE, DELETE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

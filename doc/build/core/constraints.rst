@@ -412,13 +412,13 @@ Setting up Constraints when using the Declarative ORM Extension
 
 The :class:`_schema.Table` is the SQLAlchemy Core construct that allows one to define
 table metadata, which among other things can be used by the SQLAlchemy ORM
-as a target to map a class.  The :ref:`Declarative <declarative_toplevel>`
+as a target to map a class.  The ref_declarative_toplevel
 extension allows the :class:`_schema.Table` object to be created automatically, given
 the contents of the table primarily as a mapping of :class:`_schema.Column` objects.
 
 To apply table-level constraint objects such as :class:`_schema.ForeignKeyConstraint`
 to a table defined using Declarative, use the ``__table_args__`` attribute,
-described at :ref:`declarative_table_args`.
+described at ref_declarative_table_args.
 
 .. _constraint_naming_conventions:
 

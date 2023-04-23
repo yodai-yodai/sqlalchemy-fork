@@ -198,14 +198,14 @@ class ExcludeConstraint(ColumnCollectionConstraint):
         :param ops:
           Optional dictionary.  Used to define operator classes for the
           elements; works the same way as that of the
-          :ref:`postgresql_ops <postgresql_operator_classes>`
+          ref_postgresql_operator_classes
           parameter specified to the :class:`_schema.Index` construct.
 
           .. versionadded:: 1.3.21
 
           .. seealso::
 
-            :ref:`postgresql_operator_classes` - general description of how
+            ref_postgresql_operator_classes - general description of how
             PostgreSQL operator classes are specified.
 
         """

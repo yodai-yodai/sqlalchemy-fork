@@ -75,7 +75,7 @@ as much as possible for many rows::
 The parameter dictionaries contain key/value pairs which may correspond to ORM
 mapped attributes that line up with mapped :class:`._schema.Column`
 or :func:`_orm.mapped_column` declarations, as well as with
-:ref:`composite <mapper_composite>` declarations.   The keys should match
+ref_mapper_composite declarations.   The keys should match
 the **ORM mapped attribute name** and **not** the actual database column name,
 if these two names happen to be different.
 
@@ -510,9 +510,9 @@ on the capabilities of the backend in use.
 The dialects included with SQLAlchemy that include dialect-specific "upsert"
 API features are:
 
-* SQLite - using :class:`_sqlite.Insert` documented at :ref:`sqlite_on_conflict_insert`
-* PostgreSQL - using :class:`_postgresql.Insert` documented at :ref:`postgresql_insert_on_conflict`
-* MySQL/MariaDB - using :class:`_mysql.Insert` documented at :ref:`mysql_insert_on_duplicate_key_update`
+* SQLite - using :class:`_sqlite.Insert` documented at ref_sqlite_on_conflict_insert
+* PostgreSQL - using :class:`_postgresql.Insert` documented at ref_postgresql_insert_on_conflict
+* MySQL/MariaDB - using :class:`_mysql.Insert` documented at ref_mysql_insert_on_duplicate_key_update
 
 Users should review the above sections for background on proper construction
 of these objects; in particular, the "upsert" method typically needs to

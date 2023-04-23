@@ -10,7 +10,7 @@
 Defines a rudimental 'horizontal sharding' system which allows a Session to
 distribute queries and persistence operations across multiple databases.
 
-For a usage example, see the :ref:`examples_sharding` example included in
+For a usage example, see the ref_examples_sharding example included in
 the source distribution.
 
 .. deepalchemy:: The horizontal sharding extension is an advanced feature,

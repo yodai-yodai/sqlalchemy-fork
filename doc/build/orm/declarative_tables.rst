@@ -130,7 +130,7 @@ itself (more on this at :ref:`mapper_column_distinct_names`).
 
 .. seealso::
 
-    :ref:`mapping_columns_toplevel` - contains additional notes on affecting
+    ref_mapping_columns_toplevel - contains additional notes on affecting
     how :class:`_orm.Mapper` interprets incoming :class:`.Column` objects.
 
 .. _orm_declarative_mapped_column:
@@ -890,7 +890,7 @@ Dataclass features in ``mapped_column()``
 
 The :func:`_orm.mapped_column` construct integrates with SQLAlchemy's
 "native dataclasses" feature, discussed at
-:ref:`orm_declarative_native_dataclasses`.   See that section for current
+ref_orm_declarative_native_dataclasses.   See that section for current
 background on additional directives supported by :func:`_orm.mapped_column`.
 
 
@@ -911,7 +911,7 @@ available via the ``__table__`` attribute::
 
 The above table is ultimately the same one that corresponds to the
 :attr:`_orm.Mapper.local_table` attribute, which we can see through the
-:ref:`runtime inspection system <inspection_toplevel>`::
+ref_inspection_toplevel::
 
     from sqlalchemy import inspect
 
@@ -1268,13 +1268,13 @@ the sections :ref:`orm_mapping_joins` and :ref:`orm_mapping_arbitrary_subqueries
 
 The "imperative table" form is of particular use when the class itself
 is using an alternative form of attribute declaration, such as Python
-dataclasses.   See the section :ref:`orm_declarative_dataclasses` for detail.
+dataclasses.   See the section ref_orm_declarative_dataclasses for detail.
 
 .. seealso::
 
     :ref:`metadata_describing`
 
-    :ref:`orm_declarative_dataclasses`
+    ref_orm_declarative_dataclasses
 
 .. _orm_imperative_table_column_naming:
 
@@ -1407,7 +1407,7 @@ associate additional parameters with the column.   Options include:
 
     * :ref:`maptojoin`
 
-    * :ref:`mapper_sql_expressions`
+    * ref_mapper_sql_expressions
 
     For Declarative Table configuration with :func:`_orm.mapped_column`,
     most options are available directly; see the section
@@ -1423,7 +1423,7 @@ Mapping Declaratively with Reflected Tables
 There are several patterns available which provide for producing mapped
 classes against a series of :class:`_schema.Table` objects that were
 introspected from the database, using the reflection process described at
-:ref:`metadata_reflection`.
+ref_metadata_reflection.
 
 A simple way to map a class to a table reflected from the database is to
 use a declarative hybrid mapping, passing the
@@ -1535,7 +1535,7 @@ Using Automap
 ^^^^^^^^^^^^^^
 
 A more automated solution to mapping against an existing database where table
-reflection is to be used is to use the :ref:`automap_toplevel` extension. This
+reflection is to be used is to use the ref_automap_toplevel extension. This
 extension will generate entire mapped classes from a database schema, including
 relationships between classes based on observed foreign key constraints. While
 it includes hooks for customization, such as hooks that allow custom
@@ -1547,7 +1547,7 @@ class may be preferable for its less automated approach.
 
 .. seealso::
 
-    :ref:`automap_toplevel`
+    ref_automap_toplevel
 
 
 .. _mapper_automated_reflection_schemes:
@@ -1596,8 +1596,8 @@ with our event that adds a new ".key" element, such as in a mapping as below::
         __table__ = Table("some_table", Base.metadata, autoload_with=some_engine)
 
 The approach also works with both the :class:`.DeferredReflection` base class
-as well as with the :ref:`automap_toplevel` extension.   For automap
-specifically, see the section :ref:`automap_intercepting_columns` for
+as well as with the ref_automap_toplevel extension.   For automap
+specifically, see the section ref_automap_intercepting_columns for
 background.
 
 .. seealso::
@@ -1606,7 +1606,7 @@ background.
 
     :meth:`_events.DDLEvents.column_reflect`
 
-    :ref:`automap_intercepting_columns` - in the :ref:`automap_toplevel` documentation
+    ref_automap_intercepting_columns - in the ref_automap_toplevel documentation
 
 
 .. _mapper_primary_key:
@@ -1723,7 +1723,7 @@ still be in effect** for those :class:`_schema.Column` objects that include them
 even though they may be excluded from the ORM mapping.
 
 "Schema level column defaults" refers to the defaults described at
-:ref:`metadata_defaults` including those configured by the
+ref_metadata_defaults including those configured by the
 :paramref:`_schema.Column.default`, :paramref:`_schema.Column.onupdate`,
 :paramref:`_schema.Column.server_default` and
 :paramref:`_schema.Column.server_onupdate` parameters. These constructs

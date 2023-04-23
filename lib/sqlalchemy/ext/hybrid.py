@@ -171,7 +171,7 @@ The use of :attr:`.hybrid_property.inplace` indicates that the
 :meth:`.hybrid_property.expression` modifier should mutate the
 existing hybrid object at ``Interval.radius`` in place, without creating a
 new object.   Notes on this modifier and its
-rationale are discussed in the next section :ref:`hybrid_pep484_naming`.
+rationale are discussed in the next section ref_hybrid_pep484_naming.
 The use of ``@classmethod`` is optional, and is strictly to give typing
 tools a hint that ``cls`` in this case is expected to be the ``Interval``
 class, and not an instance of ``Interval``.
@@ -501,7 +501,7 @@ We can, of course, forego being dependent on the enclosing query's usage
 of joins in favor of the correlated subquery, which can portably be packed
 into a single column expression. A correlated subquery is more portable, but
 often performs more poorly at the SQL level. Using the same technique
-illustrated at :ref:`mapper_column_property_sql_expressions`,
+illustrated at ref_mapper_column_property_sql_expressions,
 we can adjust our ``SavingsAccount`` example to aggregate the balances for
 *all* accounts, and use a correlated subquery for the column expression::
 
@@ -1018,7 +1018,7 @@ class hybrid_method(interfaces.InspectionAttrInfo, Generic[_P, _R]):
 
         .. seealso::
 
-            :ref:`hybrid_pep484_naming`
+            ref_hybrid_pep484_naming
 
         """
         return self
@@ -1255,7 +1255,7 @@ class hybrid_property(interfaces.InspectionAttrInfo, ORMDescriptor[_T]):
 
         .. seealso::
 
-            :ref:`hybrid_pep484_naming`
+            ref_hybrid_pep484_naming
 
         """
         return hybrid_property._InPlace(self)

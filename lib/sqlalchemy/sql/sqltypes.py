@@ -1775,7 +1775,7 @@ class PickleType(TypeDecorator[object]):
     a serialized binary field.
 
     To allow ORM change events to propagate for elements associated
-    with :class:`.PickleType`, see :ref:`mutable_toplevel`.
+    with :class:`.PickleType`, see ref_mutable_toplevel.
 
     """
 
