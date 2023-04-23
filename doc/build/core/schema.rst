@@ -36,8 +36,6 @@ in creating real schema generation scripts.
     :maxdepth: 3
 
     metadata
-    reflection
-    defaults
     constraints
     ddl
 

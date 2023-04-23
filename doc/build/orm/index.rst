@@ -17,6 +17,4 @@ tutorial.
     queryguide/index
     session
     extending
-    extensions/index
-    examples
 

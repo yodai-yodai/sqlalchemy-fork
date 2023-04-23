@@ -17,8 +17,5 @@ in the :ref:`unified_tutorial`.
     operators
     selectable
     dml
-    functions
     compiler
-    serializer
     foundation
-    visitors

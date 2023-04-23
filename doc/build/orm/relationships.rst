@@ -15,9 +15,7 @@ of its usage.   For an introduction to relationships, start with
     basic_relationships
     self_referential
     join_conditions
-    large_collections
     collection_api
     relationship_persistence
-    backref
     relationship_api
 

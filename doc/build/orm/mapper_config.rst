@@ -22,16 +22,8 @@ in SQLAlchemy, it's first introduced in the :ref:`unified_tutorial` at
 
     mapping_styles
     declarative_mapping
-    dataclasses
-    mapped_sql_expr
     mapped_attributes
-    composites
     inheritance
     nonstandard_mappings
-    versioning
     mapping_api
 
-.. toctree::
-    :hidden:
-
-    scalar_mapping

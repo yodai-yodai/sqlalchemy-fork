@@ -19,18 +19,7 @@ Included Dialects
     :glob:
 
     postgresql
-    mysql
-    sqlite
-    oracle
-    mssql
 
-Support Levels for Included Dialects
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The following table summarizes the support level for each included dialect.
-
-.. dialect-table:: **Supported database versions for included dialects**
-  :header-rows: 1
 
 Support Definitions
 ^^^^^^^^^^^^^^^^^^^

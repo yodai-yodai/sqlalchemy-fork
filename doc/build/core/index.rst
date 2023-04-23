@@ -12,8 +12,8 @@ Language provides a schema-centric usage paradigm.
     :maxdepth: 2
 
     expression_api
+    engines_connections
     schema
     types
-    engines_connections
     api_basics
 

@@ -16,11 +16,9 @@ persistence operations is the
     :maxdepth: 3
 
     session_basics
-    session_state_management
     cascades
     session_transaction
     persistence_techniques
-    contextual
     session_events
     session_api
 

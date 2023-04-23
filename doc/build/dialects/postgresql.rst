@@ -3,7 +3,9 @@
 PostgreSQL
 ==========
 
-.. automodule:: sqlalchemy.dialects.postgresql.base
+The  PG module
+
+..  .. automodule:: sqlalchemy.dialects.postgresql.base
 
 ARRAY Types
 -----------
@@ -533,31 +535,3 @@ PostgreSQL DML Constructs
 
 .. _postgresql_psycopg2:
 
-psycopg2
---------
-
-.. automodule:: sqlalchemy.dialects.postgresql.psycopg2
-
-.. _postgresql_psycopg:
-
-psycopg
---------
-
-.. automodule:: sqlalchemy.dialects.postgresql.psycopg
-
-pg8000
-------
-
-.. automodule:: sqlalchemy.dialects.postgresql.pg8000
-
-.. _dialect-postgresql-asyncpg:
-
-asyncpg
--------
-
-.. automodule:: sqlalchemy.dialects.postgresql.asyncpg
-
-psycopg2cffi
-------------
-
-.. automodule:: sqlalchemy.dialects.postgresql.psycopg2cffi

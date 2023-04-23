@@ -6,6 +6,5 @@ Core API Basics
     :maxdepth: 2
 
     event
-    inspection
     exceptions
     internals
