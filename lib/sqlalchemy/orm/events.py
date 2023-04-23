@@ -2110,13 +2110,6 @@ class SessionEvents(event.Events[Session]):
         """Event for after the legacy :meth:`_orm.Query.update` method
         has been called.
 
-        .. legacy:: The :meth:`_orm.SessionEvents.after_bulk_update` method
-           is a legacy event hook as of SQLAlchemy 2.0.   The event
-           **does not participate** in :term:`2.0 style` invocations
-           using :func:`_dml.update` documented at
-           :ref:`orm_queryguide_update_delete_where`.  For 2.0 style use,
-           the :meth:`_orm.SessionEvents.do_orm_execute` hook will intercept
-           these calls.
 
         :param update_context: an "update context" object which contains
          details about the update, including these attributes:
@@ -2156,13 +2149,6 @@ class SessionEvents(event.Events[Session]):
         """Event for after the legacy :meth:`_orm.Query.delete` method
         has been called.
 
-        .. legacy:: The :meth:`_orm.SessionEvents.after_bulk_delete` method
-           is a legacy event hook as of SQLAlchemy 2.0.   The event
-           **does not participate** in :term:`2.0 style` invocations
-           using :func:`_dml.delete` documented at
-           :ref:`orm_queryguide_update_delete_where`.  For 2.0 style use,
-           the :meth:`_orm.SessionEvents.do_orm_execute` hook will intercept
-           these calls.
 
         :param delete_context: a "delete context" object which contains
          details about the update, including these attributes:
@@ -3044,11 +3030,6 @@ class QueryEvents(event.Events[Query[Any]]):
     """Represent events within the construction of a :class:`_query.Query`
     object.
 
-    .. legacy:: The :class:`_orm.QueryEvents` event methods are legacy
-        as of SQLAlchemy 2.0, and only apply to direct use of the
-        :class:`_orm.Query` object. They are not used for :term:`2.0 style`
-        statements. For events to intercept and modify 2.0 style ORM use,
-        use the :meth:`_orm.SessionEvents.do_orm_execute` hook.
 
 
     The :class:`_orm.QueryEvents` hooks are now superseded by the

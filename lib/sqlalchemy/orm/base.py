@@ -883,9 +883,6 @@ class DynamicMapped(_MappedAnnotationBase[_T]):
     to indicate that the ``lazy="dynamic"`` loader strategy should be used
     for a particular :func:`_orm.relationship`.
 
-    .. legacy::  The "dynamic" lazy loader strategy is the legacy form of what
-       is now the "write_only" strategy described in the section
-       ref_write_only_relationship.
 
     E.g.::
 

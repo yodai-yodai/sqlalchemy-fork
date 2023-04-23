@@ -4298,20 +4298,6 @@ class Session(_SessionClassMethods, EventTarget):
     ) -> None:
         """Perform a bulk save of the given list of objects.
 
-        .. legacy::
-
-            This method is a legacy feature as of the 2.0 series of
-            SQLAlchemy.   For modern bulk INSERT and UPDATE, see
-            the sections :ref:`orm_queryguide_bulk_insert` and
-            :ref:`orm_queryguide_bulk_update`.
-
-            For general INSERT and UPDATE of existing ORM mapped objects,
-            prefer standard :term:`unit of work` data management patterns,
-            introduced in the :ref:`unified_tutorial` at
-            :ref:`tutorial_orm_data_manipulation`.  SQLAlchemy 2.0
-            now uses :ref:`engine_insertmanyvalues` with modern dialects
-            which solves previous issues of bulk INSERT slowness.
-
         :param objects: a sequence of mapped object instances.  The mapped
          objects are persisted as is, and are **not** associated with the
          :class:`.Session` afterwards.
@@ -4403,15 +4389,6 @@ class Session(_SessionClassMethods, EventTarget):
     ) -> None:
         """Perform a bulk insert of the given list of mapping dictionaries.
 
-        .. legacy::
-
-            This method is a legacy feature as of the 2.0 series of
-            SQLAlchemy.   For modern bulk INSERT and UPDATE, see
-            the sections :ref:`orm_queryguide_bulk_insert` and
-            :ref:`orm_queryguide_bulk_update`.  The 2.0 API shares
-            implementation details with this method and adds new features
-            as well.
-
         :param mapper: a mapped class, or the actual :class:`_orm.Mapper`
          object,
          representing the single kind of object represented within the mapping
@@ -4482,14 +4459,6 @@ class Session(_SessionClassMethods, EventTarget):
     ) -> None:
         """Perform a bulk update of the given list of mapping dictionaries.
 
-        .. legacy::
-
-            This method is a legacy feature as of the 2.0 series of
-            SQLAlchemy.   For modern bulk INSERT and UPDATE, see
-            the sections :ref:`orm_queryguide_bulk_insert` and
-            :ref:`orm_queryguide_bulk_update`.  The 2.0 API shares
-            implementation details with this method and adds new features
-            as well.
 
         :param mapper: a mapped class, or the actual :class:`_orm.Mapper`
          object,

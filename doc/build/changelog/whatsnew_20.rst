@@ -929,7 +929,7 @@ Operations that are improved by this feature include:
   which improves upon the experimental version of this feature first introduced
   in SQLAlchemy 1.4.
 * the :class:`_orm.Session` "bulk" operations described at
-  :ref:`bulk_operations`, which are superseded by the above mentioned
+  bulk_operations, which are superseded by the above mentioned
   ORM Bulk Insert feature.
 
 To get a sense of the scale of the operation, below are performance

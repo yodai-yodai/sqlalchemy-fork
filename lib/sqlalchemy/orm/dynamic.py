@@ -12,8 +12,6 @@
 Dynamic collections act like Query() objects for read operations and support
 basic add/delete mutation.
 
-.. legacy:: the "dynamic" loader is a legacy feature, superseded by the
- "write_only" loader.
 
 
 """

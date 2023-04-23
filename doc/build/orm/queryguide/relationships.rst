@@ -850,18 +850,6 @@ Things to know about this kind of loading include:
 Subquery Eager Loading
 ----------------------
 
-.. legacy:: The :func:`_orm.subqueryload` eager loader is mostly legacy
-   at this point, superseded by the :func:`_orm.selectinload` strategy
-   which is of much simpler design, more flexible with features such as
-   :ref:`Yield Per <orm_queryguide_yield_per>`, and emits more efficient SQL
-   statements in most cases.   As :func:`_orm.subqueryload` relies upon
-   re-interpreting the original SELECT statement, it may fail to work
-   efficiently when given very complex source queries.
-
-   :func:`_orm.subqueryload` may continue to be useful for the specific
-   case of an eager loaded collection for objects that use composite primary
-   keys, on the Microsoft SQL Server backend that continues to not have
-   support for the "tuple IN" syntax.
 
 Subquery loading is similar in operation to selectin eager loading, however
 the SELECT statement which is emitted is derived from the original statement,

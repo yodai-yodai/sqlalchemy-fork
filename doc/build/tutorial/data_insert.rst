@@ -1,4 +1,4 @@
-.. highlight:: pycon+sql
+ highlight:: pycon+sql
 
 .. |prev| replace:: :doc:`data`
 .. |next| replace:: :doc:`data_select`
@@ -156,62 +156,6 @@ method in conjunction with the :class:`_sql.Insert` construct, the
 :class:`_engine.Connection` ensures that the column names which are passed
 will be expressed in the VALUES clause of the :class:`_sql.Insert`
 construct automatically.
-
-.. deepalchemy::
-
-    Hi, welcome to the first edition of **Deep Alchemy**.   The person on the
-    left is known as **The Alchemist**, and you'll note they are **not** a wizard,
-    as the pointy hat is not sticking upwards.   The Alchemist comes around to
-    describe things that are generally **more advanced and/or tricky** and
-    additionally **not usually needed**, but for whatever reason they feel you
-    should know about this thing that SQLAlchemy can do.
-
-    In this edition, towards the goal of having some interesting data in the
-    ``address_table`` as well, below is a more advanced example illustrating
-    how the :meth:`_sql.Insert.values` method may be used explicitly while at
-    the same time including for additional VALUES generated from the
-    parameters.    A :term:`scalar subquery` is constructed, making use of the
-    :func:`_sql.select` construct introduced in the next section, and the
-    parameters used in the subquery are set up using an explicit bound
-    parameter name, established using the :func:`_sql.bindparam` construct.
-
-    This is some slightly **deeper** alchemy just so that we can add related
-    rows without fetching the primary key identifiers from the ``user_table``
-    operation into the application.   Most Alchemists will simply use the ORM
-    which takes care of things like this for us.
-
-    .. sourcecode:: pycon+sql
-
-        >>> from sqlalchemy import select, bindparam
-        >>> scalar_subq = (
-        ...     select(user_table.c.id)
-        ...     .where(user_table.c.name == bindparam("username"))
-        ...     .scalar_subquery()
-        ... )
-
-        >>> with engine.connect() as conn:
-        ...     result = conn.execute(
-        ...         insert(address_table).values(user_id=scalar_subq),
-        ...         [
-        ...             {
-        ...                 "username": "spongebob",
-        ...                 "email_address": "spongebob@sqlalchemy.org",
-        ...             },
-        ...             {"username": "sandy", "email_address": "sandy@sqlalchemy.org"},
-        ...             {"username": "sandy", "email_address": "sandy@squirrelpower.org"},
-        ...         ],
-        ...     )
-        ...     conn.commit()
-        {execsql}BEGIN (implicit)
-        INSERT INTO address (user_id, email_address) VALUES ((SELECT user_account.id
-        FROM user_account
-        WHERE user_account.name = ?), ?)
-        [...] [('spongebob', 'spongebob@sqlalchemy.org'), ('sandy', 'sandy@sqlalchemy.org'),
-        ('sandy', 'sandy@squirrelpower.org')]
-        COMMIT{stop}
-
-    With that, we have some more interesting data in our tables that we will
-    make use of in the upcoming sections.
 
 .. tip:: A true "empty" INSERT that inserts only the "defaults" for a table
    without including any explicit values at all is generated if we indicate

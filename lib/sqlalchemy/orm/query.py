@@ -168,10 +168,6 @@ class Query(
 
     """ORM-level SQL construction object.
 
-    .. legacy:: The ORM :class:`.Query` object is a legacy construct
-       as of SQLAlchemy 2.0.   See the notes at the top of
-       :ref:`query_api_toplevel` for an overview, including links to migration
-       documentation.
 
     :class:`_query.Query` objects are normally initially generated using the
     :meth:`~.Session.query` method of :class:`.Session`, and in

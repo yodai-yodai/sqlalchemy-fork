@@ -461,18 +461,6 @@ class UpdateBase(
         of fetching server-side expressions and defaults, for supporting
         backends only.
 
-        .. deepalchemy::
-
-            The :meth:`.UpdateBase.return_defaults` method is used by the ORM
-            for its internal work in fetching newly generated primary key
-            and server default values, in particular to provide the underyling
-            implementation of the :paramref:`_orm.Mapper.eager_defaults`
-            ORM feature as well as to allow RETURNING support with bulk
-            ORM inserts.  Its behavior is fairly idiosyncratic
-            and is not really intended for general use.  End users should
-            stick with using :meth:`.UpdateBase.returning` in order to
-            add RETURNING clauses to their INSERT, UPDATE and DELETE
-            statements.
 
         Normally, a single row INSERT statement will automatically populate the
         :attr:`.CursorResult.inserted_primary_key` attribute when executed,

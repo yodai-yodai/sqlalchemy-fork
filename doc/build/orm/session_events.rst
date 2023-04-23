@@ -168,13 +168,6 @@ to intercept all objects that extend from ``HasTimestamp`` and filter their
 Re-Executing Statements
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. deepalchemy:: the statement re-execution feature involves a slightly
-   intricate recursive sequence, and is intended to solve the fairly hard
-   problem of being able to re-route the execution of a SQL statement into
-   various non-SQL contexts.    The twin examples of "dogpile caching" and
-   "horizontal sharding", linked below, should be used as a guide for when this
-   rather advanced feature is appropriate to be used.
-
 The :class:`_orm.ORMExecuteState` is capable of controlling the execution of
 the given statement; this includes the ability to either not invoke the
 statement at all, allowing a pre-constructed result set retrieved from a cache to

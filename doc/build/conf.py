@@ -35,12 +35,10 @@ needs_sphinx = "5.0.1"
 
 extensions = [
     "sphinx.ext.autodoc",
-    "zzzeeksphinx",
     "changelog",
     "sphinx_paramlinks",
     "sphinx_copybutton",
 ]
-needs_extensions = {"zzzeeksphinx": "1.2.1"}
 
 # Add any paths that contain templates here, relative to this directory.
 # not sure why abspath() is needed here, some users
@@ -293,7 +291,7 @@ gettext_compact = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "zzzeeksphinx"
+html_theme = "nature"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -342,7 +340,7 @@ html_last_updated_fmt = "%m/%d/%Y %H:%M:%S"
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
-html_additional_pages = {"notfound": "notfound.html"}
+# html_additional_pages = {"notfound": "notfound.html"}
 
 # If false, no module index is generated.
 html_domain_indices = False

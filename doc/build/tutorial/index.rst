@@ -1,10 +1,6 @@
 .. |tutorial_title| replace:: SQLAlchemy Unified Tutorial
 .. |next| replace:: :doc:`engine`
 
-.. footer_topic:: |tutorial_title|
-
-      Next Section: |next|
-
 .. _unified_tutorial:
 
 .. rst-class:: orm_core

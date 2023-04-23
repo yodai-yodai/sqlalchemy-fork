@@ -8,7 +8,4 @@
 
       Previous: |prev|   |   Next: |next|
 
-.. footer_topic:: |tutorial_title|
-
-      Next Tutorial Section: |next|
 

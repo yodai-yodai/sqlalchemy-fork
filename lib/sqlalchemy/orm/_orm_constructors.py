@@ -1384,9 +1384,6 @@ def relationship(
         left hand side within a Declarative mapping.  See the section
         ref_dynamic_relationship for examples.
 
-        .. legacy::  The "dynamic" lazy loader strategy is the legacy form of
-           what is now the "write_only" strategy described in the section
-           ref_write_only_relationship.
 
         .. seealso::
 

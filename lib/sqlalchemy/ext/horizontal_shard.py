@@ -102,13 +102,7 @@ class IdentityChooser(Protocol):
 
 
 class ShardedQuery(Query[_T]):
-    """Query class used with :class:`.ShardedSession`.
-
-    .. legacy:: The :class:`.ShardedQuery` is a subclass of the legacy
-       :class:`.Query` class.   The :class:`.ShardedSession` now supports
-       2.0 style execution via the :meth:`.ShardedSession.execute` method.
-
-    """
+    """Query class used with :class:`.ShardedSession`."""
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)

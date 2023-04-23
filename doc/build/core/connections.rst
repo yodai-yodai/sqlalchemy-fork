@@ -1351,12 +1351,6 @@ SELECTs with LIMIT/OFFSET are correctly rendered and cached.
 Using Lambdas to add significant speed gains to statement production
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. deepalchemy:: This technique is generally non-essential except in very performance
-   intensive scenarios, and intended for experienced Python programmers.
-   While fairly straightforward, it involves metaprogramming concepts that are
-   not appropriate for novice Python developers.  The lambda approach can be
-   applied to at a later time to existing code with a minimal amount of effort.
-
 Python functions, typically expressed as lambdas, may be used to generate
 SQL expressions which are cacheable based on the Python code location of
 the lambda function itself as well as the closure variables within the

@@ -831,14 +831,3 @@ ORM extension.   An example of use is at: ref_examples_sharding.
 
 .. _bulk_operations:
 
-Bulk Operations
-===============
-
-.. legacy::
-
-  SQLAlchemy 2.0 has integrated the :class:`_orm.Session` "bulk insert" and
-  "bulk update" capabilities into 2.0 style :meth:`_orm.Session.execute`
-  method, making direct use of :class:`_dml.Insert` and :class:`_dml.Update`
-  constructs. See the document at :doc:`queryguide/dml` for documentation,
-  including :ref:`orm_queryguide_legacy_bulk_insert` which illustrates migration
-  from the older methods to the new methods.

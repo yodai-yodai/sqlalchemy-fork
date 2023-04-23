@@ -266,9 +266,6 @@ class scoped_session(Generic[_S]):
         :class:`_query.Query` object against the class and the current
         :class:`.Session` when called.
 
-        .. legacy:: The :meth:`_orm.scoped_session.query_property` accessor
-           is specific to the legacy :class:`.Query` object and is not
-           considered to be part of :term:`2.0-style` ORM use.
 
         e.g.::
 
@@ -1189,19 +1186,6 @@ class scoped_session(Generic[_S]):
             Proxied for the :class:`_orm.Session` class on
             behalf of the :class:`_orm.scoping.scoped_session` class.
 
-        .. legacy::
-
-            This method is a legacy feature as of the 2.0 series of
-            SQLAlchemy.   For modern bulk INSERT and UPDATE, see
-            the sections :ref:`orm_queryguide_bulk_insert` and
-            :ref:`orm_queryguide_bulk_update`.
-
-            For general INSERT and UPDATE of existing ORM mapped objects,
-            prefer standard :term:`unit of work` data management patterns,
-            introduced in the :ref:`unified_tutorial` at
-            :ref:`tutorial_orm_data_manipulation`.  SQLAlchemy 2.0
-            now uses :ref:`engine_insertmanyvalues` with modern dialects
-            which solves previous issues of bulk INSERT slowness.
 
         :param objects: a sequence of mapped object instances.  The mapped
          objects are persisted as is, and are **not** associated with the
@@ -1275,14 +1259,6 @@ class scoped_session(Generic[_S]):
             Proxied for the :class:`_orm.Session` class on
             behalf of the :class:`_orm.scoping.scoped_session` class.
 
-        .. legacy::
-
-            This method is a legacy feature as of the 2.0 series of
-            SQLAlchemy.   For modern bulk INSERT and UPDATE, see
-            the sections :ref:`orm_queryguide_bulk_insert` and
-            :ref:`orm_queryguide_bulk_update`.  The 2.0 API shares
-            implementation details with this method and adds new features
-            as well.
 
         :param mapper: a mapped class, or the actual :class:`_orm.Mapper`
          object,
@@ -1358,14 +1334,6 @@ class scoped_session(Generic[_S]):
             Proxied for the :class:`_orm.Session` class on
             behalf of the :class:`_orm.scoping.scoped_session` class.
 
-        .. legacy::
-
-            This method is a legacy feature as of the 2.0 series of
-            SQLAlchemy.   For modern bulk INSERT and UPDATE, see
-            the sections :ref:`orm_queryguide_bulk_insert` and
-            :ref:`orm_queryguide_bulk_update`.  The 2.0 API shares
-            implementation details with this method and adds new features
-            as well.
 
         :param mapper: a mapped class, or the actual :class:`_orm.Mapper`
          object,

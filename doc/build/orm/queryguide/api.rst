@@ -287,12 +287,6 @@ Identity Token
 
 .. doctest-disable:
 
-.. deepalchemy::   This option is an advanced-use feature mostly intended
-   to be used with the ref_horizontal_sharding_toplevel extension. For
-   typical cases of loading objects with identical primary keys from different
-   "shards" or partitions, consider using individual :class:`_orm.Session`
-   objects per shard first.
-
 
 The "identity token" is an arbitrary value that can be associated within
 the :term:`identity key` of newly loaded objects.   This element exists
