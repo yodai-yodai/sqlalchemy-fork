@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>
+            
+    
+    Overview
+ &mdash;
+    SQLAlchemy 2.0 Documentation
+
+        </title>
+
+        
+            <!-- begin iterate through site-imported + sphinx environment css_files -->
+                <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+                <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+                <link rel="stylesheet" href="_static/default.css" type="text/css" />
+                <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+                <link rel="stylesheet" href="_static/docs.css" type="text/css" />
+                <link rel="stylesheet" href="_static/changelog.css" type="text/css" />
+                <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+            <!-- end iterate through site-imported + sphinx environment css_files -->
+        
+
+        
+
+    
+
+    <!-- begin layout.mako headers -->
+
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+        <link rel="copyright" title="Copyright" href="copyright.html" />
+    <link rel="top" title="SQLAlchemy 2.0 Documentation" href="index.html" />
+        <link rel="next" title="SQLAlchemy Unified Tutorial" href="tutorial/index.html" />
+        <link rel="prev" title="Table of Contents" href="contents.html" />
+    <!-- end layout.mako headers -->
+
+
+    </head>
+    <body>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="docs-container">
+
+
+
+
+
+<div id="docs-top-navigation-container" class="body-background">
+<div id="docs-header">
+    <div id="docs-version-header">
+        Release: <span class="version-num">2.0.31</span>
+
+
+        | Release Date: June 18, 2024
+
+    </div>
+
+    <h1><a href="index.html">SQLAlchemy 2.0 Documentation</a></h1>
+
+</div>
+</div>
+
+<div id="docs-body-container">
+
+    <div id="fixed-sidebar" class="withsidebar">
+
+
+
+        <div id="docs-sidebar-popout">
+            <h3><a href="index.html">SQLAlchemy 2.0 Documentation</a></h3>
+            <p id="sidebar-topnav">
+                <a href="index.html">Home</a>
+            </p>
+
+            <div id="sidebar-search">
+                <form class="search" action="search.html" method="get">
+                  <label>
+                  Search terms:
+                  <input type="text" placeholder="search..." name="q" size="12" />
+                  </label>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </div>
+
+        </div>
+
+        <div id="docs-sidebar">
+
+        <div id="sidebar-banner">
+            
+        </div>
+
+        <div id="docs-sidebar-inner">
+
+        
+        <h3>
+            <a href="index.html" title="SQLAlchemy 2.0 Documentation">SQLAlchemy 2.0 Documentation</a>
+        </h3>
+
+        <ul>
+<li class="selected"><span class="link-container"><strong>Overview</strong><a class="paramlink headerlink reference internal" href="#">¶</a></span><ul>
+<li><span class="link-container"><a class="reference external" href="#documentation-overview">Documentation Overview</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#code-examples">Code Examples</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#installation-guide">Installation Guide</a></span><ul>
+<li><span class="link-container"><a class="reference external" href="#supported-platforms">Supported Platforms</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#asyncio-support">AsyncIO Support</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#supported-installation-methods">Supported Installation Methods</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#install-via-pip">Install via pip</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#installing-manually-from-the-source-distribution">Installing manually from the source distribution</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#building-the-cython-extensions">Building the Cython Extensions</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#installing-a-database-api">Installing a Database API</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#checking-the-installed-sqlalchemy-version">Checking the Installed SQLAlchemy Version</a></span></li>
+<li><span class="link-container"><a class="reference external" href="#next-steps">Next Steps</a></span></li>
+</ul>
+</li>
+<li><span class="link-container"><a class="reference external" href="#x-to-2-0-migration">1.x to 2.0 Migration</a></span></li>
+</ul>
+</li>
+<li><span class="link-container"><a class="reference external" href="tutorial/index.html">SQLAlchemy Unified Tutorial</a></span></li>
+<li><span class="link-container"><a class="reference external" href="orm/index.html">SQLAlchemy ORM</a></span></li>
+<li><span class="link-container"><a class="reference external" href="core/index.html">SQLAlchemy Core</a></span></li>
+<li><span class="link-container"><a class="reference external" href="dialects/index.html">Dialects</a></span></li>
+<li><span class="link-container"><a class="reference external" href="faq/index.html">Frequently Asked Questions</a></span></li>
+<li><span class="link-container"><a class="reference external" href="errors.html">Error Messages</a></span></li>
+<li><span class="link-container"><a class="reference external" href="changelog/index.html">Changes and Migration</a></span></li>
+</ul>
+
+
+
+        </div>
+
+        </div>
+
+    </div>
+
+    <div id="narrow-index-nav">
+        <form class="search" action="search.html" method="get">
+            <label>
+                Search terms:
+            <input type="text" placeholder="search..." name="q" size="12" />
+            </label>
+            <input type="submit" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+        </form>
+
+        <p>
+        <a href="index.html">Home</a>
+        </p>
+
+    </div>
+
+
+        <div id="docs-narrow-top-navigation">
+            <ul>
+                <li><b>Previous:</b>
+                <a href="contents.html" title="previous chapter">Table of Contents</a></li>
+                <li><b>Next:</b>
+                <a href="tutorial/index.html" title="next chapter">SQLAlchemy Unified Tutorial</a></li>
+
+            <li><b>Up:</b> <a href="index.html">Home</a></li>
+
+
+
+            <li><b>On this page:</b></li>
+            <ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#documentation-overview">Documentation Overview</a></li>
+<li><a class="reference internal" href="#code-examples">Code Examples</a></li>
+<li><a class="reference internal" href="#installation-guide">Installation Guide</a><ul>
+<li><a class="reference internal" href="#supported-platforms">Supported Platforms</a></li>
+<li><a class="reference internal" href="#asyncio-support">AsyncIO Support</a></li>
+<li><a class="reference internal" href="#supported-installation-methods">Supported Installation Methods</a></li>
+<li><a class="reference internal" href="#install-via-pip">Install via pip</a></li>
+<li><a class="reference internal" href="#installing-manually-from-the-source-distribution">Installing manually from the source distribution</a></li>
+<li><a class="reference internal" href="#building-the-cython-extensions">Building the Cython Extensions</a></li>
+<li><a class="reference internal" href="#installing-a-database-api">Installing a Database API</a></li>
+<li><a class="reference internal" href="#checking-the-installed-sqlalchemy-version">Checking the Installed SQLAlchemy Version</a></li>
+<li><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#x-to-2-0-migration">1.x to 2.0 Migration</a></li>
+</ul>
+</li>
+</ul>
+
+
+            </ul>
+
+        </div>
+
+
+
+    <div id="docs-body" role="main" class="withsidebar intro" >
+        
+<section id="overview">
+<span id="overview-toplevel"></span><span id="id1"></span><h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h1>
+<p>SQLAlchemy SQL Toolkit and Object Relational Mapperは、データベースとPythonを操作するための包括的なツール・セットです。これには、個別にまたは組み合わせて使用できるいくつかの異なる機能領域があります。その主要なコンポーネントを次に示します。コンポーネントの依存関係はレイヤーに編成されています。</p>
+<img alt="_images/sqla_arch_small.png" src="_images/sqla_arch_small.png" />
+<p>上の図で、SQLAlchemyの前面にある最も重要な2つの部分は、 <strong>Object Relational Mapper(ORM)</strong> と <strong>Core</strong> です。</p>
+<p>Coreには、SQLAlchemyのSQLとデータベースの統合および記述サービスの幅広さが含まれており、その中で最も顕著な部分は <strong>SQL式言語</strong> です。</p>
+<p>SQL式言語は、ORMパッケージとは独立した独自のツールキットであり、構成可能なオブジェクトによって表されるSQL式を構築するシステムを提供し、特定のトランザクションのスコープ内でターゲットデータベースに対して”実行”し、結果セットを返すことができます。挿入、更新、削除(すなわち <a class="reference internal" href="glossary.html#term-DML"><span class="xref std std-term">DML</span></a>)は、これらの文を表すSQL式オブジェクトと、各文で使用されるパラメータを表す辞書を渡すことによって実現されます。</p>
+<p>ORMはCore上に構築され、データベーススキーマにマップされたドメインオブジェクトモデルを操作する手段を提供します。ORMを使用する場合、SQL文はCoreを使用する場合とほぼ同じ方法で構築されますが、DMLのタスク(ここではデータベース内のビジネスオブジェクトの永続性を指します)は、 <a class="reference internal" href="glossary.html#term-unit-of-work"><span class="xref std std-term">unit of work</span></a> と呼ばれるパターンを使用して自動化されます。このパターンは、可変オブジェクトに対する状態の変更をINSERT、UPDATE、およびDELETE構文に変換し、これらのオブジェクトに関して呼び出されます。SELECT文は、ORM固有の自動化とオブジェクト中心のクエリ機能によっても強化されます。</p>
+<p>CoreとSQL式言語を使用すると、不変性を中心としたプログラミングパラダイムとともに、データベースのスキーマ中心のビューが表示されるのに対して、ORMは、この上に、より明示的にオブジェクト指向であり、可変性に依存するプログラミングパラダイムを使用して、データベースのドメイン中心のビューを構築します。リレーショナル・データベース自体が可変サービスであるため、Core/SQL式言語がコマンド指向であるのに対して、ORMは状態指向である点が異なります。</p>
+<section id="documentation-overview">
+<span id="doc-overview"></span><h2>Documentation Overview<a class="headerlink" href="#documentation-overview" title="Link to this heading">¶</a></h2>
+<p>The documentation is separated into four sections:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="tutorial/index.html#unified-tutorial"><span class="std std-ref">SQLAlchemy Unified Tutorial</span></a> - SQLAlchemyの1.4/2.0シリーズのためのこの全く新しいチュートリアルでは、Coreの説明から始まり、ORM固有の概念に向けてますます作業を進めながら、ライブラリ全体を総合的に紹介しています。SQLAlchemyの1.xシリーズのユーザーだけでなく、新規ユーザーもここから始める必要があります。</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="orm/index.html"><span class="std std-ref">SQLAlchemy ORM</span></a> - このセクションでは、ORMの参考資料を紹介します。</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="core/index.html"><span class="std std-ref">SQLAlchemy Core</span></a> - ここでは、Core内のその他すべての参照ドキュメントを示します。SQLAlchemyエンジン、接続、プーリング・サービスについてもここで説明します。</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference internal" href="dialects/index.html"><span class="std std-ref">Dialects</span></a> - <a class="reference internal" href="glossary.html#term-DBAPI"><span class="xref std std-term">DBAPI</span></a> 仕様を含む、すべての <a class="reference internal" href="glossary.html#term-dialect"><span class="xref std std-term">dialect</span></a> 実装のリファレンスドキュメントを提供します。</p></li>
+</ul>
+</section>
+<section id="code-examples">
+<h2>Code Examples<a class="headerlink" href="#code-examples" title="Link to this heading">¶</a></h2>
+<p>SQLAlchemyディストリビューションには、主にORMに関する実用的なコード例が含まれています。含まれているすべてのサンプルアプリケーションの説明は <a class="reference internal" href="orm/examples.html"><span class="std std-ref">ORM Examples</span></a> にあります。</p>
+<p>wikiには、コアのSQLAlchemy構成体とORMの両方を含むさまざまな例もあります。 <a class="reference external" href="https://www.sqlalchemy.org/trac/wiki/UsageRecipes">Theatrum Chemicum</a> を参照してください。</p>
+</section>
+<section id="installation-guide">
+<span id="installation"></span><h2>Installation Guide<a class="headerlink" href="#installation-guide" title="Link to this heading">¶</a></h2>
+<section id="supported-platforms">
+<h3>Supported Platforms<a class="headerlink" href="#supported-platforms" title="Link to this heading">¶</a></h3>
+<p>SQLAlchemyは次のプラットフォームをサポートしています。</p>
+<ul class="simple">
+<li><p>cPython 3.7以上</p></li>
+<li><p>Python 3互換バージョンの`PyPy&lt;<a class="reference external" href="http://PyPy.org/">http://PyPy.org/</a>&gt;`_</p></li>
+</ul>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span></p>
+<p>SQLAlchemyはPython 3.7以降に対応しました。</p>
+</div>
+</section>
+<section id="asyncio-support">
+<h3>AsyncIO Support<a class="headerlink" href="#asyncio-support" title="Link to this heading">¶</a></h3>
+<p>SQLAlchemyの”<cite>asyncio</cite>”サポートは、 <a class="reference external" href="https://pypi.org/project/greenlet/">greenlet</a> プロジェクトに依存しています。 この依存関係は一般的なマシンプラットフォームにデフォルトでインストールされますが、すべてのアーキテクチャでサポートされているわけではなく、あまり一般的でないアーキテクチャにもデフォルトでインストールされない場合があります。asyncioサポートが存在することを確認するための詳細については、 <a class="reference internal" href="orm/extensions/asyncio.html#asyncio-install"><span class="std std-ref">Asyncio Platform Installation Notes (Including Apple M1)</span></a> を参照してください。</p>
+</section>
+<section id="supported-installation-methods">
+<h3>Supported Installation Methods<a class="headerlink" href="#supported-installation-methods" title="Link to this heading">¶</a></h3>
+<p>SQLAlchemyのインストールは、 <a class="reference external" href="https://pypi.org/project/setuptools/">setuptools</a> に基づく標準的なPythonの方法で行われます。これは、 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> を直接参照するか、 <a class="reference external" href="https://pypi.org/project/pip/">pip</a> やその他のsetuptools互換の方法を使用します。</p>
+</section>
+<section id="install-via-pip">
+<h3>Install via pip<a class="headerlink" href="#install-via-pip" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span></code> が利用可能な場合は、ディストリビューションをPyPIからダウンロードして、1ステップでインストールできます。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install SQLAlchemy</pre></div>
+</div>
+<p>このコマンドは、<a class="reference external" href="https://pypi.org/project/SQLAlchemy">Python Cheese Shop</a> から最新の <strong>リリースされた</strong> バージョンのSQLAlchemyをダウンロードし、システムにインストールします。ほとんどの一般的なプラットフォームでは、ネイティブの Cython / C 拡張機能が事前に構築されたPython Wheelファイルがダウンロードされます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">2.0.0b1</span></code> のような最新の <strong>プレリリース</strong> バージョンをインストールするには、pipは <code class="docutils literal notranslate"><span class="pre">--pre</span></code> フラグを使用する必要があります。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install --pre SQLAlchemy</pre></div>
+</div>
+<p>上記の場合、最新バージョンがプレリリースであれば、最新リリースバージョンではなくプレリリースバージョンがインストールされます。</p>
+</section>
+<section id="installing-manually-from-the-source-distribution">
+<h3>Installing manually from the source distribution<a class="headerlink" href="#installing-manually-from-the-source-distribution" title="Link to this heading">¶</a></h3>
+<p>pipからインストールしない場合、ソースディストリビューションは <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> スクリプトを使ってインストールできます。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>python setup.py install</pre></div>
+</div>
+<p>ソースインストールはプラットフォームに依存せず、Cython / C ビルドツールがインストールされているかどうかにかかわらず、どのプラットフォームにもインストールされます。次のセクション <a class="reference internal" href="#c-extensions"><span class="std std-ref">Building the Cython Extensions</span></a> で詳しく説明しますが、 <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> は可能であれば Cython / C を使ってビルドしようとしますが、そうでなければ純粋なPythonインストールに戻ります。</p>
+</section>
+<section id="building-the-cython-extensions">
+<span id="c-extensions"></span><h3>Building the Cython Extensions<a class="headerlink" href="#building-the-cython-extensions" title="Link to this heading">¶</a></h3>
+<p>SQLAlchemyには <a class="reference external" href="https://cython.org/">Cython</a> extensionsが含まれており、さまざまな領域で速度をさらに向上させることができます。現在はコア結果セットの速度に重点が置かれています。</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 2.0: </span>SQLAlchemy C拡張はCythonを使用して書き直されました。</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">setup.py</span></code> は、Cythonパッケージがインストールされていれば、適切なプラットフォームが検出されれば自動的に拡張機能をビルドします。完全な手動ビルドは次のようになります。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># cd into SQLAlchemy source distribution
+cd path/to/sqlalchemy
+
+# install cython
+pip install cython
+
+# optionally build Cython extensions ahead of install
+python setup.py build_ext
+
+# run the install
+python setup.py install</pre></div>
+</div>
+<p>ソースの構築は、<a class="reference external" href="https://pypi.org/project/build/">build</a> のような <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0517/"><strong>PEP 517</strong></a> のテクニックを使って行うこともできます。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># cd into SQLAlchemy source distribution
+cd path/to/sqlalchemy
+
+# install build
+pip install build
+
+# build source / wheel dists
+python -m build</pre></div>
+</div>
+<p>Cythonがインストールされていない、コンパイラが見つからない、またはその他の問題が原因でCython拡張機能のビルドが失敗した場合、セットアッププロセスは警告メッセージを出力し、完了時にCython拡張機能なしでビルドを再実行し、最終ステータスを報告します。</p>
+<p>Cython拡張モジュールをコンパイルすることもせずにビルド/インストールを実行するには、 <code class="docutils literal notranslate"><span class="pre">DISABLE_SQLALCHEMY_CEXT</span></code> 環境変数を指定します。このユースケースは、特別なテスト状況の場合、または通常の”再構築”メカニズムでは克服できない互換性/ビルドの問題のまれなケースのいずれかです。</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>export DISABLE_SQLALCHEMY_CEXT=1; python setup.py install</pre></div>
+</div>
+</section>
+<section id="installing-a-database-api">
+<h3>Installing a Database API<a class="headerlink" href="#installing-a-database-api" title="Link to this heading">¶</a></h3>
+<p>SQLAlchemyは、特定のデータベース用に構築された <a class="reference internal" href="glossary.html#term-DBAPI"><span class="xref std std-term">DBAPI</span></a> 実装で動作するように設計されており、最も一般的なデータベースをサポートしています。
+<a class="reference internal" href="dialects/index.html"><span class="doc">Dialects</span></a> の個々のデータベースセクションには、外部リンクを含め、各データベースで利用可能なDB APIが列挙されています。</p>
+</section>
+<section id="checking-the-installed-sqlalchemy-version">
+<h3>Checking the Installed SQLAlchemy Version<a class="headerlink" href="#checking-the-installed-sqlalchemy-version" title="Link to this heading">¶</a></h3>
+<p>このドキュメントでは、SQLAlchemyバージョン2.0について説明します。すでにSQLAlchemyがインストールされているシステムで作業している場合は、次のようにPythonプロンプトからバージョンを確認してください:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sqlalchemy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sqlalchemy</span><span class="o">.</span><span class="n">__version__</span>  
+<span class="go">2.0.0</span></pre></div>
+</div>
+</section>
+<section id="next-steps">
+<h3>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">¶</a></h3>
+<p>SQLAlchemyがインストールされていれば、今までと同じように <a class="reference internal" href="tutorial/index.html#unified-tutorial"><span class="std std-ref">Proceed to the SQLAlchemy Tutorial</span></a> で学習できます。</p>
+</section>
+</section>
+<section id="x-to-2-0-migration">
+<span id="migration"></span><h2>1.x to 2.0 Migration<a class="headerlink" href="#x-to-2-0-migration" title="Link to this heading">¶</a></h2>
+<p>SQLAlchemy 2.0でリリースされた新しいAPIに関する注記は、 <a class="reference internal" href="changelog/migration_20.html"><span class="doc">SQLAlchemy 2.0 - Major Migration Guide</span></a> を参照してください。</p>
+</section>
+</section>
+
+    </div>
+
+</div>
+
+<div id="docs-bottom-navigation" class="docs-navigation-links, withsidebar">
+        Previous:
+        <a href="contents.html" title="previous chapter">Table of Contents</a>
+        Next:
+        <a href="tutorial/index.html" title="next chapter">SQLAlchemy Unified Tutorial</a>
+
+    <div id="docs-copyright">
+        &copy; <a href="copyright.html">Copyright</a> 2007-2024, the SQLAlchemy authors and contributors.
+
+
+    <p><b>flambé!</b> the dragon and <b><i>The Alchemist</i></b> image designs created and generously donated by <a href="https://github.com/vmalloc">Rotem Yaari</a>.</p>
+
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.2.6.
+
+    Documentation last generated: Mon Aug  5 20:47:27 2024 JST
+
+    </div>
+</div>
+
+</div>
+
+
+
+        
+        
+
+    <script type="text/javascript">
+      document.documentElement.dataset.content_root = './';
+
+    </script>
+
+    <!-- begin iterate through sphinx environment script_files -->
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script type="text/javascript" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/sphinx_highlight.js"></script>
+        <script type="text/javascript" src="_static/clipboard.min.js"></script>
+        <script type="text/javascript" src="_static/copybutton.js"></script>
+    <!-- end iterate through sphinx environment script_files -->
+
+    <script type="text/javascript" src="_static/init.js"></script>
+
+
+    </body>
+</html>
+
+
