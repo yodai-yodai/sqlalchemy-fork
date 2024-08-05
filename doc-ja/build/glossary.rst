@@ -307,7 +307,10 @@ Glossary
             >>> print(MyClass.data == 5)
             {printsql}data = :data_1
 
-        and at the instance level, keeps track of changes to values, and also :term:`lazy loads` unloaded attributes from the database::
+        .. and at the instance level, keeps track of changes to values, and also :term:`lazy loads` unloaded attributes from the database::
+
+        インスタンスレベルでは値の変更を追跡し、:term:`lazy loads` はデータベースからアンロードされた属性も追跡します::
+
 
             >>> m1 = MyClass()
             >>> m1.id = 5
@@ -318,7 +321,11 @@ Glossary
             "some data"
 
     DDL
-        An acronym for **Data Definition Language**.  DDL is the subset of SQL that relational databases use to configure tables, constraints, and other permanent objects within a database schema. SQLAlchemy provides a rich API for constructing and emitting DDL expressions.
+        .. An acronym for **Data Definition Language**.  DDL is the subset of SQL that relational databases use to configure tables, constraints, and other permanent objects within a database schema. SQLAlchemy provides a rich API for constructing and emitting DDL expressions.
+
+        **Data Definition Language** の頭字語です。DDLは、リレーショナル・データベースがデータベース・スキーマ内の表、制約およびその他の永続オブジェクトを構成するために使用するSQLのサブセットです。SQLAlchemyは、DDL式を構築および出力するための豊富なAPIを提供します。
+
+
 
         .. seealso::
 
@@ -331,7 +338,9 @@ Glossary
             :term:`DQL`
 
     DML
-       An acronym for **Data Manipulation Language**.  DML is the subset of SQL that relational databases use to *modify* the data in tables. DML typically refers to the three widely familiar statements of INSERT, UPDATE and  DELETE, otherwise known as :term:`CRUD` (acronym for "Create, Read, Update, Delete").
+    ..    An acronym for **Data Manipulation Language**.  DML is the subset of SQL that relational databases use to *modify* the data in tables. DML typically refers to the three widely familiar statements of INSERT, UPDATE and  DELETE, otherwise known as :term:`CRUD` (acronym for "Create, Read, Update, Delete").
+
+       **Data Manipulation Language** の頭字語。DMLは、リレーショナル・データベースが表内のデータを*変更*するために使用するSQLのサブセットです。DMLは通常、INSERT、UPDATE、DELETEの3つの一般的な文を指します。これらは :term:`CRUD` ("Create, Read, Update, Delete"の頭字語)としても知られています。
 
         .. seealso::
 
@@ -342,7 +351,11 @@ Glossary
             :term:`DQL`
 
     DQL
-        An acronym for **Data Query Language**. DQL is the subset of SQL that relational databases use to *read* the data in tables.  DQL almost exclusively refers to the SQL SELECT construct as the top level SQL statement in use.
+        .. An acronym for **Data Query Language**. DQL is the subset of SQL that relational databases use to *read* the data in tables.  DQL almost exclusively refers to the SQL SELECT construct as the top level SQL statement in use.
+
+        **Data Query Language** の頭字語です。DQLは、リレーショナル・データベースが表内のデータを*読み取る*ために使用するSQLのサブセットです。DQLは、ほとんどの場合、使用中の最上位レベルのSQL文としてSQL SELECT構文を参照します。
+
+
 
         .. seealso::
 
@@ -357,6 +370,8 @@ Glossary
     table metadata
         The term "metadata" generally refers to "data that describes data"; data that itself represents the format and/or structure of some other kind of data.  In SQLAlchemy, the term "metadata" typically refers  to the :class:`_schema.MetaData` construct, which is a collection of information about the tables, columns, constraints, and other :term:`DDL` objects that may exist in a particular database.
 
+        "メタデータ"という用語は、一般に「データを記述するデータ」、つまり、それ自体が何らかの他の種類のデータのフォーマットおよび/または構造を表すデータを指します。SQLAlchemyでは、「メタデータ」という用語は通常、特定のデータベースに存在する可能性のあるテーブル、カラム、制約、およびその他の: term:`DDL` オブジェクトに関する情報のコレクションである :class:`_schema.MetaData` 構造を指します。
+
         .. seealso::
 
             `Metadata Mapping (via Martin Fowler) <https://www.martinfowler.com/eaaCatalog/metadataMapping.html>`_
@@ -364,42 +379,65 @@ Glossary
             :ref:`tutorial_working_with_metadata`  - in the :ref:`unified_tutorial`
 
     version id column
-        In SQLAlchemy, this refers to the use of a particular table column that tracks the "version" of a particular row, as the row changes values.   While there are different kinds of relational patterns that make use of a "version id column" in different ways, SQLAlchemy's ORM includes a particular feature that allows for such a column to be configured as a means of testing for stale data when a row is being UPDATEd with new information. If the last known "version" of this column does not match that of the row when we try to put new data into the row, we know that we are acting on stale information.
+        .. In SQLAlchemy, this refers to the use of a particular table column that tracks the "version" of a particular row, as the row changes values. While there are different kinds of relational patterns that make use of a "version id column" in different ways, SQLAlchemy's ORM includes a particular feature that allows for such a column to be configured as a means of testing for stale data when a row is being UPDATEd with new information. If the last known "version" of this column does not match that of the row when we try to put new data into the row, we know that we are acting on stale information.
 
-        There are also other ways of storing "versioned" rows in a database, often referred to as "temporal" data.  In addition to SQLAlchemy's versioning feature, a few more examples are also present in the documentation, see the links below.
+        SQLAlchemyでは、これは、行が値を変更するときに、特定の行の"バージョン"を追跡する特定のテーブル列の使用を指します。"バージョンID列"をさまざまな方法で使用するさまざまな種類のリレーショナル・パターンがありますが、SQLAlchemyのORMには、行が新しい情報で更新されるときに古いデータをテストする手段として、そのような列を構成できる特別な機能が含まれています。新しいデータを行に入れようとしたときに、この列の最後の既知の"バージョン"が行のバージョンと一致しない場合は、古い情報に基づいて動作していることがわかります。
+
+        .. There are also other ways of storing "versioned" rows in a database, often referred to as "temporal" data.  In addition to SQLAlchemy's versioning feature, a few more examples are also present in the documentation, see the links below.
+
+        データベースに"バージョン管理された"行を保存する方法は他にもあり、これはしばしば"一時的な"データと呼ばれます。SQLAlchemyのバージョン管理機能に加えて、さらにいくつかの例がドキュメントに記載されています。以下のリンクを参照してください。
+
+
 
         .. seealso::
 
-            :ref:`mapper_version_counter` - SQLAlchemy's built-in version id feature.
+            .. :ref:`mapper_version_counter` - SQLAlchemy's built-in version id feature.
 
-            :ref:`examples_versioning` - other examples of mappings that version rows
-            temporally.
+            :ref:`mapper_version_counter` - SQLAlchemyの組み込みバージョンID機能です。
+
+            .. :ref:`examples_versioning` - other examples of mappings that version rows temporally.
+
+            :ref:`examples_versioning` - 行を一時的にバージョン化するマッピングの他の例です。
 
     registry
-        An object, typically globally accessible, that contains long-lived information about some program state that is generally useful to many parts of a program.
+        .. An object, typically globally accessible, that contains long-lived information about some program state that is generally useful to many parts of a program.
+
+        通常はグローバルにアクセス可能なオブジェクトで、プログラムの多くの部分で一般的に有用な、プログラムの状態に関する長期にわたる情報を含みます。
 
         .. seealso::
 
             `Registry (via Martin Fowler) <https://martinfowler.com/eaaCatalog/registry.html>`_
 
     cascade
-        A term used in SQLAlchemy to describe how an ORM persistence action that takes place on a particular object would extend into other objects which are directly associated with that object. In SQLAlchemy, these object associations are configured using the :func:`_orm.relationship` construct. :func:`_orm.relationship` contains a parameter called :paramref:`_orm.relationship.cascade` which provides options on how certain persistence operations may cascade.
+        .. A term used in SQLAlchemy to describe how an ORM persistence action that takes place on a particular object would extend into other objects which are directly associated with that object. In SQLAlchemy, these object associations are configured using the :func:`_orm.relationship` construct. :func:`_orm.relationship` contains a parameter called :paramref:`_orm.relationship.cascade` which provides options on how certain persistence operations may cascade.
 
-        The term "cascades" as well as the general architecture of this system in SQLAlchemy was borrowed, for better or worse, from the Hibernate ORM.
+        SQLAlchemyで使用される用語で、特定のオブジェクトに対して行われるORMパーシステンスアクションが、そのオブジェクトに直接関連付けられた他のオブジェクトにどのように拡張されるかを記述します。SQLAlchemyでは、これらのオブジェクトの関連付けは :func:`_orm.relationship` 構文を使用して設定されます。 :func:`_orm.relationship` には :paramref:`_orm.relationship.cascade` というパラメータが含まれていて、特定のパーシステンス操作がどのようにカスケードされるかについてのオプションを提供します。
+
+        .. The term "cascades" as well as the general architecture of this system in SQLAlchemy was borrowed, for better or worse, from the Hibernate ORM.
+
+        SQLAlchemyにおけるこのシステムの一般的なアーキテクチャと同様に、"カスケード"という用語は、良くも悪くも、Hibernate ORMから借用された。
+
+
 
         .. seealso::
 
             :ref:`unitofwork_cascades`
 
     dialect
-        In SQLAlchemy, the "dialect" is a Python object that represents information and methods that allow database operations to proceed on a particular kind of database backend and a particular kind of Python driver (or :term:`DBAPI`) for that database. SQLAlchemy dialects are subclasses of the :class:`.Dialect` class.
+        .. In SQLAlchemy, the "dialect" is a Python object that represents information and methods that allow database operations to proceed on a particular kind of database backend and a particular kind of Python driver (or :term:`DBAPI`) for that database. SQLAlchemy dialects are subclasses of the :class:`.Dialect` class.
+
+        SQLAlchemyでは、"ダイアレクト"は、特定の種類のデータベースバックエンドと、そのデータベースの特定の種類のPythonドライバ(または :term:`DBAPI` )でデータベース操作を進めるための情報とメソッドを表すPythonオブジェクトです。SQLAlchemyダイアレクトは、 :class:`.Dialect` クラスのサブクラスです。
+
+
 
         .. seealso::
 
             :ref:`engines_toplevel`
 
     discriminator
-        A result-set column which is used during :term:`polymorphic` loading to determine what kind of mapped class should be applied to a particular incoming result row.
+        .. A result-set column which is used during :term:`polymorphic` loading to determine what kind of mapped class should be applied to a particular incoming result row.
+
+       :term:`polymorphic` のロード時に使用される結果セット列で、特定の結果行に適用すべきマップされたクラスの種類を決定します。
 
         .. seealso::
 
@@ -408,12 +446,20 @@ Glossary
     instrumentation
     instrumented
     instrumenting
-        Instrumentation refers to the process of augmenting the functionality and attribute set of a particular class. Ideally, the behavior of the class should remain close to a regular class, except that additional behaviors and features are made available. The SQLAlchemy :term:`mapping` process, among other things, adds database-enabled :term:`descriptors` to a mapped class each of which represents a particular database column or relationship to a related class.
+        .. Instrumentation refers to the process of augmenting the functionality and attribute set of a particular class. Ideally, the behavior of the class should remain close to a regular class, except that additional behaviors and features are made available. The SQLAlchemy :term:`mapping` process, among other things, adds database-enabled :term:`descriptors` to a mapped class each of which represents a particular database column or relationship to a related class.
+
+        インストルメンテーションとは、特定のクラスの機能と属性セットを拡張するプロセスを指します。理想的には、クラスの動作は、追加の動作と機能が利用可能になることを除いて、通常のクラスに近い状態を維持する必要があります。SQLAlchemy :term:`mapping` プロセスは、特に、データベース対応の :term:`descriptors` を、それぞれが特定のデータベース列または関連クラスとの関係を表すマップされたクラスに追加します。
 
     identity key
-        A key associated with ORM-mapped objects that identifies their primary key identity within the database, as well as their unique identity within a :class:`_orm.Session` :term:`identity map`.
+        .. A key associated with ORM-mapped objects that identifies their primary key identity within the database, as well as their unique identity within a :class:`_orm.Session` :term:`identity map`.
 
-        In SQLAlchemy, you can view the identity key for an ORM object using the :func:`_sa.inspect` API to return the :class:`_orm.InstanceState` tracking object, then looking at the :attr:`_orm.InstanceState.key` attribute::
+        ORMマップされたオブジェクトに関連付けられたキーで、データベース内での主キーのIDと、 :class:`_orm.Session`  :term:`identity map` 内での一意のIDを識別します。
+
+        .. In SQLAlchemy, you can view the identity key for an ORM object using the :func:`_sa.inspect` API to return the :class:`_orm.InstanceState` tracking object, then looking at the :attr:`_orm.InstanceState.key` attribute::
+
+        SQLAlchemyでは、 :func:`_sa.inspect` APIを使って: class:`_orm.InstanceState` 追跡オブジェクトを返し、 :attr:`_orm.InstanceState.key` 属性を見ることで、ORMオブジェクトのIDキーを見ることができます::
+
+
 
             >>> from sqlalchemy import inspect
             >>> inspect(some_object).key
@@ -424,16 +470,24 @@ Glossary
            :term:`identity map`
 
     identity map
-        A mapping between Python objects and their database identities. The identity map is a collection that's associated with an ORM :term:`Session` object, and maintains a single instance of every database object keyed to its identity. The advantage to this pattern is that all operations which occur for a particular database identity are transparently coordinated onto a single object instance.  When using an identity map in conjunction with an :term:`isolated` transaction, having a reference to an object that's known to have a particular primary key can be considered from a practical standpoint to be a proxy to the actual database row.
+        .. A mapping between Python objects and their database identities. The identity map is a collection that's associated with an ORM :term:`Session` object, and maintains a single instance of every database object keyed to its identity. The advantage to this pattern is that all operations which occur for a particular database identity are transparently coordinated onto a single object instance.  When using an identity map in conjunction with an :term:`isolated` transaction, having a reference to an object that's known to have a particular primary key can be considered from a practical standpoint to be a proxy to the actual database row.
+
+        PythonオブジェクトとそのデータベースID間のマッピングです。IDマップはORM :term:`Session` オブジェクトに関連付けられたコレクションで、そのIDにキー付けされた各データベースオブジェクトの単一のインスタンスを保持します。このパターンの利点は、特定のデータベースIDに対して行われるすべての操作が、単一のオブジェクトインスタンスに透過的に調整されることです。IDマップを :term:`isolated` トランザクションと組み合わせて使用する場合、特定の主キーを持つことがわかっているオブジェクトへの参照を持つことは、実際のデータベース行へのプロキシであると実用的な観点から考えることができます。
 
         .. seealso::
 
             `Identity Map (via Martin Fowler) <https://martinfowler.com/eaaCatalog/identityMap.html>`_
 
-            :ref:`session_get` - how to look up an object in the identity map by primary key
+            .. :ref:`session_get` - how to look up an object in the identity map by primary key
+
+            :ref:`session_get` - IDマップ内のオブジェクトをプライマリキーで検索する方法
+
+
 
     lazy initialization
-        A tactic of delaying some initialization action, such as creating objects, populating data, or establishing connectivity to other services, until those resources are required.
+        .. A tactic of delaying some initialization action, such as creating objects, populating data, or establishing connectivity to other services, until those resources are required.
+
+        オブジェクトの作成、データの取り込み、または他のサービスへの接続の確立などの初期化アクションを、それらのリソースが必要になるまで遅延させる戦術。
 
         .. seealso::
 
@@ -443,11 +497,18 @@ Glossary
     lazy loads
     lazy loaded
     lazy loading
-        In object relational mapping, a "lazy load" refers to an attribute that does not contain its database-side value for some period of time, typically when the object is first loaded. Instead, the attribute receives a *memoization* that causes it to go out to the database and load its data when it's first used. Using this pattern, the complexity and time spent within object fetches can sometimes be reduced, in that attributes for related tables don't need to be addressed immediately.
+        .. In object relational mapping, a "lazy load" refers to an attribute that does not contain its database-side value for some period of time, typically when the object is first loaded. Instead, the attribute receives a *memoization* that causes it to go out to the database and load its data when it's first used. Using this pattern, the complexity and time spent within object fetches can sometimes be reduced, in that attributes for related tables don't need to be addressed immediately.
 
-        Lazy loading is the opposite of :term:`eager loading`.
+        オブジェクト・リレーショナル・マッピングでは、"遅延ロード"とは、通常はオブジェクトが最初にロードされるときに、ある期間データベース側の値を含まない属性を指します。その代わりに、属性は*メモ化*を受け取り、データベースに送信され、最初に使用されたときにデータをロードします。このパターンを使用すると、関連するテーブルの属性をすぐに処理する必要がないため、オブジェクト・フェッチの複雑さと時間を削減できる場合があります。
+
+        .. Lazy loading is the opposite of :term:`eager loading`.
+
+        遅延読み込みは :term:`eager loading` の反対です。
 
         Within SQLAlchemy, lazy loading is a key feature of the ORM, and applies to attributes which are :term:`mapped` on a user-defined class. When attributes that refer to database columns or related objects are accessed, for which no loaded value is present, the ORM makes use of the :class:`_orm.Session` for which the current object is associated with in the :term:`persistent` state, and emits a SELECT statement on the current transaction, starting a new transaction if one was not in progress. If the object is in the :term:`detached` state and not associated with any :class:`_orm.Session`, this is considered to be an error state and an :ref:`informative exception <error_bhk3>` is raised.
+
+        SQLAlchemyでは、遅延読み込みはORMの重要な機能であり、ユーザ定義クラスの :term:`mapped` 属性に適用されます。データベース列や関連するオブジェクトを参照する属性がアクセスされ、その属性にロードされた値が存在しない場合、ORMは現在のオブジェクトが :term:`persistent` 状態で関連付けられている :class:`_orm.Session` を利用し、現在のトランザクションでSELECT文を発行し、進行中でなければ新しいトランザクションを開始します。オブジェクトが :term:`detached` 状態で、どの :class:`_orm.Session` とも関連付けられていない場合、これはエラー状態とみなされ、 :ref:`informational exception<error_bhk3>` が発生します。
+
 
         .. seealso::
 
@@ -455,20 +516,30 @@ Glossary
 
             :term:`N plus one problem`
 
-            :ref:`loading_columns` - includes information on lazy loading of ORM mapped columns
+            .. :ref:`loading_columns` - includes information on lazy loading of ORM mapped columns
 
-            :doc:`orm/queryguide/relationships` - includes information on lazy loading of ORM related objects
+            :ref:`loading_columns` - ORMマップされた列の遅延読み込みに関する情報を含みます
 
-            :ref:`asyncio_orm_avoid_lazyloads` - tips on avoiding lazy loading when using the :ref:`asyncio_toplevel` extension
+            .. :doc:`orm/queryguide/relationships` - includes information on lazy loading of ORM related objects
+
+            :doc:`orm/queryguide/relationships` - ORM関連オブジェクトの遅延読み込みに関する情報を含んでいます
+
+            .. :ref:`asyncio_orm_avoid_lazyloads` - tips on avoiding lazy loading when using the :ref:`asyncio_toplevel` extension
+
+            :ref:`asyncio_orm_avoid_lazyloads` - :ref:`asyncio_toplevel` 拡張を使用する際に遅延読み込みを避けるためのヒント
 
     eager load
     eager loads
     eager loaded
     eager loading
     eagerly load
-        In object relational mapping, an "eager load" refers to an attribute that is populated with its database-side value at the same time as when the object itself is loaded from the database. In SQLAlchemy, the term "eager loading" usually refers to related collections and instances of objects that are linked between mappings using the :func:`_orm.relationship` construct, but can also refer to additional column attributes being loaded, often from other tables related to a particular table being queried, such as when using :ref:`inheritance <inheritance_toplevel>` mappings.
+        .. In object relational mapping, an "eager load" refers to an attribute that is populated with its database-side value at the same time as when the object itself is loaded from the database. In SQLAlchemy, the term "eager loading" usually refers to related collections and instances of objects that are linked between mappings using the :func:`_orm.relationship` construct, but can also refer to additional column attributes being loaded, often from other tables related to a particular table being queried, such as when using :ref:`inheritance <inheritance_toplevel>` mappings.
 
-        Eager loading is the opposite of :term:`lazy loading`.
+        オブジェクトリレーショナルマッピングでは、"eager load"とは、オブジェクト自体がデータベースからロードされるのと同時に、データベース側の値が入力される属性を指します。SQLAlchemyでは、"eager loading"という用語は通常、 :func:`_orm.relationship` 構文を使用してマッピング間でリンクされたオブジェクトの関連するコレクションとインスタンスを指しますが、 :ref:`inheritance<inheritance_toplevel>` マッピングを使用する場合など、クエリされている特定のテーブルに関連する他のテーブルからロードされる追加の列属性を指すこともあります。
+
+        .. Eager loading is the opposite of :term:`lazy loading`.
+
+        Eager loadingは :term:`lazy loading` の反対です。
 
         .. seealso::
 
@@ -479,7 +550,9 @@ Glossary
     mapped
     mapped class
     ORM mapped class
-        We say a class is "mapped" when it has been associated with an instance of the :class:`_orm.Mapper` class. This process associates the class with a database table or other :term:`selectable` construct, so that instances of it can be persisted and loaded using a :class:`.Session`.
+        .. We say a class is "mapped" when it has been associated with an instance of the :class:`_orm.Mapper` class. This process associates the class with a database table or other :term:`selectable` construct, so that instances of it can be persisted and loaded using a :class:`.Session`.
+
+        クラスが :class:`_orm.Mapper` クラスのインスタンスに関連付けられている場合、そのクラスは"マップされている"と言います。このプロセスはクラスをデータベーステーブルや他の :term:`選択可能な` 構成体に関連付け、そのインスタンスが :class:`.Session` を使って永続化されロードされるようにします。
 
         .. seealso::
 
@@ -487,7 +560,9 @@ Glossary
 
     N plus one problem
     N plus one
-        The N plus one problem is a common side effect of the :term:`lazy load` pattern, whereby an application wishes to iterate through a related attribute or collection on each member of a result set of objects, where that attribute or collection is set to be loaded via the lazy load pattern. The net result is that a SELECT statement is emitted to load the initial result set of parent objects; then, as the application iterates through each member, an additional SELECT statement is emitted for each member in order to load the related attribute or collection for that member. The end result is that for a result set of N parent objects, there will be N + 1 SELECT statements emitted.
+        .. The N plus one problem is a common side effect of the :term:`lazy load` pattern, whereby an application wishes to iterate through a related attribute or collection on each member of a result set of objects, where that attribute or collection is set to be loaded via the lazy load pattern. The net result is that a SELECT statement is emitted to load the initial result set of parent objects; then, as the application iterates through each member, an additional SELECT statement is emitted for each member in order to load the related attribute or collection for that member. The end result is that for a result set of N parent objects, there will be N + 1 SELECT statements emitted.
+
+        N+1の問題は、 :term:`遅延ロード` パターンの一般的な副作用です。このパターンでは、アプリケーションはオブジェクトの結果セットの各メンバの関連する属性またはコレクションを繰り返し処理し、その属性またはコレクションは遅延ロードパターンを介してロードされるように設定されます。最終的には、親オブジェクトの最初の結果セットをロードするためにSELECTステートメントが発行されます。次に、アプリケーションが各メンバを繰り返し処理すると、そのメンバの関連する属性またはコレクションをロードするために、各メンバに対して追加のSELECTステートメントが発行されます。最終的には、N個の親オブジェクトの結果セットに対して、N+1個のSELECTステートメントが発行されます。
 
         The N plus one problem is alleviated using :term:`eager loading`.
 
@@ -499,15 +574,25 @@ Glossary
 
     polymorphic
     polymorphically
-        Refers to a function that handles several types at once. In SQLAlchemy, the term is usually applied to the concept of an ORM mapped class whereby a query operation will return different subclasses based on information in the result set, typically by checking the value of a particular column in the result known as the :term:`discriminator`.
+        .. Refers to a function that handles several types at once. In SQLAlchemy, the term is usually applied to the concept of an ORM mapped class whereby a query operation will return different subclasses based on information in the result set, typically by checking the value of a particular column in the result known as the :term:`discriminator`.
+
+        一度に複数の型を処理する関数を指します。SQLAlchemyでは、この用語は通常、ORMマップされたクラスの概念に適用されます。これにより、クエリ操作は結果セット内の情報に基づいて、通常は :term:`discriminator` として知られる結果内の特定の列の値をチェックすることによって、異なるサブクラスを返します。
 
         Polymorphic loading in SQLAlchemy implies that a one or a combination of three different schemes are used to map a hierarchy of classes; "joined", "single", and "concrete". The section :ref:`inheritance_toplevel` describes inheritance mapping fully.
 
+        SQLAlchemyにおけるポリモーフィックなロードは、クラスの階層をマップするために、"joined"、"single"、"concrete"の3つの異なるスキームの1つまたは組み合わせが使用されることを意味します。セクション :ref:`inheritance_toplevel` では、継承マッピングについて詳しく説明しています。
+
+
+
     method chaining
     generative
-        "Method chaining", referred to within SQLAlchemy documentation as "generative", is an object-oriented technique whereby the state of an object is constructed by calling methods on the object. The object features any number of methods, each of which return a new object (or in some cases the same object) with additional state added to the object.
+        .. "Method chaining", referred to within SQLAlchemy documentation as "generative", is an object-oriented technique whereby the state of an object is constructed by calling methods on the object. The object features any number of methods, each of which return a new object (or in some cases the same object) with additional state added to the object.
 
-        The two SQLAlchemy objects that make the most use of method chaining are the :class:`_expression.Select` object and the :class:`.orm.query.Query` object.  For example, a :class:`_expression.Select` object can be assigned two expressions to its WHERE clause as well as an ORDER BY clause by calling upon the :meth:`_expression.Select.where` and :meth:`_expression.Select.order_by` methods::
+        SQLAlchemyドキュメント内で「ジェネレーティブ」と呼ばれる「メソッドチェーニング」は、オブジェクト上のメソッドを呼び出すことによってオブジェクトの状態を構築するオブジェクト指向のテクニックです。オブジェクトには任意の数のメソッドがあり、それぞれが新しいオブジェクト(場合によっては同じオブジェクト)を返し、オブジェクトに追加の状態が追加されます。
+
+        .. The two SQLAlchemy objects that make the most use of method chaining are the :class:`_expression.Select` object and the :class:`.orm.query.Query` object.  For example, a :class:`_expression.Select` object can be assigned two expressions to its WHERE clause as well as an ORDER BY clause by calling upon the :meth:`_expression.Select.where` and :meth:`_expression.Select.order_by` methods::
+
+        メソッドチェーニングを最大限に活用している2つのSQLAlchemyオブジェクトは、 :class:`_expression.Select` オブジェクトと :class:`.orm.query.Query` オブジェクトです。例えば、 :class:`_expression.Select` オブジェクトは、 :meth:`_expression.Select.where` メソッドと :meth:`_expression.Select.order_by` メソッドを呼び出すことで、WHERE句とORDER BY句に2つの式を割り当てることができます。
 
             stmt = (
                 select(user.c.name)
@@ -516,16 +601,20 @@ Glossary
                 .order_by(user.c.name)
             )
 
-        Each method call above returns a copy of the original
-        :class:`_expression.Select` object with additional qualifiers
-        added.
+        .. Each method call above returns a copy of the original :class:`_expression.Select` object with additional qualifiers added.
+
+        上記の各メソッド呼び出しは、元の :class:`_expression.Select` オブジェクト追加の修飾子が追加されたコピーを返します。
 
     release
     releases
     released
-        In the context of SQLAlchemy, the term "released" refers to the process of ending the usage of a particular database connection.  SQLAlchemy features the usage of connection pools, which allows configurability as to the lifespan of database connections. When using a pooled connection, the process of "closing" it, i.e. invoking a statement like ``connection.close()``, may have the effect of the connection being returned to an existing pool, or it may have the effect of actually shutting down the underlying TCP/IP connection referred to by that connection - which one takes place depends on configuration as well as the current state of the pool. So we used the term *released* instead, to mean "do whatever it is you do with connections when we're done using them".
+        .. In the context of SQLAlchemy, the term "released" refers to the process of ending the usage of a particular database connection.  SQLAlchemy features the usage of connection pools, which allows configurability as to the lifespan of database connections. When using a pooled connection, the process of "closing" it, i.e. invoking a statement like ``connection.close()``, may have the effect of the connection being returned to an existing pool, or it may have the effect of actually shutting down the underlying TCP/IP connection referred to by that connection - which one takes place depends on configuration as well as the current state of the pool. So we used the term *released* instead, to mean "do whatever it is you do with connections when we're done using them".
 
-        The term will sometimes be used in the phrase, "release transactional resources", to indicate more explicitly that what we are actually "releasing" is any transactional state which as accumulated upon the connection. In most situations, the process of selecting from tables, emitting updates, etc. acquires :term:`isolated` state upon that connection as well as potential row or table locks. This state is all local to a particular transaction on the connection, and is released when we emit a rollback. An important feature of the connection pool is that when we return a connection to the pool, the ``connection.rollback()`` method of the DBAPI is called as well, so that as the connection is set up to be used again, it's in a "clean" state with no references held to the previous series of operations.
+        SQLAlchemyの文脈では、"解放された"という用語は、特定のデータベース接続の使用を終了するプロセスを指します。SQLAlchemyは、接続プールの使用を特徴とし、データベース接続の寿命に関して構成可能性を可能にします。プールされた接続を使用する場合、それを「閉じる」プロセス、すなわち ``connection. close()`` のような文を呼び出すプロセスは、接続が既存のプールに戻される効果を持つこともあれば、その接続によって参照される基礎となるTCP/IP接続を実際にシャットダウンする効果を持つこともあります。どちらが行われるかは、構成とプールの現在の状態に依存します。そのため、代わりに"接続の使用が終了したら、接続に対して行うことは何でも行う"という意味で"解放された"という用語を使用しました。
+
+        .. The term will sometimes be used in the phrase, "release transactional resources", to indicate more explicitly that what we are actually "releasing" is any transactional state which as accumulated upon the connection. In most situations, the process of selecting from tables, emitting updates, etc. acquires :term:`isolated` state upon that connection as well as potential row or table locks. This state is all local to a particular transaction on the connection, and is released when we emit a rollback. An important feature of the connection pool is that when we return a connection to the pool, the ``connection.rollback()`` method of the DBAPI is called as well, so that as the connection is set up to be used again, it's in a "clean" state with no references held to the previous series of operations.
+
+        この用語は、"トランザクションリソースを解放する"というフレーズで使用されることがあります。これは、実際に"解放"しているものが、接続時に蓄積されたトランザクション状態であることをより明確に示すためです。ほとんどの場合、テーブルから選択したり、更新を発行したりするプロセスなどは、その接続時に :term:`isolated` 状態と、潜在的なローまたはテーブルロックを取得します。この状態はすべて、接続上の特定のトランザクションに対してローカルであり、ロールバックを発行すると解放されます。接続プールの重要な機能は、接続をプールに戻すときに、DBAPIの ``connection. rollback()`` メソッドも呼び出されることです。これにより、接続が再度使用されるように設定されると、前の一連の操作への参照が保持されない"クリーン"状態になります。
 
         .. seealso::
 
@@ -533,7 +622,9 @@ Glossary
 
     DBAPI
     pep-249
-        DBAPI is shorthand for the phrase "Python Database API Specification".  This is a widely used specification within Python to define common usage patterns for all database connection packages. The DBAPI is a "low level" API which is typically the lowest level system used in a Python application to talk to a database.  SQLAlchemy's :term:`dialect` system is constructed around the operation of the DBAPI, providing individual dialect classes which service a specific DBAPI on top of a specific database engine; for example, the :func:`_sa.create_engine` URL ``postgresql+psycopg2://@localhost/test`` refers to the :mod:`psycopg2 <.postgresql.psycopg2>` DBAPI/dialect combination, whereas the URL ``mysql+mysqldb://@localhost/test`` refers to the :mod:`MySQL for Python <.mysql.mysqldb>` DBAPI/dialect combination.
+        .. DBAPI is shorthand for the phrase "Python Database API Specification".  This is a widely used specification within Python to define common usage patterns for all database connection packages. The DBAPI is a "low level" API which is typically the lowest level system used in a Python application to talk to a database.  SQLAlchemy's :term:`dialect` system is constructed around the operation of the DBAPI, providing individual dialect classes which service a specific DBAPI on top of a specific database engine; for example, the :func:`_sa.create_engine` URL ``postgresql+psycopg2://@localhost/test`` refers to the :mod:`psycopg2 <.postgresql.psycopg2>` DBAPI/dialect combination, whereas the URL ``mysql+mysqldb://@localhost/test`` refers to the :mod:`MySQL for Python <.mysql.mysqldb>` DBAPI/dialect combination.
+
+        DBAPIは"Python Database API Specification"の省略形です。これは、すべてのデータベース接続パッケージに共通の使用パターンを定義するために、Python内で広く使用されている仕様です。DBAPIは"低レベル"のAPIで、通常はPythonアプリケーションでデータベースと通信するために使用される最低レベルのシステムです。SQLAlchemyの :term:`dialect` システムはDBAPIの操作を中心に構築されており、特定のデータベースエンジン上で特定のDBAPIを提供する個々のダイアレクトクラスを提供します。たとえば、 :func:`_sa.create_engine` のURL ``postgresql+psycopg2://@localhost/test`` は :mod:`psycopg2 <.postgresql.psycopg2>` DBAPI/ダイアレクトの組み合わせを参照し、URL ``MySQL+mysqldb://@localhost/test`` は :mod:`MySQL for Python <MySQL.mysqldb>` DBAPI/ダイアレクトの組み合わせを参照します。
 
         .. seealso::
 
@@ -541,7 +632,9 @@ Glossary
 
     domain model
 
-        A domain model in problem solving and software engineering is a conceptual model of all the topics related to a specific problem. It describes the various entities, their attributes, roles, and relationships, plus the constraints that govern the problem domain.
+        .. A domain model in problem solving and software engineering is a conceptual model of all the topics related to a specific problem. It describes the various entities, their attributes, roles, and relationships, plus the constraints that govern the problem domain.
+
+        問題解決とソフトウェアエンジニアリングにおけるドメインモデルは、特定の問題に関連するすべてのトピックの概念モデルです。さまざまなエンティティ、その属性、役割、関係、および問題ドメインを管理する制約を記述します。
 
         (via Wikipedia)
 
@@ -550,11 +643,17 @@ Glossary
             `Domain Model (via Wikipedia) <https://en.wikipedia.org/wiki/Domain_model>`_
 
     unit of work
-        A software architecture where a persistence system such as an object relational mapper maintains a list of changes made to a series of objects, and periodically flushes all those pending changes out to the database.
+        .. A software architecture where a persistence system such as an object relational mapper maintains a list of changes made to a series of objects, and periodically flushes all those pending changes out to the database.
 
-        SQLAlchemy's :class:`_orm.Session` implements the unit of work pattern, where objects that are added to the :class:`_orm.Session` using methods like :meth:`_orm.Session.add` will then participate in unit-of-work style persistence.
+        オブジェクト・リレーショナル・マッパーなどのパーシスタンス・システムが、一連のオブジェクトに対して行われた変更のリストを保持し、保留中のすべての変更を定期的にデータベースにフラッシュするソフトウェア・アーキテクチャー。
 
-        For a walk-through of what unit of work persistence looks like in SQLAlchemy, start with the section :ref:`tutorial_orm_data_manipulation` in the :ref:`unified_tutorial`.  Then for more detail, see :ref:`session_basics` in the general reference documentation.
+        .. SQLAlchemy's :class:`_orm.Session` implements the unit of work pattern, where objects that are added to the :class:`_orm.Session` using methods like :meth:`_orm.Session.add` will then participate in unit-of-work style persistence.
+
+        SQLAlchemyの :class:`_orm.Session` は作業単位パターンを実装しており 、:meth:`_orm.Session.add` のようなメソッドを使って :class:`_orm.Session` に追加されたオブジェクトは、作業単位スタイルの永続化に参加します。
+
+        .. For a walk-through of what unit of work persistence looks like in SQLAlchemy, start with the section :ref:`tutorial_orm_data_manipulation` in the :ref:`unified_tutorial`.  Then for more detail, see :ref:`session_basics` in the general reference documentation.
+
+        SQLAlchemyでの作業持続性の単位がどのように見えるかのウォークスルーについては、 :ref:`unified_tutorial` の :ref:`tutorial_orm_data_manipulation` セクションから始めてください。その後、詳細については、一般的なリファレンスドキュメントの :ref:`session_basics` を参照してください。
 
         .. seealso::
 
@@ -568,7 +667,9 @@ Glossary
     flushing
     flushed
 
-        This refers to the actual process used by the :term:`unit of work` to emit changes to a database. In SQLAlchemy this process occurs via the :class:`_orm.Session` object and is usually automatic, but can also be controlled manually.
+        .. This refers to the actual process used by the :term:`unit of work` to emit changes to a database. In SQLAlchemy this process occurs via the :class:`_orm.Session` object and is usually automatic, but can also be controlled manually.
+
+         :term:`unit of work` がデータベースに変更を加えるために使用する実際のプロセスを指します。SQLAlchemyでは、このプロセスは :class:`_orm.Session` オブジェクトを介して行われ、通常は自動的に行われますが、手動で制御することもできます。
 
         .. seealso::
 
@@ -579,33 +680,46 @@ Glossary
     expires
     expiring
     Expiring
-        In the SQLAlchemy ORM, refers to when the data in a :term:`persistent` or sometimes :term:`detached` object is erased, such that when the object's attributes are next accessed, a :term:`lazy load` SQL query will be emitted in order to refresh the data for this object as stored in the current ongoing transaction.
+        .. In the SQLAlchemy ORM, refers to when the data in a :term:`persistent` or sometimes :term:`detached` object is erased, such that when the object's attributes are next accessed, a :term:`lazy load` SQL query will be emitted in order to refresh the data for this object as stored in the current ongoing transaction.
+
+        SQLAlchemyのORMでは、 :term:`persistent` オブジェクトや、時には :term:`detached` オブジェクトのデータがいつ消去されるかを参照します。オブジェクトの属性が次にアクセスされたとき、現在進行中のトランザクションに格納されているこのオブジェクトのデータを更新するために、 :term:`lazy load` SQLクエリが発行されます。
 
         .. seealso::
 
             :ref:`session_expire`
 
     Session
-        The container or scope for ORM database operations. Sessions load instances from the database, track changes to mapped instances and persist changes in a single unit of work when flushed.
+        .. The container or scope for ORM database operations. Sessions load instances from the database, track changes to mapped instances and persist changes in a single unit of work when flushed.
+
+        ORMデータベース操作のコンテナまたはスコープです。セッションは、データベースからインスタンスをロードし、マップされたインスタンスへの変更を追跡し、フラッシュ時に単一の作業単位で変更を保持します。
 
         .. seealso::
 
             :doc:`orm/session`
 
     columns clause
-        The portion of the ``SELECT`` statement which enumerates the SQL expressions to be returned in the result set. The expressions follow the ``SELECT`` keyword directly and are a comma-separated list of individual expressions.
+        .. The portion of the ``SELECT`` statement which enumerates the SQL expressions to be returned in the result set. The expressions follow the ``SELECT`` keyword directly and are a comma-separated list of individual expressions.
 
-        E.g.:
+        結果セットに返されるSQL式を列挙する ``SELECT`` 文の部分です。式は ``SELECT`` キーワードの直後に続き、カンマで区切られた個々の式のリストです。
 
+        .. E.g.:
+
+        例:
         .. sourcecode:: sql
 
             SELECT user_account.name, user_account.email
             FROM user_account WHERE user_account.name = 'fred'
 
-        Above, the list of columns ``user_acount.name``, ``user_account.email`` is the columns clause of the ``SELECT``.
+        .. Above, the list of columns ``user_acount.name``, ``user_account.email`` is the columns clause of the ``SELECT``.
+
+        上記の ``user_acount.name`` 、 ``user_account.email`` 列のリストは、 ``SELECT`` の ``columns`` 節です。
 
     WHERE clause
-        The portion of the ``SELECT`` statement which indicates criteria by which rows should be filtered. It is a single SQL expression which follows the keyword ``WHERE``.
+        .. The portion of the ``SELECT`` statement which indicates criteria by which rows should be filtered. It is a single SQL expression which follows the keyword ``WHERE``.
+
+        ``SELECT`` 文の中で、行をフィルタする条件を示す部分。キーワード ``WHERE`` の後に続く1つのSQL式です。
+
+
 
         .. sourcecode:: sql
 
