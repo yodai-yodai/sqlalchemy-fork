@@ -15,7 +15,7 @@ Glossary
     2.0-style
         .. These terms are new in SQLAlchemy 1.4 and refer to the SQLAlchemy 1.4-> 2.0 transition plan, described at :ref:`migration_20_toplevel`.  The term "1.x style" refers to an API used in the way it's been documented throughout the 1.x series of SQLAlchemy and earlier (e.g. 1.3, 1.2, etc) and the term "2.0 style" refers to the way an API will look in version 2.0.   Version 1.4 implements nearly all of 2.0's API in so-called "transition mode", while version 2.0 still maintains the legacy :class:`_orm.Query` object to allow legacy code to remain largely 2.0 compatible.
 
-        これらの用語はSQLAlchemy 1.4で新しく追加されたもので、 :ref:`migration_20_toplevel` で説明されているSQLAlchemy 1.4 -> 2.0の移行計画を参照しています。"1.x style"という用語は、SQLAlchemyの1.xシリーズおよびそれ以前(例えば1.3、1.2など)で文書化されている方法で使用されるAPIを指し、"2.0 style"という用語は、バージョン2.0でのAPIの表示方法を指します。バージョン1.4は2.0のAPIのほぼすべてをいわゆる"移行モード"で実装していますが、バージョン2.0はレガシーコードが2.0との互換性を維持できるようにレガシーの:class`_orm.Query`オブジェクトを維持しています。
+        これらの用語はSQLAlchemy 1.4で新しく追加されたもので、 :ref:`migration_20_toplevel` で説明されているSQLAlchemy 1.4 -> 2.0の移行計画を参照しています。"1.x style"という用語は、SQLAlchemyの1.xシリーズおよびそれ以前(例えば1.3、1.2など)で文書化されている方法で使用されるAPIを指し、"2.0 style"という用語は、バージョン2.0でのAPIの表示方法を指します。バージョン1.4は2.0のAPIのほぼすべてをいわゆる"移行モード"で実装していますが、バージョン2.0はレガシーコードが2.0との互換性を維持できるようにレガシーの :class:`_orm.Query` オブジェクトを維持しています。
 
         .. seealso::
 
@@ -25,7 +25,7 @@ Glossary
     insert sentinel
         .. This is a SQLAlchemy-specific term that refers to a :class:`_schema.Column` which can be used for a bulk         :term:`insertmanyvalues` operation to track INSERTed data records against rows passed back using RETURNING or similar.   Such a column configuration is necessary for those cases when the :term:`insertmanyvalues` feature does an optimized INSERT..RETURNING statement for many rows at once while still being able to guarantee the order of returned rows matches the input data.
 
-        これはSQLAlchemy特有の用語で、 :class`_schema.Column` を参照します。これはバルクの :term:`insertmanyvalues` 操作で使用でき、RETURNINGなどを使用して返された行に対して挿入されたデータレコードを追跡します。このような列設定は、 :term:`insertmanyvalues` 機能が一度に多くの行に対して最適化されたINSERT.RETURNING文を実行し、返された行の順序が入力データと一致することを保証できる場合に必要です。
+        これはSQLAlchemy特有の用語で、:class:`_schema.Column` を参照します。これはバルクの :term:`insertmanyvalues` 操作で使用でき、RETURNINGなどを使用して返された行に対して挿入されたデータレコードを追跡します。このような列設定は、 :term:`insertmanyvalues` 機能が一度に多くの行に対して最適化されたINSERT.RETURNING文を実行し、返された行の順序が入力データと一致することを保証できる場合に必要です。
 
         .. For typical use cases, the SQLAlchemy SQL compiler can automatically make use of surrogate integer primary key columns as "insert sentinels", and no user-configuration is required. For less common cases with other varieties of server-generated primary key values, explicit "insert sentinel" columns may be optionally configured within :term:`table metadata` in order to optimize INSERT statements that are inserting many rows at once.
 
@@ -33,7 +33,7 @@ Glossary
 
         .. seealso::
 
-            :ref:`engine_insertmanyvalues_returning_order` - in the section
+            :ref:`engine_insertmanyvalues_returning_order` - このセクションにあります。
             :ref:`engine_insertmanyvalues`
 
     insertmanyvalues
@@ -48,15 +48,14 @@ Glossary
 
     mixin class
     mixin classes
+        ..   A common object-oriented pattern where a class that contains methods or attributes for use by other classes without having to be the parent class of those other classes.
 
-    ..   A common object-oriented pattern where a class that contains methods or attributes for use by other classes without having to be the parent class of those other classes.
-
-    他のクラスによって使用されるメソッドまたは属性を含むクラスが、それらの他のクラスの親クラスである必要がない、共通のオブジェクト指向パターン。
+        他のクラスによって使用されるメソッドまたは属性を含むクラスが、それらの他のクラスの親クラスである必要がない、共通のオブジェクト指向パターン。
 
 
-      .. seealso::
+        .. seealso::
 
-          `Mixin (via Wikipedia) <https://en.wikipedia.org/wiki/Mixin>`_
+          `Mixin (Wkipediaより) <https://en.wikipedia.org/wiki/Mixin>`_
 
 
     reflection
@@ -99,18 +98,18 @@ Glossary
 
         .. seealso::
 
-            `Facade pattern (via Wikipedia) <https://en.wikipedia.org/wiki/Facade_pattern>`_
+            `Facade pattern (Wkipediaより) <https://en.wikipedia.org/wiki/Facade_pattern>`_
 
     relational
     relational algebra
 
         .. An algebraic system developed by Edgar F. Codd that is used for modelling and querying the data stored in relational databases.
 
-        リレーショナル・データベースに格納されたデータのモデリングとクエリーに使用される、エドガー・F・コッドによって開発された代数的システム。
+        リレーショナル・データベースに格納されたデータのモデリングとクエリーに使用される、Edgar F. Coddによって開発された代数的システム。
 
         .. seealso::
 
-            `Relational Algebra (via Wikipedia) <https://en.wikipedia.org/wiki/Relational_algebra>`_
+            `Relational Algebra (Wkipediaより) <https://en.wikipedia.org/wiki/Relational_algebra>`_
 
     cartesian product
 
@@ -128,7 +127,7 @@ Glossary
 
         .. seealso::
 
-            `Cartesian Product (via Wikipedia) <https://en.wikipedia.org/wiki/Cartesian_product>`_
+            `Cartesian Product (Wkipediaより) <https://en.wikipedia.org/wiki/Cartesian_product>`_
 
     cyclomatic complexity
         .. A measure of code complexity based on the number of possible paths through a program's source code.
@@ -151,16 +150,15 @@ Glossary
 
         .. The specific system by which the database driver does this should not matter to the caller; the point is that on the outside, data should **always** be passed separately and not as part of the SQL string itself.  This is integral both to having adequate security against SQL injections as well as allowing the driver to have the best performance.
 
-        データベースドライバがこれを行う特定のシステムは、呼び出し元には関係ありません。重要なのは、外部では、データはSQL文字列自体の一部としてではなく、**常に**別々に渡されるべきであるということです。これは、SQLインジェクションに対して適切なセキュリティを確保するためにも、ドライバが最高のパフォーマンスを発揮できるようにするためにも不可欠です。
-
+        データベースドライバがこれを行う特定のシステムは、呼び出し元には関係ありません。重要なのは、外部では、データはSQL文字列自体の一部としてではなく、 **常に** 別々に渡されるべきであるということです。これは、SQLインジェクションに対して適切なセキュリティを確保するためにも、ドライバが最高のパフォーマンスを発揮できるようにするためにも不可欠です。
 
         .. seealso::
 
-            `Prepared Statement <https://en.wikipedia.org/wiki/Prepared_statement>`_ - at Wikipedia
+            `Prepared Statement <https://en.wikipedia.org/wiki/Prepared_statement>`_ - Wikipediaより
 
             `bind parameters <https://use-the-index-luke.com/sql/where-clause/bind-parameters>`_ - at Use The Index, Luke!
 
-            :ref:`tutorial_sending_parameters` - in the :ref:`unified_tutorial`
+            :ref:`tutorial_sending_parameters` - :ref:`unified_tutorial`
 
     selectable
         .. A term used in SQLAlchemy to describe a SQL construct that represents a collection of rows.   It's largely similar to the concept of a "relation" in :term:`relational algebra`.  In SQLAlchemy, objects that subclass the :class:`_expression.Selectable` class are considered to be usable as "selectables" when using SQLAlchemy Core.  The two most common constructs are that of the :class:`_schema.Table` and that of the :class:`_expression.Select` statement.
@@ -179,7 +177,6 @@ Glossary
 
         SQLAlchemyの文書化されたコード例のほとんどは、"Annotated Example"または"Non-annotated Example"に関する小さな注記でフォーマットされています。これは例が :pep:`484` 注釈付きであるかどうかを示し、"ORM-annotated"というSQLAlchemyの概念とは関係ありません。
 
-
         .. When the phrase "ORM-annotated" appears in documentation, it is referring to Core SQL expression objects such as :class:`.Table`, :class:`.Column`, and :class:`.Select` objects, which originate from, or refer to sub-elements that originate from, one or more ORM mappings, and therefore will have ORM-specific interpretations and/or behaviors when passed to ORM methods such as :meth:`_orm.Session.execute`.  For example, when we construct a :class:`.Select` object from an ORM mapping, such as the ``User`` class illustrated in the :ref:`ORM Tutorial <tutorial_declaring_mapped_classes>`::
 
         ドキュメントに"ORM-annotated"というフレーズがある場合、これは :class:`.Table` 、 :class:`.Column` 、 :class:`.Select` オブジェクトなどのコアSQL式オブジェクトを参照しています。これらのオブジェクトは、1つまたは複数のORMマッピングから生成されるか、またはORMマッピングから生成されるサブ要素を参照します。したがって、 :meth:`_orm.Session.execute` などのORMメソッドに渡されると、ORM固有の解釈や動作が行われます。たとえば、 :ref:`ORM Tutorial<tutorial_declaring_mapped_classes>` に示されている ``User`` クラスのようなORMマッピングから :class:`.Select` オブジェクトを構築する場合::
@@ -196,7 +193,7 @@ Glossary
 
         .. However, when our :class:`.Select` is passed along to an ORM :class:`.Session`, the ORM entities that are indirectly associated with the object are used to interpret this :class:`.Select` in an ORM context. The actual "ORM annotations" can be seen in another private variable ``._annotations``::
 
-しかし、 :class:`.Select` がORM :class:`.Session` に渡されると、オブジェクトに間接的に関連付けられたORMエンティティが、この :class:`.Select` をORMコンテキストで解釈するために使用されます。実際の"ORMアノテーション"は、別のプライベート変数 ``._annotations`` で確認することができます。
+        しかし、 :class:`.Select` がORM :class:`.Session` に渡されると、オブジェクトに間接的に関連付けられたORMエンティティが、この :class:`.Select` をORMコンテキストで解釈するために使用されます。実際の"ORMアノテーション"は、別のプライベート変数 ``._annotations`` で確認することができます::
 
 
           >>> stmt._raw_columns[0]._annotations
@@ -269,11 +266,11 @@ Glossary
     data marshalling
         ..  The process of transforming the memory representation of an object to a data format suitable for storage or transmission to another part of a system, when data must be moved between different parts of a computer program or from one program to another. In terms of SQLAlchemy, we often need to "marshal" data into a format appropriate for passing into the relational database.
 
-        コンピュータプログラムの異なる部分間で、またはあるプログラムから別のプログラムにデータを移動する必要がある場合に、オブジェクトのメモリ表現を、システムの別の部分への格納または転送に適したデータ形式に変換するプロセス。SQLAlchemyに関しては、リレーショナル・データベースに渡すのに適した形式にデータを「マーシャリング」する必要があります。
+        コンピュータプログラムの異なる部分間で、またはあるプログラムから別のプログラムにデータを移動する必要がある場合に、オブジェクトのメモリ表現を、システムの別の部分への格納または転送に適したデータ形式に変換するプロセス。SQLAlchemyに関しては、リレーショナル・データベースに渡すのに適した形式にデータを"マーシャリング"する必要があります。
 
          .. seealso::
 
-            `Marshalling (via Wikipedia) <https://en.wikipedia.org/wiki/Marshalling_(computer_science)>`_
+            `Marshalling (Wkipediaより) <https://en.wikipedia.org/wiki/Marshalling_(computer_science)>`_
 
             .. :ref:`types_typedecorator` - SQLAlchemy's :class:`.TypeDecorator` is commonly used for data marshalling as data is sent into the database for INSERT and UPDATE statements, and "unmarshalling" data as it is retrieved using SELECT statements.
 
@@ -284,7 +281,7 @@ Glossary
 
         .. In Python, a descriptor is an object attribute with “binding behavior”, one whose attribute access has been overridden by methods in the `descriptor protocol <https://docs.python.org/howto/descriptor.html>`_.  Those methods are ``__get__()``, ``__set__()``, and ``__delete__()``.  If any of those methods are defined for an object, it is said to be a descriptor.
 
-        Pythonでは、記述子は「バインド動作」を持つオブジェクト属性であり、その属性アクセスは `descriptor protocol <https://docs.python.org/howto/descriptor.html>`_.  のメソッドによってオーバーライドされています。これらのメソッドは、 ``__get__()`` 、``__set__()`` 、および ``__delete__()`` です。これらのメソッドのいずれかがオブジェクトに対して定義されている場合、それは記述子であると言われます。
+        Pythonでは、記述子は"バインド動作"を持つオブジェクト属性であり、その属性アクセスは `descriptor protocol <https://docs.python.org/howto/descriptor.html>`_.  のメソッドによってオーバーライドされています。これらのメソッドは、 ``__get__()`` 、``__set__()`` 、および ``__delete__()`` です。これらのメソッドのいずれかがオブジェクトに対して定義されている場合、それは記述子であると言われます。
 
         .. In SQLAlchemy, descriptors are used heavily in order to provide attribute behavior on mapped classes. When a class is mapped as such::
 
@@ -299,7 +296,7 @@ Glossary
 
         .. The ``MyClass`` class will be :term:`mapped` when its definition is complete, at which point the ``id`` and ``data`` attributes, starting out as :class:`_schema.Column` objects, will be replaced by the :term:`instrumentation` system with instances of :class:`.InstrumentedAttribute`, which are descriptors that provide the above mentioned ``__get__()``, ``__set__()`` and ``__delete__()`` methods.   The :class:`.InstrumentedAttribute` will generate a SQL expression when used at the class level:
 
-        定義が完了すると、 ``MyClass`` クラスは :term:`mapped` になります。その時点で、 :class:`_schema.Column` オブジェクトから始まる ``id`` 属性と ``data`` 属性は、 :class:`.InstrumentedAttribute` のインスタンスを持つ :term:`instrumentation` システムに置き換えられます。これは、前述の ``__get__()`` 、 ``__set__()`` 、 ``__delete__()`` メソッドを提供する記述子です。 :class:`.InstrumentedAttribute` をクラスレベルで使用すると、SQL式が生成されます。
+        定義が完了すると、 ``MyClass`` クラスは :term:`mapped` になります。その時点で、 :class:`_schema.Column` オブジェクトから始まる ``id`` 属性と ``data`` 属性は、 :class:`.InstrumentedAttribute` のインスタンスを持つ :term:`instrumentation` システムに置き換えられます。これは、前述の ``__get__()`` 、 ``__set__()`` 、 ``__delete__()`` メソッドを提供する記述子です。 :class:`.InstrumentedAttribute` をクラスレベルで使用すると、SQL式が生成されます:
 
 
         .. sourcecode:: pycon+sql
@@ -331,20 +328,20 @@ Glossary
 
             :ref:`metadata_toplevel`
 
-            `DDL (via Wikipedia) <https://en.wikipedia.org/wiki/Data_definition_language>`_
+            `DDL (Wkipediaより) <https://en.wikipedia.org/wiki/Data_definition_language>`_
 
             :term:`DML`
 
             :term:`DQL`
 
     DML
-    ..    An acronym for **Data Manipulation Language**.  DML is the subset of SQL that relational databases use to *modify* the data in tables. DML typically refers to the three widely familiar statements of INSERT, UPDATE and  DELETE, otherwise known as :term:`CRUD` (acronym for "Create, Read, Update, Delete").
+        .. An acronym for **Data Manipulation Language**.  DML is the subset of SQL that relational databases use to *modify* the data in tables. DML typically refers to the three widely familiar statements of INSERT, UPDATE and  DELETE, otherwise known as :term:`CRUD` (acronym for "Create, Read, Update, Delete").
 
        **Data Manipulation Language** の頭字語。DMLは、リレーショナル・データベースが表内のデータを*変更*するために使用するSQLのサブセットです。DMLは通常、INSERT、UPDATE、DELETEの3つの一般的な文を指します。これらは :term:`CRUD` ("Create, Read, Update, Delete"の頭字語)としても知られています。
 
         .. seealso::
 
-            `DML (via Wikipedia) <https://en.wikipedia.org/wiki/Data_manipulation_language>`_
+            `DML (Wkipediaより) <https://en.wikipedia.org/wiki/Data_manipulation_language>`_
 
             :term:`DDL`
 
@@ -355,11 +352,9 @@ Glossary
 
         **Data Query Language** の頭字語です。DQLは、リレーショナル・データベースが表内のデータを*読み取る*ために使用するSQLのサブセットです。DQLは、ほとんどの場合、使用中の最上位レベルのSQL文としてSQL SELECT構文を参照します。
 
-
-
         .. seealso::
 
-            `DQL (via Wikipedia) <https://en.wikipedia.org/wiki/Data_query_language>`_
+            `DQL (Wkipediaより) <https://en.wikipedia.org/wiki/Data_query_language>`_
 
             :term:`DML`
 
@@ -368,15 +363,15 @@ Glossary
     metadata
     database metadata
     table metadata
-        The term "metadata" generally refers to "data that describes data"; data that itself represents the format and/or structure of some other kind of data.  In SQLAlchemy, the term "metadata" typically refers  to the :class:`_schema.MetaData` construct, which is a collection of information about the tables, columns, constraints, and other :term:`DDL` objects that may exist in a particular database.
+        .. The term "metadata" generally refers to "data that describes data"; data that itself represents the format and/or structure of some other kind of data.  In SQLAlchemy, the term "metadata" typically refers  to the :class:`_schema.MetaData` construct, which is a collection of information about the tables, columns, constraints, and other :term:`DDL` objects that may exist in a particular database.
 
-        "メタデータ"という用語は、一般に「データを記述するデータ」、つまり、それ自体が何らかの他の種類のデータのフォーマットおよび/または構造を表すデータを指します。SQLAlchemyでは、「メタデータ」という用語は通常、特定のデータベースに存在する可能性のあるテーブル、カラム、制約、およびその他の: term:`DDL` オブジェクトに関する情報のコレクションである :class:`_schema.MetaData` 構造を指します。
+        "メタデータ"という用語は、一般に"データを記述するデータ"、つまり、それ自体が何らかの他の種類のデータのフォーマットおよび/または構造を表すデータを指します。SQLAlchemyでは、"メタデータ"という用語は通常、特定のデータベースに存在する可能性のあるテーブル、カラム、制約、およびその他の :term:`DDL` オブジェクトに関する情報のコレクションである :class:`_schema.MetaData` 構造を指します。
 
         .. seealso::
 
             `Metadata Mapping (via Martin Fowler) <https://www.martinfowler.com/eaaCatalog/metadataMapping.html>`_
 
-            :ref:`tutorial_working_with_metadata`  - in the :ref:`unified_tutorial`
+            :ref:`tutorial_working_with_metadata`  - :ref:`unified_tutorial`
 
     version id column
         .. In SQLAlchemy, this refers to the use of a particular table column that tracks the "version" of a particular row, as the row changes values. While there are different kinds of relational patterns that make use of a "version id column" in different ways, SQLAlchemy's ORM includes a particular feature that allows for such a column to be configured as a means of testing for stale data when a row is being UPDATEd with new information. If the last known "version" of this column does not match that of the row when we try to put new data into the row, we know that we are acting on stale information.
@@ -386,8 +381,6 @@ Glossary
         .. There are also other ways of storing "versioned" rows in a database, often referred to as "temporal" data.  In addition to SQLAlchemy's versioning feature, a few more examples are also present in the documentation, see the links below.
 
         データベースに"バージョン管理された"行を保存する方法は他にもあり、これはしばしば"一時的な"データと呼ばれます。SQLAlchemyのバージョン管理機能に加えて、さらにいくつかの例がドキュメントに記載されています。以下のリンクを参照してください。
-
-
 
         .. seealso::
 
@@ -415,7 +408,7 @@ Glossary
 
         .. The term "cascades" as well as the general architecture of this system in SQLAlchemy was borrowed, for better or worse, from the Hibernate ORM.
 
-        SQLAlchemyにおけるこのシステムの一般的なアーキテクチャと同様に、"カスケード"という用語は、良くも悪くも、Hibernate ORMから借用された。
+        SQLAlchemyにおけるこのシステムの一般的なアーキテクチャと同様に、"カスケード"という用語は、良くも悪くも、Hibernate ORMから借りました。
 
 
 
@@ -437,7 +430,7 @@ Glossary
     discriminator
         .. A result-set column which is used during :term:`polymorphic` loading to determine what kind of mapped class should be applied to a particular incoming result row.
 
-       :term:`polymorphic` のロード時に使用される結果セット列で、特定の結果行に適用すべきマップされたクラスの種類を決定します。
+         :term:`polymorphic` のロード時に使用される結果セット列で、特定の結果行に適用すべきマップされたクラスの種類を決定します。
 
         .. seealso::
 
@@ -453,11 +446,11 @@ Glossary
     identity key
         .. A key associated with ORM-mapped objects that identifies their primary key identity within the database, as well as their unique identity within a :class:`_orm.Session` :term:`identity map`.
 
-        ORMマップされたオブジェクトに関連付けられたキーで、データベース内での主キーのIDと、 :class:`_orm.Session`  :term:`identity map` 内での一意のIDを識別します。
+        ORMマップされたオブジェクトに関連付けられたキーで、データベース内での主キーのIDと、 :class:`_orm.Session` 、 :term:`identity map` 内での一意のIDを識別します。
 
         .. In SQLAlchemy, you can view the identity key for an ORM object using the :func:`_sa.inspect` API to return the :class:`_orm.InstanceState` tracking object, then looking at the :attr:`_orm.InstanceState.key` attribute::
 
-        SQLAlchemyでは、 :func:`_sa.inspect` APIを使って: class:`_orm.InstanceState` 追跡オブジェクトを返し、 :attr:`_orm.InstanceState.key` 属性を見ることで、ORMオブジェクトのIDキーを見ることができます::
+        SQLAlchemyでは、 :func:`_sa.inspect` APIを使って :class:`_orm.InstanceState` 追跡オブジェクトを返し、 :attr:`_orm.InstanceState.key` 属性を見ることで、ORMオブジェクトのIDキーを見ることができます::
 
 
 
@@ -491,7 +484,7 @@ Glossary
 
         .. seealso::
 
-            `Lazy initialization (via Wikipedia) <https://en.wikipedia.org/wiki/Lazy_initialization>`_
+            `Lazy initialization (Wkipediaより) <https://en.wikipedia.org/wiki/Lazy_initialization>`_
 
     lazy load
     lazy loads
@@ -499,22 +492,20 @@ Glossary
     lazy loading
         .. In object relational mapping, a "lazy load" refers to an attribute that does not contain its database-side value for some period of time, typically when the object is first loaded. Instead, the attribute receives a *memoization* that causes it to go out to the database and load its data when it's first used. Using this pattern, the complexity and time spent within object fetches can sometimes be reduced, in that attributes for related tables don't need to be addressed immediately.
 
-        オブジェクト・リレーショナル・マッピングでは、"遅延ロード"とは、通常はオブジェクトが最初にロードされるときに、ある期間データベース側の値を含まない属性を指します。その代わりに、属性は*メモ化*を受け取り、データベースに送信され、最初に使用されたときにデータをロードします。このパターンを使用すると、関連するテーブルの属性をすぐに処理する必要がないため、オブジェクト・フェッチの複雑さと時間を削減できる場合があります。
+        オブジェクト・リレーショナル・マッピングでは、"遅延ロード"とは、通常はオブジェクトが最初にロードされるときに、ある期間データベース側の値を含まない属性を指します。その代わりに、属性は *メモ化* を受け取り、データベースに送信され、最初に使用されたときにデータをロードします。このパターンを使用すると、関連するテーブルの属性をすぐに処理する必要がないため、オブジェクト・フェッチの複雑さと時間を削減できる場合があります。
 
         .. Lazy loading is the opposite of :term:`eager loading`.
 
         遅延読み込みは :term:`eager loading` の反対です。
 
-        Within SQLAlchemy, lazy loading is a key feature of the ORM, and applies to attributes which are :term:`mapped` on a user-defined class. When attributes that refer to database columns or related objects are accessed, for which no loaded value is present, the ORM makes use of the :class:`_orm.Session` for which the current object is associated with in the :term:`persistent` state, and emits a SELECT statement on the current transaction, starting a new transaction if one was not in progress. If the object is in the :term:`detached` state and not associated with any :class:`_orm.Session`, this is considered to be an error state and an :ref:`informative exception <error_bhk3>` is raised.
+        .. Within SQLAlchemy, lazy loading is a key feature of the ORM, and applies to attributes which are :term:`mapped` on a user-defined class. When attributes that refer to database columns or related objects are accessed, for which no loaded value is present, the ORM makes use of the :class:`_orm.Session` for which the current object is associated with in the :term:`persistent` state, and emits a SELECT statement on the current transaction, starting a new transaction if one was not in progress. If the object is in the :term:`detached` state and not associated with any :class:`_orm.Session`, this is considered to be an error state and an :ref:`informative exception <error_bhk3>` is raised.
 
         SQLAlchemyでは、遅延読み込みはORMの重要な機能であり、ユーザ定義クラスの :term:`mapped` 属性に適用されます。データベース列や関連するオブジェクトを参照する属性がアクセスされ、その属性にロードされた値が存在しない場合、ORMは現在のオブジェクトが :term:`persistent` 状態で関連付けられている :class:`_orm.Session` を利用し、現在のトランザクションでSELECT文を発行し、進行中でなければ新しいトランザクションを開始します。オブジェクトが :term:`detached` 状態で、どの :class:`_orm.Session` とも関連付けられていない場合、これはエラー状態とみなされ、 :ref:`informational exception<error_bhk3>` が発生します。
 
 
         .. seealso::
 
-            `Lazy Load (via Martin Fowler) <https://martinfowler.com/eaaCatalog/lazyLoad.html>`_
-
-            :term:`N plus one problem`
+            `Lazy Load (via Martin Fowler) <https://martinfowler.com/eaaCatalog/lazyLoad.html>`_ :term:`N plus one problem`
 
             .. :ref:`loading_columns` - includes information on lazy loading of ORM mapped columns
 
@@ -552,7 +543,7 @@ Glossary
     ORM mapped class
         .. We say a class is "mapped" when it has been associated with an instance of the :class:`_orm.Mapper` class. This process associates the class with a database table or other :term:`selectable` construct, so that instances of it can be persisted and loaded using a :class:`.Session`.
 
-        クラスが :class:`_orm.Mapper` クラスのインスタンスに関連付けられている場合、そのクラスは"マップされている"と言います。このプロセスはクラスをデータベーステーブルや他の :term:`選択可能な` 構成体に関連付け、そのインスタンスが :class:`.Session` を使って永続化されロードされるようにします。
+        クラスが :class:`_orm.Mapper` クラスのインスタンスに関連付けられている場合、そのクラスは"マップされている"と言います。このプロセスはクラスをデータベーステーブルや他の :term:`selectable` 構成体に関連付け、そのインスタンスが :class:`.Session` を使って永続化されロードされるようにします。
 
         .. seealso::
 
@@ -562,7 +553,7 @@ Glossary
     N plus one
         .. The N plus one problem is a common side effect of the :term:`lazy load` pattern, whereby an application wishes to iterate through a related attribute or collection on each member of a result set of objects, where that attribute or collection is set to be loaded via the lazy load pattern. The net result is that a SELECT statement is emitted to load the initial result set of parent objects; then, as the application iterates through each member, an additional SELECT statement is emitted for each member in order to load the related attribute or collection for that member. The end result is that for a result set of N parent objects, there will be N + 1 SELECT statements emitted.
 
-        N+1の問題は、 :term:`遅延ロード` パターンの一般的な副作用です。このパターンでは、アプリケーションはオブジェクトの結果セットの各メンバの関連する属性またはコレクションを繰り返し処理し、その属性またはコレクションは遅延ロードパターンを介してロードされるように設定されます。最終的には、親オブジェクトの最初の結果セットをロードするためにSELECTステートメントが発行されます。次に、アプリケーションが各メンバを繰り返し処理すると、そのメンバの関連する属性またはコレクションをロードするために、各メンバに対して追加のSELECTステートメントが発行されます。最終的には、N個の親オブジェクトの結果セットに対して、N+1個のSELECTステートメントが発行されます。
+        N+1の問題は、 :term:`lazy load` パターンの一般的な副作用です。このパターンでは、アプリケーションはオブジェクトの結果セットの各メンバの関連する属性またはコレクションを繰り返し処理し、その属性またはコレクションは遅延ロードパターンを介してロードされるように設定されます。最終的には、親オブジェクトの最初の結果セットをロードするためにSELECTステートメントが発行されます。次に、アプリケーションが各メンバを繰り返し処理すると、そのメンバの関連する属性またはコレクションをロードするために、各メンバに対して追加のSELECTステートメントが発行されます。最終的には、N個の親オブジェクトの結果セットに対して、N+1個のSELECTステートメントが発行されます。
 
         The N plus one problem is alleviated using :term:`eager loading`.
 
@@ -578,7 +569,7 @@ Glossary
 
         一度に複数の型を処理する関数を指します。SQLAlchemyでは、この用語は通常、ORMマップされたクラスの概念に適用されます。これにより、クエリ操作は結果セット内の情報に基づいて、通常は :term:`discriminator` として知られる結果内の特定の列の値をチェックすることによって、異なるサブクラスを返します。
 
-        Polymorphic loading in SQLAlchemy implies that a one or a combination of three different schemes are used to map a hierarchy of classes; "joined", "single", and "concrete". The section :ref:`inheritance_toplevel` describes inheritance mapping fully.
+        .. Polymorphic loading in SQLAlchemy implies that a one or a combination of three different schemes are used to map a hierarchy of classes; "joined", "single", and "concrete". The section :ref:`inheritance_toplevel` describes inheritance mapping fully.
 
         SQLAlchemyにおけるポリモーフィックなロードは、クラスの階層をマップするために、"joined"、"single"、"concrete"の3つの異なるスキームの1つまたは組み合わせが使用されることを意味します。セクション :ref:`inheritance_toplevel` では、継承マッピングについて詳しく説明しています。
 
@@ -588,11 +579,11 @@ Glossary
     generative
         .. "Method chaining", referred to within SQLAlchemy documentation as "generative", is an object-oriented technique whereby the state of an object is constructed by calling methods on the object. The object features any number of methods, each of which return a new object (or in some cases the same object) with additional state added to the object.
 
-        SQLAlchemyドキュメント内で「ジェネレーティブ」と呼ばれる「メソッドチェーニング」は、オブジェクト上のメソッドを呼び出すことによってオブジェクトの状態を構築するオブジェクト指向のテクニックです。オブジェクトには任意の数のメソッドがあり、それぞれが新しいオブジェクト(場合によっては同じオブジェクト)を返し、オブジェクトに追加の状態が追加されます。
+        SQLAlchemyドキュメント内で"ジェネレーティブ"と呼ばれる"メソッドチェーニング"は、オブジェクト上のメソッドを呼び出すことによってオブジェクトの状態を構築するオブジェクト指向のテクニックです。オブジェクトには任意の数のメソッドがあり、それぞれが新しいオブジェクト(場合によっては同じオブジェクト)を返し、オブジェクトに追加の状態が追加されます。
 
         .. The two SQLAlchemy objects that make the most use of method chaining are the :class:`_expression.Select` object and the :class:`.orm.query.Query` object.  For example, a :class:`_expression.Select` object can be assigned two expressions to its WHERE clause as well as an ORDER BY clause by calling upon the :meth:`_expression.Select.where` and :meth:`_expression.Select.order_by` methods::
 
-        メソッドチェーニングを最大限に活用している2つのSQLAlchemyオブジェクトは、 :class:`_expression.Select` オブジェクトと :class:`.orm.query.Query` オブジェクトです。例えば、 :class:`_expression.Select` オブジェクトは、 :meth:`_expression.Select.where` メソッドと :meth:`_expression.Select.order_by` メソッドを呼び出すことで、WHERE句とORDER BY句に2つの式を割り当てることができます。
+        メソッドチェーニングを最大限に活用している2つのSQLAlchemyオブジェクトは、 :class:`_expression.Select` オブジェクトと :class:`.orm.query.Query` オブジェクトです。例えば、 :class:`_expression.Select` オブジェクトは、 :meth:`_expression.Select.where` メソッドと :meth:`_expression.Select.order_by` メソッドを呼び出すことで、WHERE句とORDER BY句に2つの式を割り当てることができます::
 
             stmt = (
                 select(user.c.name)
@@ -610,7 +601,7 @@ Glossary
     released
         .. In the context of SQLAlchemy, the term "released" refers to the process of ending the usage of a particular database connection.  SQLAlchemy features the usage of connection pools, which allows configurability as to the lifespan of database connections. When using a pooled connection, the process of "closing" it, i.e. invoking a statement like ``connection.close()``, may have the effect of the connection being returned to an existing pool, or it may have the effect of actually shutting down the underlying TCP/IP connection referred to by that connection - which one takes place depends on configuration as well as the current state of the pool. So we used the term *released* instead, to mean "do whatever it is you do with connections when we're done using them".
 
-        SQLAlchemyの文脈では、"解放された"という用語は、特定のデータベース接続の使用を終了するプロセスを指します。SQLAlchemyは、接続プールの使用を特徴とし、データベース接続の寿命に関して構成可能性を可能にします。プールされた接続を使用する場合、それを「閉じる」プロセス、すなわち ``connection. close()`` のような文を呼び出すプロセスは、接続が既存のプールに戻される効果を持つこともあれば、その接続によって参照される基礎となるTCP/IP接続を実際にシャットダウンする効果を持つこともあります。どちらが行われるかは、構成とプールの現在の状態に依存します。そのため、代わりに"接続の使用が終了したら、接続に対して行うことは何でも行う"という意味で"解放された"という用語を使用しました。
+        SQLAlchemyの文脈では、"release"という用語は、特定のデータベース接続の使用を終了するプロセスを指します。SQLAlchemyは、接続プールの使用を特徴とし、データベース接続の寿命に関して構成可能性を可能にします。プールされた接続を使用する場合、それを"閉じる"プロセス、すなわち ``connection. close()`` のような文を呼び出すプロセスは、接続が既存のプールに戻される効果を持つこともあれば、その接続によって参照される基礎となるTCP/IP接続を実際にシャットダウンする効果を持つこともあります。どちらが行われるかは、構成とプールの現在の状態に依存します。そのため、代わりに"接続の使用が終了したら、接続に対して行うことは何でも行う"という意味で"release"という用語を使用しました。
 
         .. The term will sometimes be used in the phrase, "release transactional resources", to indicate more explicitly that what we are actually "releasing" is any transactional state which as accumulated upon the connection. In most situations, the process of selecting from tables, emitting updates, etc. acquires :term:`isolated` state upon that connection as well as potential row or table locks. This state is all local to a particular transaction on the connection, and is released when we emit a rollback. An important feature of the connection pool is that when we return a connection to the pool, the ``connection.rollback()`` method of the DBAPI is called as well, so that as the connection is set up to be used again, it's in a "clean" state with no references held to the previous series of operations.
 
@@ -632,15 +623,13 @@ Glossary
 
     domain model
 
-        .. A domain model in problem solving and software engineering is a conceptual model of all the topics related to a specific problem. It describes the various entities, their attributes, roles, and relationships, plus the constraints that govern the problem domain.
+        .. A domain model in problem solving and software engineering is a conceptual model of all the topics related to a specific problem. It describes the various entities, their attributes, roles, and relationships, plus the constraints that govern the problem domain. (Wkipediaより)
 
-        問題解決とソフトウェアエンジニアリングにおけるドメインモデルは、特定の問題に関連するすべてのトピックの概念モデルです。さまざまなエンティティ、その属性、役割、関係、および問題ドメインを管理する制約を記述します。
-
-        (via Wikipedia)
+        問題解決とソフトウェアエンジニアリングにおけるドメインモデルは、特定の問題に関連するすべてのトピックの概念モデルです。さまざまなエンティティ、その属性、役割、関係、および問題ドメインを管理する制約を記述します。(Wikipediaより)
 
         .. seealso::
 
-            `Domain Model (via Wikipedia) <https://en.wikipedia.org/wiki/Domain_model>`_
+            `Domain Model (Wkipediaより) <https://en.wikipedia.org/wiki/Domain_model>`_
 
     unit of work
         .. A software architecture where a persistence system such as an object relational mapper maintains a list of changes made to a series of objects, and periodically flushes all those pending changes out to the database.
@@ -727,12 +716,19 @@ Glossary
             FROM user_account
             WHERE user_account.name = 'fred' AND user_account.status = 'E'
 
-        Above, the phrase ``WHERE user_account.name = 'fred' AND user_account.status = 'E'`` comprises the WHERE clause of the ``SELECT``.
+        .. Above, the phrase ``WHERE user_account.name = 'fred' AND user_account.status = 'E'`` comprises the WHERE clause of the ``SELECT``.
+
+        上の例では、 ``WHERE user_account.name='fred'AND user_account.status='E'`` というフレーズが、 ``SELECT`` のWHERE句を構成しています。
+
 
     FROM clause
-        The portion of the ``SELECT`` statement which indicates the initial source of rows.
+        .. The portion of the ``SELECT`` statement which indicates the initial source of rows.
 
-        A simple ``SELECT`` will feature one or more table names in its FROM clause. Multiple sources are separated by a comma:
+        行の初期ソースを示す ``SELECT`` 文の部分です。
+
+        .. A simple ``SELECT`` will feature one or more table names in its FROM clause. Multiple sources are separated by a comma:
+
+        単純な ``SELECT`` は、FROM句の中に1つ以上のテーブル名を持ちます。複数のソースはコンマで区切られます。
 
         .. sourcecode:: sql
 
@@ -740,7 +736,9 @@ Glossary
             FROM user, address
             WHERE user.id=address.user_id
 
-        The FROM clause is also where explicit joins are specified. We can rewrite the above ``SELECT`` using a single ``FROM`` element which consists of a ``JOIN`` of the two tables:
+        .. The FROM clause is also where explicit joins are specified. We can rewrite the above ``SELECT`` using a single ``FROM`` element which consists of a ``JOIN`` of the two tables:
+
+        FROM句は、明示的な結合が指定される場所でもあります。2つのテーブルの ``JOIN`` からなる単一の ``FROM`` 要素を使って、上記の ``SELECT`` を書き直すことができます。
 
         .. sourcecode:: sql
 
@@ -750,27 +748,39 @@ Glossary
 
     subquery
     scalar subquery
-        Refers to a ``SELECT`` statement that is embedded within an enclosing ``SELECT``.
+        .. Refers to a ``SELECT`` statement that is embedded within an enclosing ``SELECT``.
 
-        A subquery comes in two general flavors, one known as a "scalar select" which specifically must return exactly one row and one column, and the other form which acts as a "derived table" and serves as a source of rows for the FROM clause of another select. A scalar select is eligible to be placed in the :term:`WHERE clause`, :term:`columns clause`, ORDER BY clause or HAVING clause of the enclosing select, whereas the derived table form is eligible to be placed in the FROM clause of the enclosing ``SELECT``.
+        囲んでいる ``SELECT`` 文内に埋め込まれた ``SELECT`` 文を参照します。
 
-        Examples:
+        .. A subquery comes in two general flavors, one known as a "scalar select" which specifically must return exactly one row and one column, and the other form which acts as a "derived table" and serves as a source of rows for the FROM clause of another select. A scalar select is eligible to be placed in the :term:`WHERE clause`, :term:`columns clause`, ORDER BY clause or HAVING clause of the enclosing select, whereas the derived table form is eligible to be placed in the FROM clause of the enclosing ``SELECT``.
 
-        1. a scalar subquery placed in the :term:`columns clause` of an enclosing ``SELECT``. The subquery in this example is a :term:`correlated subquery` because part of the rows which it selects from are given via the enclosing statement.
+        .. Examples:
+
+        副問い合わせには2つの一般的な形式があります。1つは厳密に1つのローと1つのカラムを返さなければならない"スカラーselect"と呼ばれる形式で、もう1つは"導出表"として動作し、別のselectのFROM句のソースとして機能します。スカラーselectは、それを囲むselectの :term:`WHERE clause`、 :term:`columns clause` 、ORDER BY clause、またはHAVING clauseに配置できます。一方、導出表形式は、それを囲む ``SELECT`` のFROM句に配置できます。
+
+        例:
+
+        .. 1. a scalar subquery placed in the :term:`columns clause` of an enclosing ``SELECT``. The subquery in this example is a :term:`correlated subquery` because part of the rows which it selects from are given via the enclosing statement.
+
+        1. 包含する ``SELECT`` の :term:`columns clause` に置かれたスカラー副問い合わせ。この例の副問い合わせは :term:`correlated subquery` です。なぜなら、副問い合わせが選択する行の一部は、包含する文によって与えられるからです。
 
            .. sourcecode:: sql
 
             SELECT id, (SELECT name FROM address WHERE address.user_id=user.id)
             FROM user
 
-        2. a scalar subquery placed in the :term:`WHERE clause` of an enclosing ``SELECT``. This subquery in this example is not correlated as it selects a fixed result.
+        .. 2. a scalar subquery placed in the :term:`WHERE clause` of an enclosing ``SELECT``. This subquery in this example is not correlated as it selects a fixed result.
+
+        2. 包含する ``SELECT`` の :term:`WHERE clause` に置かれたスカラー副問い合わせ。この例の副問い合わせは、固定された結果を選択するので、相関はありません。
 
            .. sourcecode:: sql
 
             SELECT id, name FROM user
             WHERE status=(SELECT status_id FROM status_code WHERE code='C')
 
-        3. a derived table subquery placed in the :term:`FROM clause` of an enclosing ``SELECT``.  Such a subquery is almost always given an alias name.
+        .. 3. a derived table subquery placed in the :term:`FROM clause` of an enclosing ``SELECT``.  Such a subquery is almost always given an alias name.
+
+        3. 包含する ``SELECT`` の :term:`FROM clause` に置かれた導出表副問い合わせ。このような副問い合わせには、ほとんどの場合エイリアス名が与えられます。
 
            .. sourcecode:: sql
 
@@ -783,9 +793,13 @@ Glossary
     correlates
     correlated subquery
     correlated subqueries
-        A :term:`subquery` is correlated if it depends on data in the enclosing ``SELECT``.
+        .. A :term:`subquery` is correlated if it depends on data in the enclosing ``SELECT``.
 
-        Below, a subquery selects the aggregate value ``MIN(a.id)`` from the ``email_address`` table, such that it will be invoked for each value of ``user_account.id``, correlating the value of this column against the ``email_address.user_account_id`` column:
+        :term:`subquery` は、それを囲む ``SELECT`` 内のデータに依存する場合に相関があります。
+
+        .. Below, a subquery selects the aggregate value ``MIN(a.id)`` from the ``email_address`` table, such that it will be invoked for each value of ``user_account.id``, correlating the value of this column against the ``email_address.user_account_id`` column:
+
+        以下では、サブクエリが ``email_address`` テーブルから集約値 ``MIN(a.id)`` を選択し、 ``user_account.id`` の各値に対して呼び出され、この列の値を ``email_address.user_account_id`` 列に関連付けます。
 
         .. sourcecode:: sql
 
@@ -797,11 +811,17 @@ Glossary
                 WHERE a.user_account_id=user_account.id
              )
 
-        The above subquery refers to the ``user_account`` table, which is not itself in the ``FROM`` clause of this nested query.  Instead, the ``user_account`` table is received from the enclosing query, where each row selected from ``user_account`` results in a distinct execution of the subquery.
+        .. The above subquery refers to the ``user_account`` table, which is not itself in the ``FROM`` clause of this nested query.  Instead, the ``user_account`` table is received from the enclosing query, where each row selected from ``user_account`` results in a distinct execution of the subquery.
 
-        A correlated subquery is in most cases present in the :term:`WHERE clause` or :term:`columns clause` of the immediately enclosing ``SELECT`` statement, as well as in the ORDER BY or HAVING clause.
+        上記のサブクエリは、このネストされたクエリの ``FROM`` 節にはない ``user_account`` テーブルを参照しています。代わりに、 ``user_account`` テーブルは、それを囲むクエリから受信されます。 ``user_account`` から選択された各行は、サブクエリの明確な実行につながります。
 
-        In less common cases, a correlated subquery may be present in the :term:`FROM clause` of an enclosing ``SELECT``; in these cases the correlation is typically due to the enclosing ``SELECT`` itself being enclosed in the WHERE, ORDER BY, columns or HAVING clause of another ``SELECT``, such as:
+        .. A correlated subquery is in most cases present in the :term:`WHERE clause` or :term:`columns clause` of the immediately enclosing ``SELECT`` statement, as well as in the ORDER BY or HAVING clause.
+
+        ほとんどの場合、相関サブクエリは、ORDER BY句やHAVING句だけでなく、すぐ外側の ``SELECT`` 文の :term:`WHERE clause` や :term:`columns clause` にも存在します。
+
+        .. In less common cases, a correlated subquery may be present in the :term:`FROM clause` of an enclosing ``SELECT``; in these cases the correlation is typically due to the enclosing ``SELECT`` itself being enclosed in the WHERE, ORDER BY, columns or HAVING clause of another ``SELECT``, such as:
+
+        あまり一般的ではありませんが、相関する副問い合わせが、囲んでいる ``SELECT`` の :term:`FROM clause` に存在することがあります。このような場合、相関は通常、囲んでいる ``SELECT`` 自体が、次のような別の ``SELECT`` のWHERE、ORDER BY、カラム、またはHAVING句で囲まれていることに起因します。
 
         .. sourcecode:: sql
 
@@ -816,10 +836,13 @@ Glossary
 
         Correlation from one ``SELECT`` directly to one which encloses the correlated query via its ``FROM`` clause is not possible, because the correlation can only proceed once the original source rows from the enclosing statement's FROM clause are available.
 
+        1つの ``SELECT`` から、その ``FROM`` 節を介して相関された問い合わせを囲む直接の相関は不可能です。なぜなら、相関は、囲んでいる文のFROM節から元のソース行が利用可能になって初めて実行されるからです。
 
     ACID
     ACID model
-        An acronym for "Atomicity, Consistency, Isolation, Durability"; a set of properties that guarantee that database transactions are processed reliably.  (via Wikipedia)
+        .. An acronym for "Atomicity, Consistency, Isolation, Durability"; a set of properties that guarantee that database transactions are processed reliably.  (Wkipediaより)
+
+        "Atomicity, Consistency, Isolation, Durability"の頭字語。データベーストランザクションが確実に処理されることを保証するプロパティのセットです。(Wikipediaより)
 
         .. seealso::
 
@@ -831,36 +854,42 @@ Glossary
 
             :term:`durability`
 
-            `ACID Model (via Wikipedia) <https://en.wikipedia.org/wiki/ACID_Model>`_
+            `ACID Model (Wkipediaより) <https://en.wikipedia.org/wiki/ACID_Model>`_
 
     atomicity
-        Atomicity is one of the components of the :term:`ACID` model, and requires that each transaction is "all or nothing": if one part of the transaction fails, the entire transaction fails, and the database state is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors, and crashes.  (via Wikipedia)
+        .. Atomicity is one of the components of the :term:`ACID` model, and requires that each transaction is "all or nothing": if one part of the transaction fails, the entire transaction fails, and the database state is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors, and crashes.  (Wkipediaより)
+
+        原子性は :term:`ACID` モデルの構成要素の1つであり、各トランザクションが"all or nothing"であることを要求します。つまり、トランザクションの一部が失敗した場合、トランザクション全体が失敗し、データベースの状態は変更されないままになります。原子性システムは、電源障害、エラー、クラッシュなど、あらゆる状況で原子性を保証する必要があります。(Wikipediaより)
 
         .. seealso::
 
             :term:`ACID`
 
-            `Atomicity (via Wikipedia) <https://en.wikipedia.org/wiki/Atomicity_(database_systems)>`_
+            `Atomicity (Wkipediaより) <https://en.wikipedia.org/wiki/Atomicity_(database_systems)>`_
 
     consistency
-        Consistency is one of the components of the :term:`ACID` model, and ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules, including but not limited to :term:`constraints`, cascades, triggers, and any combination thereof.  (via Wikipedia)
+        .. Consistency is one of the components of the :term:`ACID` model, and ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules, including but not limited to :term:`constraints`, cascades, triggers, and any combination thereof.  (Wkipediaより)
+
+        一貫性は :term:`ACID` モデルの構成要素の1つであり、任意のトランザクションがデータベースをある有効な状態から別の有効な状態にすることを保証します。データベースに書き込まれるデータはすべて、定義されたすべてのルールに従って有効でなければなりません。これには :term:`constraints` 、cascade、triggers、およびそれらの任意の組み合わせが含まれますが、これらに限定されません。(Wikipediaより)
 
         .. seealso::
 
             :term:`ACID`
 
-            `Consistency (via Wikipedia) <https://en.wikipedia.org/wiki/Consistency_(database_systems)>`_
+            `Consistency (Wkipediaより) <https://en.wikipedia.org/wiki/Consistency_(database_systems)>`_
 
     isolation
     isolated
     isolation level
-        The isolation property of the :term:`ACID` model ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were executed serially, i.e. one after the other. Each transaction must execute in total isolation i.e. if T1 and T2 execute concurrently then each should remain independent of the other.  (via Wikipedia)
+        .. The isolation property of the :term:`ACID` model ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were executed serially, i.e. one after the other. Each transaction must execute in total isolation i.e. if T1 and T2 execute concurrently then each should remain independent of the other.  (Wkipediaより)
+
+        :term:`ACID` モデルの独立性プロパティは、トランザクションの同時実行が、トランザクションが連続して実行された場合、つまり次々に実行された場合に得られるシステム状態になることを保証します。各トランザクションは完全に分離して実行する必要があります。つまり、T1とT2が同時に実行される場合、それぞれが互いに独立している必要があります。(Wikipediaより)
 
         .. seealso::
 
             :term:`ACID`
 
-            `Isolation (via Wikipedia) <https://en.wikipedia.org/wiki/Isolation_(database_systems)>`_
+            `Isolation (Wkipediaより) <https://en.wikipedia.org/wiki/Isolation_(database_systems)>`_
 
             :term:`read uncommitted`
 
@@ -871,52 +900,82 @@ Glossary
             :term:`serializable`
 
     repeatable read
-        One of the four database :term:`isolation` levels, repeatable read features all of the isolation of :term:`read committed`, and additionally features that any particular row that is read within a transaction is guaranteed from that point to not have any subsequent external changes in value (i.e. from other concurrent UPDATE statements) for the duration of that transaction.
+        .. One of the four database :term:`isolation` levels, repeatable read features all of the isolation of :term:`read committed`, and additionally features that any particular row that is read within a transaction is guaranteed from that point to not have any subsequent external changes in value (i.e. from other concurrent UPDATE statements) for the duration of that transaction.
+
+        4つのdatabase :term:`isolation` レベルの1つであるrepeatable readは、 :term:`read committed` のすべての独立性を特徴とし、さらに、トランザクション内で読み取られる特定の行は、その時点から、そのトランザクションの間、値が外部から変更されないこと(つまり、他の同時UPDATE文から)が保証されるという特徴があります。
 
     read committed
-        One of the four database :term:`isolation` levels, read committed features that the transaction will not be exposed to any data from other concurrent transactions that has not been committed yet, preventing so-called "dirty reads".  However, under read committed there can be non-repeatable reads, meaning data in a row may change when read a second time if another transaction has committed changes.
+        .. One of the four database :term:`isolation` levels, read committed features that the transaction will not be exposed to any data from other concurrent transactions that has not been committed yet, preventing so-called "dirty reads".  However, under read committed there can be non-repeatable reads, meaning data in a row may change when read a second time if another transaction has committed changes.
+
+        4つのdatabase :term:`isolation` レベルの1つで、コミットされた読み込み機能は、まだコミットされていない他の同時実行中のトランザクションからのいかなるデータにもトランザクションがさらされないようにし、いわゆる"ダーティリード"を防ぎます。しかし、コミットされた読み込みでは、繰り返し不可能な読み込みがある可能性があります。つまり、別のトランザクションが変更をコミットした場合、2回目の読み込み時に行内のデータが変更される可能性があります。
 
     read uncommitted
-        One of the four database :term:`isolation` levels, read uncommitted features that changes made to database data within a transaction will not become permanent until the transaction is committed. However, within read uncommitted, it may be possible for data that is not committed in other transactions to be viewable within the scope of another transaction; these are known as "dirty reads".
+        .. One of the four database :term:`isolation` levels, read uncommitted features that changes made to database data within a transaction will not become permanent until the transaction is committed. However, within read uncommitted, it may be possible for data that is not committed in other transactions to be viewable within the scope of another transaction; these are known as "dirty reads".
+
+        4つのdatabase :term:`isolation` レベルの1つで、トランザクション内でデータベースデータに加えられた変更が、トランザクションがコミットされるまで永続的にならないread uncommitted機能です。しかし、read uncommittedでは、他のトランザクションでコミットされていないデータが、別のトランザクションのスコープ内で表示される可能性があります。これは"ダーティリード"と呼ばれます。
 
     serializable
-        One of the four database :term:`isolation` levels, serializable features all of the isolation of :term:`repeatable read`, and additionally within a lock-based approach guarantees that so-called "phantom reads" cannot occur; this means that rows which are INSERTed or DELETEd within the scope of other transactions will not be detectable within this transaction.  A row that is read within this transaction is guaranteed to continue existing, and a row that does not exist is guaranteed that it cannot appear of inserted from another transaction.
+        .. One of the four database :term:`isolation` levels, serializable features all of the isolation of :term:`repeatable read`, and additionally within a lock-based approach guarantees that so-called "phantom reads" cannot occur; this means that rows which are INSERTed or DELETEd within the scope of other transactions will not be detectable within this transaction.  A row that is read within this transaction is guaranteed to continue existing, and a row that does not exist is guaranteed that it cannot appear of inserted from another transaction.
 
-        Serializable isolation typically relies upon locking of rows or ranges of rows in order to achieve this effect and can increase the chance of deadlocks and degrade performance. There are also non-lock based schemes however these necessarily rely upon rejecting transactions if write collisions are detected.
+        4つのデータベース :term:`isolation` レベルの1つであるシリアライザブル機能は、 :term:`repeatable read` のすべての独立性を備えています。さらに、ロックベースのアプローチでは、いわゆる"phantom reads"が発生しないことが保証されています。つまり、他のトランザクションのスコープ内で挿入または削除された行は、このトランザクション内では検出できません。このトランザクション内で読み取られた行は存在し続けることが保証され、存在しない行は他のトランザクションから表示または挿入されないことが保証されます。
+
+        .. Serializable isolation typically relies upon locking of rows or ranges of rows in order to achieve this effect and can increase the chance of deadlocks and degrade performance. There are also non-lock based schemes however these necessarily rely upon rejecting transactions if write collisions are detected.
+
+        シリアライズ可能な分離は、通常、この効果を達成するために行または行の範囲のロックに依存しており、デッドロックの可能性を高め、パフォーマンスを低下させる可能性があります。ロックベースでないスキームもあるが、これらは、書き込み衝突が検出された場合にトランザクションを拒否することに必然的に依存します。
 
 
     durability
-        Durability is a property of the :term:`ACID` model which means that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors. In a relational database, for instance, once a group of SQL statements execute, the results need to be stored permanently (even if the database crashes immediately thereafter).  (via Wikipedia)
+        .. Durability is a property of the :term:`ACID` model which means that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors. In a relational database, for instance, once a group of SQL statements execute, the results need to be stored permanently (even if the database crashes immediately thereafter).  (Wkipediaより)
+
+        耐久性は :term:`ACID` モデルの特性であり、一度コミットされたトランザクションは、停電、クラッシュ、エラーが発生した場合でもコミットされたままになることを意味します。例えば、リレーショナルデータベースでは、SQL文のグループが実行されると、その結果を永続的に保存する必要があります(その直後にデータベースがクラッシュした場合でも)。(Wikipediaより)
 
         .. seealso::
 
             :term:`ACID`
 
-            `Durability (via Wikipedia) <https://en.wikipedia.org/wiki/Durability_(database_systems)>`_
+            `Durability (Wkipediaより) <https://en.wikipedia.org/wiki/Durability_(database_systems)>`_
 
     RETURNING
-        This is a non-SQL standard clause provided in various forms by certain backends, which provides the service of returning a result set upon execution of an INSERT, UPDATE or DELETE statement. Any set of columns from the matched rows can be returned, as though they were produced from a SELECT statement.
+        .. This is a non-SQL standard clause provided in various forms by certain backends, which provides the service of returning a result set upon execution of an INSERT, UPDATE or DELETE statement. Any set of columns from the matched rows can be returned, as though they were produced from a SELECT statement.
 
-        The RETURNING clause provides both a dramatic performance boost to common update/select scenarios, including retrieval of inline- or default- generated primary key values and defaults at the moment they were created, as well as a way to get at server-generated default values in an atomic way.
+        これは、特定のバックエンドによってさまざまな形式で提供される非SQL標準句で、INSERT、UPDATE、またはDELETE文の実行時に結果セットを返すサービスを提供します。SELECT文から生成されたかのように、一致したローから任意のカラムのセットを返すことができます。
 
-        An example of RETURNING, idiomatic to PostgreSQL, looks like:
+        .. The RETURNING clause provides both a dramatic performance boost to common update/select scenarios, including retrieval of inline- or default- generated primary key values and defaults at the moment they were created, as well as a way to get at server-generated default values in an atomic way.
+
+        RETURNING句を使用すると、インラインまたはデフォルトで生成されたプライマリ・キー値とデフォルト値をそれらが作成された時点で取得するなど、一般的な更新/選択シナリオのパフォーマンスが大幅に向上します。また、サーバで生成されたデフォルト値をアトミックな方法で取得することもできます。
+
+        .. An example of RETURNING, idiomatic to PostgreSQL, looks like:
+
+        PostgreSQLの慣用表現であるRETURNINGの例は以下のようになります:
 
         .. sourcecode:: sql
 
             INSERT INTO user_account (name) VALUES ('new name') RETURNING id, timestamp
 
-        Above, the INSERT statement will provide upon execution a result set which includes the values of the columns ``user_account.id`` and ``user_account.timestamp``, which above should have been generated as default values as they are not included otherwise (but note any series of columns or SQL expressions can be placed into RETURNING, not just default-value columns).
+        .. Above, the INSERT statement will provide upon execution a result set which includes the values of the columns ``user_account.id`` and ``user_account.timestamp``, which above should have been generated as default values as they are not included otherwise (but note any series of columns or SQL expressions can be placed into RETURNING, not just default-value columns).
 
-        The backends that currently support RETURNING or a similar construct are PostgreSQL, SQL Server, Oracle, and Firebird.  The PostgreSQL and Firebird implementations are generally full featured, whereas the implementations of SQL Server and Oracle have caveats. On SQL Server, the clause is known as "OUTPUT INSERTED" for INSERT and UPDATE statements and "OUTPUT DELETED" for DELETE statements; the key caveat is that triggers are not supported in conjunction with this keyword.  On Oracle, it is known as "RETURNING...INTO", and requires that the value be placed into an OUT parameter, meaning not only is the syntax awkward, but it can also only be used for one row at a time.
+        上の例では、INSERT文は実行時に結果セットを提供します。この結果セットには、 ``user_account.id`` 列と ``user_account.timestamp`` 列の値が含まれています。これらの列は、他の方法では含まれないので、デフォルト値として生成されるはずです(ただし、デフォルト値の列だけでなく、任意の列やSQL式をRETURNINGに入れることができることに注意してください)。
 
-        SQLAlchemy's :meth:`.UpdateBase.returning` system provides a layer of abstraction on top of the RETURNING systems of these backends to provide a consistent interface for returning columns.  The ORM also includes many optimizations that make use of RETURNING when available.
+        .. The backends that currently support RETURNING or a similar construct are PostgreSQL, SQL Server, Oracle, and Firebird.  The PostgreSQL and Firebird implementations are generally full featured, whereas the implementations of SQL Server and Oracle have caveats. On SQL Server, the clause is known as "OUTPUT INSERTED" for INSERT and UPDATE statements and "OUTPUT DELETED" for DELETE statements; the key caveat is that triggers are not supported in conjunction with this keyword.  On Oracle, it is known as "RETURNING...INTO", and requires that the value be placed into an OUT parameter, meaning not only is the syntax awkward, but it can also only be used for one row at a time.
+
+        現在RETURNINGまたは同様の構文をサポートしているバックエンドは、PostgreSQL、SQL Server、Oracle、およびFirebirdです。PostgreSQLおよびFirebirdの実装は一般的にフル機能ですが、SQL ServerおよびOracleの実装には注意事項があります。SQL Serverでは、この句はINSERT文およびUPDATE文の場合は"OUTPUT INSERTED"、DELETE文の場合は"OUTPUT DELETED"と呼ばれます。重要な注意事項は、このキーワードと一緒にトリガを使用できないことです。Oracleでは、これは"RETURNING...INTO"と呼ばれ、値をOUTパラメータに入れる必要があります。これは構文が厄介であるだけでなく、一度に1つの行にしか使用できないことを意味します。
+
+        .. SQLAlchemy's :meth:`.UpdateBase.returning` system provides a layer of abstraction on top of the RETURNING systems of these backends to provide a consistent interface for returning columns.  The ORM also includes many optimizations that make use of RETURNING when available.
+
+        SQLAlchemyの :meth:`.UpdateBase.returning` システムは、これらのバックエンドのRETURNINGシステムの上に抽象層を提供して、列を返すための一貫したインターフェースを提供します。ORMには、利用可能な場合にRETURNINGを利用する多くの最適化も含まれています。
 
     one to many
-        A style of :func:`~sqlalchemy.orm.relationship` which links the primary key of the parent mapper's table to the foreign key of a related table.   Each unique parent object can then refer to zero or more unique related objects.
+        .. A style of :func:`~sqlalchemy.orm.relationship` which links the primary key of the parent mapper's table to the foreign key of a related table.   Each unique parent object can then refer to zero or more unique related objects.
 
-        The related objects in turn will have an implicit or explicit :term:`many to one` relationship to their parent object.
+        :func:`~sqlalchemy.orm.relationship` のスタイルで、親マッパーのテーブルの主キーを関連テーブルの外部キーにリンクします。それぞれの一意の親オブジェクトは、0個以上の一意の関連オブジェクトを参照できます。
 
-        An example one to many schema (which, note, is identical to the :term:`many to one` schema):
+        .. The related objects in turn will have an implicit or explicit :term:`many to one` relationship to their parent object.
+
+        関連するオブジェクトは、親オブジェクトに対して暗黙的または明示的な :term:`many to one` 関係を持ちます。
+
+        .. An example one to many schema (which, note, is identical to the :term:`many to one` schema):
+
+        1対多のスキーマの例(これは :term:`many to one` スキーマと同じであることに注意してください:
 
         .. sourcecode:: sql
 
@@ -931,7 +990,11 @@ Glossary
                 dep_id INTEGER REFERENCES department(id)
             )
 
-        The relationship from ``department`` to ``employee`` is one to many, since many employee records can be associated with a single department. A SQLAlchemy mapping might look like::
+        .. The relationship from ``department`` to ``employee`` is one to many, since many employee records can be associated with a single department. A SQLAlchemy mapping might look like::
+
+        1つの部署に複数の従業員レコードを関連付けることができるので、 ``部署`` から ``従業員`` への関係は1対多になります。SQLAlchemyマッピングは次のようになります::
+
+
 
             class Department(Base):
                 __tablename__ = "department"
@@ -955,11 +1018,17 @@ Glossary
             :term:`backref`
 
     many to one
-        A style of :func:`~sqlalchemy.orm.relationship` which links a foreign key in the parent mapper's table to the primary key of a related table. Each parent object can then refer to exactly zero or one related object.
+        .. A style of :func:`~sqlalchemy.orm.relationship` which links a foreign key in the parent mapper's table to the primary key of a related table. Each parent object can then refer to exactly zero or one related object.
 
-        The related objects in turn will have an implicit or explicit :term:`one to many` relationship to any number of parent objects that refer to them.
+        :func:`~sqlalchemy.orm.relationship` のスタイルで、親マッパーのテーブル内の外部キーを関連するテーブルのプライマリキーにリンクします。各親オブジェクトは、正確に0個または1個の関連するオブジェクトを参照できます。
 
-        An example many to one schema (which, note, is identical to the :term:`one to many` schema):
+        .. The related objects in turn will have an implicit or explicit :term:`one to many` relationship to any number of parent objects that refer to them.
+
+        関連するオブジェクトは、それらを参照する任意の数の親オブジェクトに対して、暗黙的または明示的な :term:`one to many` 関係を持ちます。
+
+        .. An example many to one schema (which, note, is identical to the :term:`one to many` schema):
+
+        多対1スキーマの例(これは :term:`one to many` スキーマと同じであることに注意してください):
 
         .. sourcecode:: sql
 
@@ -975,7 +1044,9 @@ Glossary
             )
 
 
-        The relationship from ``employee`` to ``department`` is many to one, since many employee records can be associated with a single department. A SQLAlchemy mapping might look like::
+        .. The relationship from ``employee`` to ``department`` is many to one, since many employee records can be associated with a single department. A SQLAlchemy mapping might look like::
+
+        ``employee`` から ``department`` への関係は、多数の従業員レコードを1つの部署に関連付けることができるため、多対1です。SQLAlchemyマッピングは次のようになります::
 
             class Department(Base):
                 __tablename__ = "department"
@@ -1000,7 +1071,9 @@ Glossary
 
     backref
     bidirectional relationship
-        An extension to the :term:`relationship` system whereby two distinct :func:`~sqlalchemy.orm.relationship` objects can be mutually associated with each other, such that they coordinate in memory as changes occur to either side. The most common way these two relationships are constructed is by using the :func:`~sqlalchemy.orm.relationship` function explicitly for one side and specifying the ``backref`` keyword to it so that the other :func:`~sqlalchemy.orm.relationship` is created automatically.  We can illustrate this against the example we've used in :term:`one to many` as follows::
+        .. An extension to the :term:`relationship` system whereby two distinct :func:`~sqlalchemy.orm.relationship` objects can be mutually associated with each other, such that they coordinate in memory as changes occur to either side. The most common way these two relationships are constructed is by using the :func:`~sqlalchemy.orm.relationship` function explicitly for one side and specifying the ``backref`` keyword to it so that the other :func:`~sqlalchemy.orm.relationship` is created automatically.  We can illustrate this against the example we've used in :term:`one to many` as follows::
+
+        :term:`relationship` システムを拡張したもので、2つの異なる :func:`~sqlalchemy.orm.relationship` オブジェクトを相互に関連付けることができます。これにより、どちらかの側で変更が発生したときにメモリ内で調整されます。これら2つの関係を構築する最も一般的な方法は、一方の側に対して :func:`~sqlalchemy.orm.relationship` 関数を明示的に使用し、もう一方の:func:`~sqlalchemy.orm.relationship` が自動的に作成されるように、それに対して`backref`キーワードを指定することです。これを :term:`one to many` で使用した例に対して次のように説明できます::
 
             class Department(Base):
                 __tablename__ = "department"
@@ -1015,8 +1088,9 @@ Glossary
                 name = Column(String(30))
                 dep_id = Column(Integer, ForeignKey("department.id"))
 
-        A backref can be applied to any relationship, including one to many,
-        many to one, and :term:`many to many`.
+        .. A backref can be applied to any relationship, including one to many, many to one, and :term:`many to many`.
+
+        backrefは、1対多、多対1、 :term:`many to many` など、任意の関係に適用できます。
 
         .. seealso::
 
@@ -1029,9 +1103,13 @@ Glossary
             :term:`many to many`
 
     many to many
-        A style of :func:`sqlalchemy.orm.relationship` which links two tables together via an intermediary table in the middle. Using this configuration, any number of rows on the left side may refer to any number of rows on the right, and vice versa.
+        .. A style of :func:`sqlalchemy.orm.relationship` which links two tables together via an intermediary table in the middle. Using this configuration, any number of rows on the left side may refer to any number of rows on the right, and vice versa.
 
-        A schema where employees can be associated with projects:
+        :func:`sqlalchemy.orm.relationship` のスタイルで、中間のテーブルを介して2つのテーブルをリンクします。この設定を使用すると、左側の任意の数の行が右側の任意の数の行を参照することができ、その逆も可能です。
+
+        .. A schema where employees can be associated with projects:
+
+        従業員をプロジェクトに関連付けることができるスキーマ:
 
         .. sourcecode:: sql
 
@@ -1052,9 +1130,13 @@ Glossary
                 FOREIGN KEY project_id REFERENCES project(id)
             )
 
-        Above, the ``employee_project`` table is the many-to-many table, which naturally forms a composite primary key consisting of the primary key from each related table.
+        .. Above, the ``employee_project`` table is the many-to-many table, which naturally forms a composite primary key consisting of the primary key from each related table.
 
-        In SQLAlchemy, the :func:`sqlalchemy.orm.relationship` function can represent this style of relationship in a mostly transparent fashion, where the many-to-many table is specified using plain table metadata::
+        上の例では、 ``employee_project`` テーブルは多対多のテーブルであり、関連する各テーブルのプライマリキーからなる複合主キーを自然に形成します。
+
+        .. In SQLAlchemy, the :func:`sqlalchemy.orm.relationship` function can represent this style of relationship in a mostly transparent fashion, where the many-to-many table is specified using plain table metadata::
+
+        SQLAlchemyでは、 :func:`SQLAlchemy.orm.relationship` 関数はこのスタイルの関係をほとんど透過的に表現することができ、多対多のテーブルは普通のテーブルメタデータを使って指定されます::
 
             class Employee(Base):
                 __tablename__ = "employee"
@@ -1080,7 +1162,9 @@ Glossary
                 id = Column(Integer, primary_key=True)
                 name = Column(String(30))
 
-        Above, the ``Employee.projects`` and back-referencing ``Project.employees`` collections are defined::
+        .. Above, the ``Employee.projects`` and back-referencing ``Project.employees`` collections are defined::
+
+        上記では、 ``Employee.projects`` コレクションと後方参照 ``Project.employees`` コレクションが定義されています。
 
             proj = Project(name="Client A")
 
@@ -1101,28 +1185,38 @@ Glossary
 
     relationship
     relationships
-        A connecting unit between two mapped classes, corresponding to some relationship between the two tables in the database.
+        .. A connecting unit between two mapped classes, corresponding to some relationship between the two tables in the database.
 
-        The relationship is defined using the SQLAlchemy function :func:`~sqlalchemy.orm.relationship`. Once created, SQLAlchemy inspects the arguments and underlying mappings involved in order to classify the relationship as one of three types: :term:`one to many`, :term:`many to one`, or :term:`many to many`.  With this classification, the relationship construct handles the task of persisting the appropriate linkages in the database in response to in-memory object associations, as well as the job of loading object references and collections into memory based on the current linkages in the database.
+        データベース内の2つのテーブル間の関係に対応する、2つのマップされたクラスを接続するユニットです。
+
+        .. The relationship is defined using the SQLAlchemy function :func:`~sqlalchemy.orm.relationship`. Once created, SQLAlchemy inspects the arguments and underlying mappings involved in order to classify the relationship as one of three types: :term:`one to many`, :term:`many to one`, or :term:`many to many`.  With this classification, the relationship construct handles the task of persisting the appropriate linkages in the database in response to in-memory object associations, as well as the job of loading object references and collections into memory based on the current linkages in the database.
+
+        関係はSQLAlchemy関数 :func:`~SQLAlchemy.orm.relationship` を使用して定義されます。一度作成されると、SQLAlchemyは関係を3つのタイプ :term:`one to many` , :term:`many to one` , :term:`many to many` のいずれかに分類するために、関連する引数と基礎となるマッピングを検査します。この分類では、関係構造は、メモリー内のオブジェクトの関連付けに応じてデータベース内に適切なリンクを保持するタスクと、データベース内の現在のリンクに基づいてオブジェクト参照とコレクションをメモリーにロードするジョブを処理します。
 
         .. seealso::
 
             :ref:`relationship_config_toplevel`
 
     cursor
-        A control structure that enables traversal over the records in a database. In the Python DBAPI, the cursor object is in fact the starting point for statement execution as well as the interface used for fetching results.
+        .. A control structure that enables traversal over the records in a database. In the Python DBAPI, the cursor object is in fact the starting point for statement execution as well as the interface used for fetching results.
+
+        データベース内のレコードの走査を可能にする制御構造です。Python DBAPIでは、カーソル・オブジェクトは実際に文の実行の開始点であり、結果のフェッチに使用されるインタフェースでもあります。
 
         .. seealso::
 
             `Cursor Objects (in pep-249) <https://www.python.org/dev/peps/pep-0249/#cursor-objects>`_
 
-            `Cursor (via Wikipedia) <https://en.wikipedia.org/wiki/Cursor_(databases)>`_
+            `Cursor (Wkipediaより) <https://en.wikipedia.org/wiki/Cursor_(databases)>`_
 
 
     association relationship
-        A two-tiered :term:`relationship` which links two tables together using an association table in the middle. The association relationship differs from a :term:`many to many` relationship in that the many-to-many table is mapped by a full class, rather than invisibly handled by the :func:`sqlalchemy.orm.relationship` construct as in the case with many-to-many, so that additional attributes are explicitly available.
+        .. A two-tiered :term:`relationship` which links two tables together using an association table in the middle. The association relationship differs from a :term:`many to many` relationship in that the many-to-many table is mapped by a full class, rather than invisibly handled by the :func:`sqlalchemy.orm.relationship` construct as in the case with many-to-many, so that additional attributes are explicitly available.
 
-        For example, if we wanted to associate employees with projects, also storing the specific role for that employee with the project, the relational schema might look like:
+        2層の :term:`relationship` で、中間に関連付けテーブルを使って2つのテーブルをリンクします。関連付け関係は :term:`many to many` 関係とは異なり、多対多テーブルは完全なクラスによってマップされます。多対多の場合のように :func:`sqlalchemy.orm.relationship` 構文によって見えないように処理されるのではなく、追加の属性が明示的に利用できるようになります。
+
+        .. For example, if we wanted to associate employees with projects, also storing the specific role for that employee with the project, the relational schema might look like:
+
+        たとえば、従業員をプロジェクトに関連付け、その従業員の特定のロールもプロジェクトに格納する場合、リレーショナルスキーマは次のようになります:
 
         .. sourcecode:: sql
 
@@ -1144,7 +1238,9 @@ Glossary
                 FOREIGN KEY project_id REFERENCES project(id)
             )
 
-        A SQLAlchemy declarative mapping for the above might look like::
+        .. A SQLAlchemy declarative mapping for the above might look like::
+
+        上記のSQLAlchemy宣言マッピングは、次のようになります::
 
             class Employee(Base):
                 __tablename__ = "employee"
@@ -1170,7 +1266,9 @@ Glossary
                 project = relationship("Project", backref="project_employees")
                 employee = relationship("Employee", backref="employee_projects")
 
-        Employees can be added to a project given a role name::
+        .. Employees can be added to a project given a role name::
+
+        ロール名を指定して、従業員をプロジェクトに追加できます::
 
             proj = Project(name="Client A")
 
@@ -1191,27 +1289,34 @@ Glossary
     constraint
     constraints
     constrained
-        Rules established within a relational database that ensure the validity and consistency of data. Common forms of constraint include :term:`primary key constraint`, :term:`foreign key constraint`, and :term:`check constraint`.
+        .. Rules established within a relational database that ensure the validity and consistency of data. Common forms of constraint include :term:`primary key constraint`, :term:`foreign key constraint`, and :term:`check constraint`.
+
+        データの有効性と一貫性を保証する、リレーショナルデータベース内で確立された規則。制約の一般的な形式には、:term:`primary key constraint` 、 :term:`foreign key constraint` 、および :term:`check constraint` があります。
 
     candidate key
 
-        A :term:`relational algebra` term referring to an attribute or set of attributes that form a uniquely identifying key for a row.  A row may have more than one candidate key, each of which is suitable for use as the primary key of that row.  The primary key of a table is always a candidate key.
+        .. A :term:`relational algebra` term referring to an attribute or set of attributes that form a uniquely identifying key for a row.  A row may have more than one candidate key, each of which is suitable for use as the primary key of that row.  The primary key of a table is always a candidate key.
+
+        :term:`relational algebra` 用語で、一意に識別されるキーを形成するアトリビュートまたはアトリビュートのセットを指します。1つのローは複数の候補キーを持つことができ、それぞれがそのローのプライマリ・キーとして使用されます。テーブルのプライマリ・キーは常に候補キーです。
 
         .. seealso::
 
             :term:`primary key`
 
-            `Candidate key (via Wikipedia) <https://en.wikipedia.org/wiki/Candidate_key>`_
+            `Candidate key (Wkipediaより) <https://en.wikipedia.org/wiki/Candidate_key>`_
 
             https://www.databasestar.com/database-keys/
 
     primary key
     primary key constraint
 
-        A :term:`constraint` that uniquely defines the characteristics of each row in a table. The primary key has to consist of characteristics that cannot be duplicated by any other row. The primary key may consist of a single attribute or multiple attributes in combination.  (via Wikipedia)
+        .. A :term:`constraint` that uniquely defines the characteristics of each row in a table. The primary key has to consist of characteristics that cannot be duplicated by any other row. The primary key may consist of a single attribute or multiple attributes in combination.  (Wkipediaより)
 
-        The primary key of a table is typically, though not always,
-        defined within the ``CREATE TABLE`` :term:`DDL`:
+        テーブル内の各行の特性を一意に定義する :term:`constraint` 。主キーは、他の行では複製できない特性で構成されている必要があります。主キーは、単一の属性または組み合わせた複数の属性で構成できます。(Wikipediaより)
+
+        .. The primary key of a table is typically, though not always, defined within the ``CREATE TABLE`` :term:`DDL`:
+
+        テーブルのプライマリキーは、必ずではありませんが、一般的には ``CREATE TABLE`` :term:`DDL` 内で定義されます。
 
         .. sourcecode:: sql
 
@@ -1226,20 +1331,26 @@ Glossary
 
             :term:`composite primary key`
 
-            `Primary key (via Wikipedia) <https://en.wikipedia.org/wiki/Primary_Key>`_
+            `Primary key (Wkipediaより) <https://en.wikipedia.org/wiki/Primary_Key>`_
 
     composite primary key
 
-        A :term:`primary key` that has more than one column. A particular database row is unique based on two or more columns rather than just a single value.
+        .. A :term:`primary key` that has more than one column. A particular database row is unique based on two or more columns rather than just a single value.
+
+        複数の列を持つ :term:`primary key` 。特定のデータベース行は、単一の値ではなく、複数の列に基づいて一意です。
 
         .. seealso::
 
             :term:`primary key`
 
     foreign key constraint
-        A referential constraint between two tables. A foreign key is a field or set of fields in a relational table that matches a :term:`candidate key` of another table. The foreign key can be used to cross-reference tables. (via Wikipedia)
+        .. A referential constraint between two tables. A foreign key is a field or set of fields in a relational table that matches a :term:`candidate key` of another table. The foreign key can be used to cross-reference tables. (Wkipediaより)
 
-        A foreign key constraint can be added to a table in standard SQL using :term:`DDL` like the following:
+        2つのテーブル間の参照制約です。外部キーは、他のテーブルの :term:`candidate key` と一致するリレーショナルテーブル内のフィールドまたはフィールドのセットです。外部キーは、テーブルを相互参照するために使用できます。(Wikipediaより)
+
+        .. A foreign key constraint can be added to a table in standard SQL using :term:`DDL` like the following:
+
+        以下のように :term:`DDL` を使用して、標準SQLのテーブルに外部キー制約を追加することができます。
 
         .. sourcecode:: sql
 
@@ -1248,11 +1359,13 @@ Glossary
 
         .. seealso::
 
-            `Foreign Key Constraint (via Wikipedia) <https://en.wikipedia.org/wiki/Foreign_key_constraint>`_
+            `Foreign Key Constraint (Wkipediaより) <https://en.wikipedia.org/wiki/Foreign_key_constraint>`_
 
     check constraint
 
-        A check constraint is a condition that defines valid data when adding or updating an entry in a table of a relational database. A check constraint is applied to each row in the table.  (via Wikipedia)
+        .. A check constraint is a condition that defines valid data when adding or updating an entry in a table of a relational database. A check constraint is applied to each row in the table.  (Wkipediaより)
+
+        チェック制約は、リレーショナル・データベースのテーブル内のエントリを追加または更新するときに有効なデータを定義する条件です。チェック制約はテーブル内の各行に適用されます。(Wikipediaより)
 
         A check constraint can be added to a table in standard SQL using :term:`DDL` like the following:
 
@@ -1262,55 +1375,70 @@ Glossary
 
         .. seealso::
 
-            `CHECK constraint (via Wikipedia) <https://en.wikipedia.org/wiki/Check_constraint>`_
+            `CHECK constraint (Wkipediaより) <https://en.wikipedia.org/wiki/Check_constraint>`_
 
     unique constraint
     unique key index
-        A unique key index can uniquely identify each row of data values in a database table. A unique key index comprises a single column or a set of columns in a single database table. No two distinct rows or data records in a database table can have the same data value (or combination of data values) in those unique key index columns if NULL values are not used. Depending on its design, a database table may have many unique key indexes but at most one primary key index.
+        .. A unique key index can uniquely identify each row of data values in a database table. A unique key index comprises a single column or a set of columns in a single database table. No two distinct rows or data records in a database table can have the same data value (or combination of data values) in those unique key index columns if NULL values are not used. Depending on its design, a database table may have many unique key indexes but at most one primary key index. (Wkipediaより)
 
-        (via Wikipedia)
+        一意キーインデックスは、データベーステーブル内のデータ値の各行を一意に識別できます。一意キーインデックスは、単一のデータベーステーブル内の単一の列または列のセットで構成されます。NULL値が使用されていない場合、データベーステーブル内の2つの異なる行またはデータレコードが、それらの一意キーインデックス列内で同じデータ値(またはデータ値の組み合わせ)を持つことはできません。データベーステーブルの設計によっては、多くの一意キーインデックスを持つことができますが、主キーインデックスは多くても1つです。(Wikipediaより)
 
         .. seealso::
 
-            `Unique key (via Wikipedia) <https://en.wikipedia.org/wiki/Unique_key#Defining_unique_keys>`_
+            `Unique key (Wkipediaより) <https://en.wikipedia.org/wiki/Unique_key#Defining_unique_keys>`_
 
     transient
-        This describes one of the major object states which an object can have within a :term:`Session`; a transient object is a new object that doesn't have any database identity and has not been associated with a session yet. When the object is added to the session, it moves to the :term:`pending` state.
+        .. This describes one of the major object states which an object can have within a :term:`Session`; a transient object is a new object that doesn't have any database identity and has not been associated with a session yet. When the object is added to the session, it moves to the :term:`pending` state.
+
+        これは、オブジェクトが :term:`Session` 内で持つことができる主要なオブジェクト状態の1つを記述します。一時オブジェクトとは、データベースIDを持たず、まだセッションに関連付けられていない新しいオブジェクトです。オブジェクトがセッションに追加されると、 :term:`pending` 状態に移行します。
 
         .. seealso::
 
             :ref:`session_object_states`
 
     pending
-        This describes one of the major object states which an object can have within a :term:`Session`; a pending object is a new object that doesn't have any database identity, but has been recently associated with a session.  When the session emits a flush and the row is inserted, the object moves to the :term:`persistent` state.
+        .. This describes one of the major object states which an object can have within a :term:`Session`; a pending object is a new object that doesn't have any database identity, but has been recently associated with a session.  When the session emits a flush and the row is inserted, the object moves to the :term:`persistent` state.
+
+        これは、オブジェクトが :term:`Session` 内で持つことができる主要なオブジェクト状態の1つを記述します。pendingオブジェクトとは、データベースIDを持たないが、最近セッションに関連付けられた新しいオブジェクトです。セッションがフラッシュを発行し、行が挿入されると、オブジェクトは :term:`persistent` 状態に移行します。
 
         .. seealso::
 
             :ref:`session_object_states`
 
     deleted
-        This describes one of the major object states which an object can have within a :term:`Session`; a deleted object is an object that was formerly persistent and has had a DELETE statement emitted to the database within a flush to delete its row. The object will move to the :term:`detached` state once the session's transaction is committed; alternatively, if the session's transaction is rolled back, the DELETE is reverted and the object moves back to the :term:`persistent` state.
+        .. This describes one of the major object states which an object can have within a :term:`Session`; a deleted object is an object that was formerly persistent and has had a DELETE statement emitted to the database within a flush to delete its row. The object will move to the :term:`detached` state once the session's transaction is committed; alternatively, if the session's transaction is rolled back, the DELETE is reverted and the object moves back to the :term:`persistent` state.
+
+        これは、オブジェクトが :term:`Session` 内で持つことができる主要なオブジェクト状態の1つを記述します。削除されたオブジェクトとは、以前は永続的であったオブジェクトで、その行を削除するためにフラッシュ内でデータベースにDELETE文が発行されました。セッションのトランザクションがコミットされると、オブジェクトは :term:`detached` 状態に移動します。あるいは、セッションのトランザクションがロールバックされると、DELETEは元に戻され、オブジェクトは :term:`persistent` 状態に戻ります。
 
         .. seealso::
 
             :ref:`session_object_states`
 
     persistent
-        This describes one of the major object states which an object can have within a :term:`Session`; a persistent object is an object that has a database identity (i.e. a primary key) and is currently associated with a session. Any object that was previously :term:`pending` and has now been inserted is in the persistent state, as is any object that's been loaded by the session from the database. When a persistent object is removed from a session, it is known as :term:`detached`.
+        .. This describes one of the major object states which an object can have within a :term:`Session`; a persistent object is an object that has a database identity (i.e. a primary key) and is currently associated with a session. Any object that was previously :term:`pending` and has now been inserted is in the persistent state, as is any object that's been loaded by the session from the database. When a persistent object is removed from a session, it is known as :term:`detached`.
+
+        これは、オブジェクトが :term:`Session` 内で持つことができる主要なオブジェクト状態の1つを記述します。永続オブジェクトとは、データベースID(すなわち主キー)を持ち、現在セッションに関連付けられているオブジェクトです。以前 :term:`pending` であったオブジェクトが現在挿入されている場合は、データベースからセッションによってロードされたオブジェクトと同様に永続状態になります。永続オブジェクトがセッションから削除された場合、それは :term:`detached` と呼ばれます。
 
         .. seealso::
 
             :ref:`session_object_states`
 
     detached
-        This describes one of the major object states which an object can have within a :term:`Session`; a detached object is an object that has a database identity (i.e. a primary key) but is not associated with any session.  An object that was previously :term:`persistent` and was removed from its session either because it was expunged, or the owning session was closed, moves into the detached state. The detached state is generally used when objects are being moved between sessions or when being moved to/from an external object cache.
+        .. This describes one of the major object states which an object can have within a :term:`Session`; a detached object is an object that has a database identity (i.e. a primary key) but is not associated with any session.  An object that was previously :term:`persistent` and was removed from its session either because it was expunged, or the owning session was closed, moves into the detached state. The detached state is generally used when objects are being moved between sessions or when being moved to/from an external object cache.
+
+        これは、オブジェクトが :term:`Session` 内で持つことができる主要なオブジェクト状態の1つを記述します。デタッチされたオブジェクトとは、データベースID(すなわち主キー)を持つが、どのセッションにも関連付けられていないオブジェクトです。以前 :term:`persistent` であったオブジェクトが、削除されたか、所有しているセッションが閉じられたためにセッションから削除された場合、デタッチ状態に移行します。デタッチ状態は一般に、オブジェクトがセッション間で移動されるとき、または外部オブジェクトキャッシュとの間で移動されるときに使用されます。
+
+
 
         .. seealso::
 
             :ref:`session_object_states`
 
     attached
-        Indicates an ORM object that is presently associated with a specific
+        .. Indicates an ORM object that is presently associated with a specific
+
+        現在特定のに関連付けられているORMオブジェクトを示します。
+
         :term:`Session`.
 
         .. seealso::
