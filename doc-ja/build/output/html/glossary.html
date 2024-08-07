@@ -384,7 +384,6 @@ FROM user_account WHERE user_account.name = ‘fred’</p>
 <span class="w">    </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span></pre></div>
 </div>
-<p>Correlation from one <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> directly to one which encloses the correlated query via its <code class="docutils literal notranslate"><span class="pre">FROM</span></code> clause is not possible, because the correlation can only proceed once the original source rows from the enclosing statement’s FROM clause are available.</p>
 <p>1つの <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> から、その <code class="docutils literal notranslate"><span class="pre">FROM</span></code> 節を介して相関された問い合わせを囲む直接の相関は不可能です。なぜなら、相関は、囲んでいる文のFROM節から元のソース行が利用可能になって初めて実行されるからです。</p>
 </dd>
 <dt id="term-crud">crud<a class="headerlink" href="#term-crud" title="Link to this term">¶</a></dt><dt id="term-CRUD">CRUD<a class="headerlink" href="#term-CRUD" title="Link to this term">¶</a></dt><dd><p>“Create, Update, Delete”を意味する頭字語。SQLにおけるこの用語は、データベースからデータを作成、変更、削除する操作の集合を指し、 <a class="reference internal" href="#term-DML"><span class="xref std std-term">DML</span></a> としても知られています。また、一般的には、 <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> 、<code class="docutils literal notranslate"><span class="pre">UPDATE</span></code> 、 <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> 文を指します。</p>
@@ -991,7 +990,7 @@ emp2 = Employee(name=”emp2”)</p>
 
         Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 7.2.6.
 
-    Documentation last generated: Tue Aug  6 21:40:31 2024 JST
+    Documentation last generated: Wed Aug  7 21:11:36 2024 JST
 
     </div>
 </div>

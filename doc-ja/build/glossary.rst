@@ -709,7 +709,6 @@ Glossary
         ``SELECT`` 文の中で、行をフィルタする条件を示す部分。キーワード ``WHERE`` の後に続く1つのSQL式です。
 
 
-
         .. sourcecode:: sql
 
             SELECT user_account.name, user_account.email
@@ -834,7 +833,7 @@ Glossary
                 LIMIT 3)
             WHERE id = 7)
 
-        Correlation from one ``SELECT`` directly to one which encloses the correlated query via its ``FROM`` clause is not possible, because the correlation can only proceed once the original source rows from the enclosing statement's FROM clause are available.
+        .. Correlation from one ``SELECT`` directly to one which encloses the correlated query via its ``FROM`` clause is not possible, because the correlation can only proceed once the original source rows from the enclosing statement's FROM clause are available.
 
         1つの ``SELECT`` から、その ``FROM`` 節を介して相関された問い合わせを囲む直接の相関は不可能です。なぜなら、相関は、囲んでいる文のFROM節から元のソース行が利用可能になって初めて実行されるからです。
 
